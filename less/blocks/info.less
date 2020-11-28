@@ -1,0 +1,42 @@
+.info {
+  position: relative;
+  margin-bottom: 115px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: -50px;
+    width: 416px;
+    height: 832px;
+    background-image: url(../img/images/deco-3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .title {
+    text-align: left;
+  }
+  
+  ul {
+    padding-left: 17px;
+  }
+  
+  a {
+    color: @blue;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
+}
+
+.info__wrap {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
