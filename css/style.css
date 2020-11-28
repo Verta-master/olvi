@@ -921,6 +921,10 @@ button {
   color: #000;
   letter-spacing: 0.04em;
 }
+.subtitle {
+  font-size: 20px;
+  font-weight: 700;
+}
 .category {
   position: relative;
   margin-bottom: 70px;
@@ -1384,4 +1388,122 @@ button {
   opacity: 0.8;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.info {
+  position: relative;
+  margin-bottom: 115px;
+}
+.info::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: -50px;
+  width: 416px;
+  height: 832px;
+  background-image: url(../img/images/deco-3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.info .title {
+  text-align: left;
+}
+.info ul {
+  padding-left: 17px;
+}
+.info a {
+  color: #00a0e3;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.info a:hover,
+.info a:active {
+  text-decoration: none;
+}
+.info__wrap {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+  background-color: #000;
+}
+.footer__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__info {
+  font-size: 14px;
+  margin-top: 30px;
+}
+.footer__title {
+  margin-top: 0;
+  color: #b3b3b3;
+  text-transform: uppercase;
+}
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer__list li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.footer__list li::before {
+  content: ">";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  font-size: 12px;
+}
+.footer__list a:hover,
+.footer__list a:active {
+  text-decoration: underline;
+}
+.footer__tel {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  text-align: right;
+}
+.footer__tel::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/icons/tel.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.footer__tel:nth-of-type(2)::before,
+.footer__tel:nth-of-type(3)::before {
+  display: none;
+}
+.footer__tel--skype {
+  text-align: left;
+}
+.footer__tel--skype::before {
+  background-image: url(../img/icons/13.svg);
+}
+.footer__tel span {
+  margin-right: 15px;
+}
+.footer__tel:hover,
+.footer__tel:active {
+  text-decoration: underline;
+}
+.footer__tel:hover span,
+.footer__tel:active span {
+  text-decoration: none;
 }
