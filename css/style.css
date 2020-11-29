@@ -728,14 +728,29 @@ button {
 .menu__item {
   margin-left: 20px;
   margin-right: 20px;
+  padding: 10px 0;
+}
+.menu__item:hover .menu__link,
+.menu__item:active .menu__link {
+  background-color: #00a8ee;
 }
 .menu__link {
-  display: block;
-  padding: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  padding: 0 10px;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
   color: #fff;
+  border-radius: 4px;
 }
 .menu__lang {
   margin-left: 20px;
@@ -1391,6 +1406,7 @@ button {
 }
 .info {
   position: relative;
+  z-index: 5;
   margin-bottom: 115px;
 }
 .info::before {
@@ -1498,6 +1514,8 @@ button {
 }
 .footer__tel span {
   margin-right: 15px;
+  display: inline-block;
+  vertical-align: baseline;
 }
 .footer__tel:hover,
 .footer__tel:active {
@@ -1506,4 +1524,41 @@ button {
 .footer__tel:hover span,
 .footer__tel:active span {
   text-decoration: none;
+}
+.footer__social {
+  width: 375px;
+  max-width: 100%;
+}
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.social__item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.social__link {
+  display: block;
+}
+.social__link svg {
+  width: 42px;
+  height: 42px;
+  fill: #fff;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.social__link:hover svg,
+.social__link:active svg {
+  fill: #00a0e3;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
