@@ -1855,3 +1855,143 @@ button {
     right: -15px;
   }
 }
+@media (max-width: 1170px) {
+  .wrapper {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header__phones a::after,
+  .menu__list,
+  .header__call {
+    display: none;
+  }
+  .search__input {
+    width: 470px;
+  }
+  .menu__lang {
+    margin-left: 15px;
+  }
+  .header__phones a:nth-of-type(n + 2) {
+    display: none;
+  }
+  .header__phones {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .header__phones::before {
+    top: 0;
+  }
+  .header__login {
+    margin-right: 0;
+  }
+  .promo {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .swiper-button-prev {
+    left: -5px;
+  }
+  .swiper-button-next {
+    right: -5px;
+  }
+  .type__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 700px;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  .type__link {
+    width: 49%;
+  }
+  .type__link:nth-child(3) {
+    position: relative;
+    -webkit-transform: none;
+            transform: none;
+    left: 0;
+  }
+  .tabs,
+  .type {
+    margin-bottom: 70px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .category__item {
+    width: 240px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  .category__list {
+    margin-right: -10px;
+  }
+  .category::after {
+    width: 215px;
+    height: 430px;
+    top: auto;
+    bottom: -100px;
+  }
+  .tabs__name a {
+    font-size: 24px;
+  }
+  .tabs__name {
+    padding: 0;
+  }
+  .tabs__title {
+    margin-bottom: 30px;
+  }
+  .blog--video::before {
+    width: 215px;
+    height: 430px;
+  }
+  .info::before {
+    width: 215px;
+    height: 430px;
+  }
+  .info__wrap {
+    max-width: 500px;
+  }
+  .footer__logo {
+    display: block;
+    width: 220px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding-right: 70px;
+  }
+  .footer__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__menu--info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 20px;
+  }
+  .footer__menu--buyer {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    padding-left: 220px;
+  }
+  .footer__contacts {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 225px;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+  .footer__social {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+    width: 225px;
+  }
+}
