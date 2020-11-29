@@ -34,9 +34,9 @@
         <a href="tel:+380668588806">+38 (066) 858 88 06</a>
         <a href="tel:+380635925786">+38 (063) 592 57 86</a>
       </div>
-      <a href="#" class="header__call">Обратный звонок</a>
+      <a data-fancybox="" data-src="#call" href="javascript:;" class="header__call">Обратный звонок</a>
       <span class="header__time">Мы работаем: Пн-Сб 9:00-19:00</span>
-      <a href="#" class="header__login">Войти в кабинет</a>
+      <a data-fancybox="" data-src="#login" href="javascript:;" class="header__login">Войти в кабинет</a>
       <div class="header__icons">
         <a href="#" class="header__icon header__icon--like" title="Избранное">
           <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
@@ -1339,6 +1339,49 @@
     </div>
   </footer>
   
+  <!-- Modal windows -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="modal__title">Оставьте номер телефона, и мы вам перезвоним</p>
+    <form action="#" class="form">
+      <label for="name" class="form__label">Ваше имя:<span>*</span></label>
+      <input type="text" id="name" class="form__input" required="">
+      <label for="tel" class="form__label">Ваш телефон:<span>*</span></label>
+      <input type="tel" id="tel" class="form__input" required="">
+      <button type="submit" class="btn form__btn">Отправить</button>
+      <p class="form__comment"><span>*</span> — Поля, обязательные для заполнения</p>
+    </form>
+  </div>
+  
+  <div style="display: none;" id="login" class="modal">
+    <p class="modal__title">Войти в личный кабинет</p>
+    <div class="modal__enter" id="enter">
+      <ul class="modal__list">
+        <li class="modal__name"><a href="#enter-1">Вход</a></li>
+        <li class="modal__name"><a href="#enter-2">Регистрация</a></li>
+      </ul>
+      <div class="modal__field" id="enter-1">
+        <form action="#" class="form">
+          <label for="email" class="form__label">Введите Ваш e-mail:</label>
+          <input type="email" id="email" class="form__input">
+          <label for="password" class="form__label">Введите пароль:</label>
+          <input type="password" id="password" class="form__input">
+          <button type="submit" class="btn form__btn">Войти</button>
+        </form>
+      </div>
+      <div class="modal__field" id="enter-2">
+        <form action="#" class="form">
+          <label for="email2" class="form__label">Введите Ваш e-mail:</label>
+          <input type="email" id="email2" class="form__input">
+          <label for="tel2" class="form__label">Ваш номер телефона:</label>
+          <input type="tel" id="tel2" class="form__input">
+          <label for="password" class="form__label">Придумайте пароль:</label>
+          <input type="password" id="password" class="form__input">
+          <button type="submit" class="btn form__btn">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
@@ -1478,6 +1521,7 @@
   <script>
     $(function() {
       $("#tabs").tabs();
+      $("#enter").tabs();
     });
   </script>
 </body>
