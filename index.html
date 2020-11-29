@@ -1291,7 +1291,7 @@
           </div>
           <div class="footer__info">© Интернет-магазин ОЛВИ, 2010-2017</div>
         </div>
-        <nav class="footer__menu">
+        <nav class="footer__menu footer__menu--info">
           <p class="footer__title">Инфо</p>
           <ul class="footer__list">
             <li><a href="#">О нас</a></li>
@@ -1300,7 +1300,7 @@
             <li><a href="#">Карта сайта</a></li>
           </ul>
         </nav>
-        <nav class="footer__menu">
+        <nav class="footer__menu footer__menu--buyer">
           <p class="footer__title">Покупателям</p>
           <ul class="footer__list">
             <li><a href="#">Оплата и доставка</a></li>
@@ -1413,11 +1413,13 @@
       breakpoints: {
         1200: {
           slidesPerView: 3,
-        },
-        1022: {
-          slidesPerView: 2,
+          spaceBetween: 15,
         },
         600: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        480: {
           slidesPerView: 1,
         }
       }
@@ -1436,11 +1438,13 @@
       breakpoints: {
         1200: {
           slidesPerView: 3,
-        },
-        1022: {
-          slidesPerView: 2,
+          spaceBetween: 15,
         },
         600: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        480: {
           slidesPerView: 1,
         }
       }
@@ -1459,11 +1463,13 @@
       breakpoints: {
         1200: {
           slidesPerView: 3,
-        },
-        1022: {
-          slidesPerView: 2,
+          spaceBetween: 15,
         },
         600: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        480: {
           slidesPerView: 1,
         }
       }
@@ -1482,11 +1488,13 @@
       breakpoints: {
         1200: {
           slidesPerView: 3,
-        },
-        1022: {
-          slidesPerView: 2,
+          spaceBetween: 15,
         },
         600: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        480: {
           slidesPerView: 1,
         }
       }
@@ -1502,6 +1510,19 @@
       preventClicksPropagation: false,
       slidesPerView: 4,
       spaceBetween: 30,
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        480: {
+          slidesPerView: 1,
+        }
+      }
     });
     
     var mySwiper7 = new Swiper ('.blog__slider--video', {
@@ -1514,6 +1535,15 @@
       preventClicksPropagation: false,
       slidesPerView: 4,
       spaceBetween: 30,
+      breakpoints: {
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 1,
+        }
+      }
     });
   </script>
   
