@@ -43,15 +43,27 @@
 .menu__item {
   margin-left: 20px;
   margin-right: 20px;
+  padding: 10px 0;
+  
+  &:hover,
+  &:active {
+    .menu__link {
+      background-color: rgb(0, 168, 238);
+    }
+  }
 }
 
 .menu__link {
-  display: block;
-  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
   color: #fff;
+  border-radius: 4px;
 }
 
 .menu__lang {
