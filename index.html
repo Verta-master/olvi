@@ -1263,7 +1263,7 @@
     
     <section class="blog blog--video">
       <div class="wrapper">
-        <p class="title">ВИДЕООБЗОРЫ НАШИХ ПОКУПАТЕЛЕЙ</p>
+        <p class="title">ВИДЕООБЗОРЫ <span>НАШИХ ПОКУПАТЕЛЕЙ</span></p>
         <div class="swiper-container blog__slider blog__slider--video">
           <div class="swiper-wrapper">
             <div class="swiper-slide blog__slide">
@@ -1336,6 +1336,12 @@
             <li>Неправильно подобранная обувь: неудачная для ношения с точки зрения ее конструкции, а часто и не по размеру или вовсе</li>
           </ul>
           <a href="#">читать полностью</a>
+          <div class="info__logo">
+            <div class="logo">
+              <img src="img/images/1.png" alt="Logo">
+            </div>
+            <div class="info__about">© Интернет-магазин ОЛВИ, 2010-2017</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1596,6 +1602,9 @@
       slidesPerView: 4,
       spaceBetween: 30,
       breakpoints: {
+        1400: {
+          slidesPerView: 3,
+        },
         1200: {
           slidesPerView: 2,
           spaceBetween: 20,
