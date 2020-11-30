@@ -129,18 +129,11 @@
     margin-right: 5px;
     margin-bottom: 5px;
   }
-  .header__phones-mobile {
+  .header__phones {
+    padding-left: 0;
+  }
+  .header__phones .header__phone {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    width: 150px;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 4px 23.75px 1.25px rgba(0, 0, 0, 0.1);
   }
   .header__mobilebtn {
     width: 40px;
@@ -150,17 +143,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 35px 35px;
-  }
-  .header__phones {
-    padding-left: 0;
-    position: relative;
-  }
-  .header__droptablet {
-    position: static;
-    display: block;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
   }
   .footer__list li {
     margin-bottom: 2px;
@@ -241,5 +223,51 @@
   }
   .footer__tel--skype span::before {
     background-image: url(../img/icons/13.svg);
+  }
+  .header__title {
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid rgb(240, 240, 240);
+  }
+  .header__closebtn {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/icons/2.svg);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center;
+  }
+  .header__droptablet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    display: block;
+    opacity: 0;
+    width: 0;
+    .transition();
+    
+    &--open {
+      display: block;
+      opacity: 1;
+      width: 300px;
+      .transition();
+    }
+  }
+  .header__opt a {
+    display: block;
+    margin-left: 0;
+    margin-top: 5px;
   }
 }
