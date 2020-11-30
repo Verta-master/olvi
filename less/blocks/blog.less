@@ -1,14 +1,15 @@
 .blog {
-  margin-bottom: 100px;
+  margin-bottom: 110px;
   
   &--video {
     position: relative;
+    margin-bottom: 90px;
     
     &::before {
       content: "";
       position: absolute;
       left: 0;
-      top: -100px;
+      top: -120px;
       z-index: -1;
       width: 416px;
       height: 832px;
@@ -17,11 +18,15 @@
       background-size: contain;
     }
   }
+  
+  .title {
+    margin-bottom: 15px;
+  }
 }
 
 .blog__slider {
   box-sizing: border-box;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   padding: 20px;
   margin-left: -20px;
   margin-right: -20px;
@@ -31,18 +36,18 @@
   box-sizing: border-box;
   height: auto;
   padding: 20px;
+  font-size: 14px;
   border-radius: 4px;
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(248, 248, 248);
   .transition();
   
   time {
-    font-size: 14px;
     color: #808080;
   }
   
   p {
-    margin-top: 10px;
+    margin-top: 6px;
     margin-bottom: 0;
   }
   
@@ -87,6 +92,7 @@
   margin-top: 10px;
   margin-bottom: 0;
   color: #000;
+  font-size: 16px;
   .transition();
 }
 
@@ -110,7 +116,7 @@
     height: 72px;
     z-index: 5;
     transform: translate(-50%, -50%);
-    background-image: url(../../img/icons/56.svg);
+    background-image: url(../img/icons/56.svg);
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.8;
