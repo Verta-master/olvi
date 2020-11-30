@@ -452,6 +452,19 @@ button {
   color: #F95454;
   cursor: pointer;
 }
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay--show {
+  display: block;
+}
 .wrapper {
   position: relative;
   width: 1704px;
@@ -856,6 +869,7 @@ button {
 .menu__category:active {
   text-decoration: underline;
 }
+.menu__mobile,
 .menu__title,
 .menu__closebtn,
 .menu__arrow {
@@ -1884,6 +1898,9 @@ button {
   .menu__lang {
     margin-left: 15px;
   }
+  .catalog__label {
+    margin-right: 2px;
+  }
   .header__phones {
     position: relative;
     margin-left: 0;
@@ -2036,7 +2053,7 @@ button {
     position: absolute;
     top: 100%;
     left: -10px;
-    z-index: 10;
+    z-index: 1000;
     width: 320px;
     border-radius: 4px;
     background-color: #ffffff;
@@ -2203,6 +2220,7 @@ button {
     width: 100%;
     position: relative;
     margin-bottom: 5px;
+    padding: 0 10px;
     border-radius: 4px;
   }
   .menu__arrow {
@@ -2217,7 +2235,7 @@ button {
             align-items: center;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -10px;
     width: 30px;
     height: 30px;
   }
@@ -2247,6 +2265,27 @@ button {
   .menu__img,
   .menu__block--hidden {
     display: none;
+  }
+  .menu__category {
+    margin-bottom: 0;
+    padding: 10px 0;
+    padding-right: 15px;
+    color: #000;
+  }
+  .menu__category--blue {
+    color: #00a0e3;
+  }
+  .menu__category--sale {
+    color: #e5097f;
+  }
+  .menu__wraplink {
+    position: relative;
+  }
+  .menu__mobile {
+    display: block;
+  }
+  .menu__mobile .menu__block {
+    background-color: #fafafa;
   }
 }
 @media (max-width: 766px) {
@@ -2510,7 +2549,7 @@ button {
   }
   .header__droptablet--open {
     opacity: 1;
-    z-index: 100;
+    z-index: 1000;
     width: 300px;
     -webkit-transition: ease-out 0.3s;
     transition: ease-out 0.3s;
@@ -2519,5 +2558,8 @@ button {
     display: block;
     margin-left: 0;
     margin-top: 5px;
+  }
+  .menu__drop--open {
+    width: 300px;
   }
 }
