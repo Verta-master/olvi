@@ -20,3 +20,13 @@ $('.search').click(function(e) {
 $('body').click(function(){
   $('.search').removeClass('search--focus');
 })
+
+//Phones
+$('.header__dropbtn').click(function() {
+  $('.header__droptablet').slideToggle();
+  $(this).toggleClass('header__dropbtn--up');
+})
+
+$('.header__mobilebtn').click(function() {
+  $('.header__phones-mobile').slideToggle();
+})
