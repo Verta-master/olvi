@@ -76,3 +76,18 @@ button {
 	color: #F95454;
 	cursor: pointer;
 }
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background-color: rgba(0,0,0,0.7);
+  
+  &--show {
+    display: block;
+  }
+}
