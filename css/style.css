@@ -505,17 +505,10 @@ button {
   width: 113px;
   padding-bottom: 10px;
 }
+.header__droptablet,
 .header__mobilebtn,
 .header__dropbtn {
   display: none;
-}
-.header__phones-mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .header__phones {
   position: relative;
@@ -1876,6 +1869,8 @@ button {
     padding-left: 10px;
     padding-right: 10px;
   }
+  .header__title,
+  .header__closebtn,
   .header__phones a::after,
   .menu__list,
   .header__call {
@@ -1888,6 +1883,7 @@ button {
     margin-left: 15px;
   }
   .header__phones {
+    position: relative;
     margin-left: 0;
     margin-right: 0;
   }
@@ -2006,8 +2002,11 @@ button {
             order: 5;
     width: 225px;
   }
-  .header__phones-mobile {
-    position: relative;
+  .header__phones a {
+    margin-right: 0;
+  }
+  .header__phone:nth-of-type(n + 2) {
+    display: none;
   }
   .header__dropbtn {
     display: block;
@@ -2035,21 +2034,121 @@ button {
     position: absolute;
     top: 100%;
     left: -10px;
-    right: -10px;
     z-index: 10;
-    padding: 10px;
-    padding-top: 0;
+    width: 320px;
     border-radius: 4px;
     background-color: #ffffff;
     -webkit-box-shadow: 0px 4px 23.75px 1.25px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 4px 23.75px 1.25px rgba(0, 0, 0, 0.1);
   }
-  .header__droptablet a {
+  .header__droptablet .header__time {
     display: block;
-    margin-top: 5px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-left: 25px;
+    font-size: 14px;
   }
-  .header__phones a {
-    margin-right: 0;
+  .header__droptablet .header__time::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icons/81.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+  .header__block {
+    padding: 15px 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .header__block .header__tel {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    color: #00a0e3;
+  }
+  .header__block .header__tel:last-of-type {
+    margin-bottom: 0;
+  }
+  .header__block .header__tel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icons/73.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .header__block .header__tel:nth-of-type(2)::before {
+    background-image: url(../img/icons/71.svg);
+  }
+  .header__block .header__tel:nth-of-type(3)::before {
+    background-image: url(../img/icons/72.svg);
+  }
+  .header__mail,
+  .header__mobilecall,
+  .header__skype,
+  .header__opt {
+    position: relative;
+    padding-left: 25px;
+  }
+  .header__mail::before,
+  .header__mobilecall::before,
+  .header__skype::before,
+  .header__opt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .header__opt {
+    margin: 0;
+  }
+  .header__opt a {
+    color: #00a0e3;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 10px;
+  }
+  .header__opt::before {
+    background-image: url(../img/icons/82.svg);
+  }
+  .header__skype {
+    color: #00a0e3;
+  }
+  .header__skype::before {
+    background-image: url(../img/icons/13.png);
+  }
+  .header__mobilecall {
+    color: #00a0e3;
+  }
+  .header__mobilecall::before {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/3-blue.svg);
+  }
+  .header__mail {
+    color: #00a0e3;
+  }
+  .header__mail::before {
+    top: 2px;
+    background-image: url(../img/icons/66.svg);
   }
 }
 @media (max-width: 766px) {
@@ -2185,20 +2284,11 @@ button {
     margin-right: 5px;
     margin-bottom: 5px;
   }
-  .header__phones-mobile {
+  .header__phones {
+    padding-left: 0;
+  }
+  .header__phones .header__phone {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    z-index: 10;
-    width: 150px;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    -webkit-box-shadow: 0px 4px 23.75px 1.25px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 4px 23.75px 1.25px rgba(0, 0, 0, 0.1);
   }
   .header__mobilebtn {
     width: 40px;
@@ -2208,18 +2298,6 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 35px 35px;
-  }
-  .header__phones {
-    padding-left: 0;
-    position: relative;
-  }
-  .header__droptablet {
-    position: static;
-    display: block;
-    padding: 0;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
   }
   .footer__list li {
     margin-bottom: 2px;
@@ -2295,5 +2373,52 @@ button {
   }
   .footer__tel--skype span::before {
     background-image: url(../img/icons/13.svg);
+  }
+  .header__title {
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .header__closebtn {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/icons/2.svg);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center;
+  }
+  .header__droptablet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    display: block;
+    opacity: 0;
+    width: 0;
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+  }
+  .header__droptablet--open {
+    display: block;
+    opacity: 1;
+    width: 300px;
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+  }
+  .header__opt a {
+    display: block;
+    margin-left: 0;
+    margin-top: 5px;
   }
 }

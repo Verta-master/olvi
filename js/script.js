@@ -28,5 +28,9 @@ $('.header__dropbtn').click(function() {
 })
 
 $('.header__mobilebtn').click(function() {
-  $('.header__phones-mobile').slideToggle();
+  $('.header__droptablet').addClass('header__droptablet--open');
+})
+
+$('.header__closebtn').click(function() {
+  $('.header__droptablet').removeClass('header__droptablet--open');
 })
