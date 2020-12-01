@@ -1,0 +1,29 @@
+.breadcrumbs {
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.breadcrumbs__link {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #808080;
+}
+
+a.breadcrumbs__link {
+  margin-right: 5px;
+  color: #333;
+  
+  &::after {
+    content: ">";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
