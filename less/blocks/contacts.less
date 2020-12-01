@@ -1,0 +1,140 @@
+.contacts {
+  margin-bottom: 120px;
+}
+
+.contacts__wrap {
+  display: flex;
+  margin-bottom: 60px;
+  
+  .title-main {
+    margin-top: 0;
+  }
+}
+
+.contacts__info {
+  width: 710px;
+  padding-right: 100px;
+  color: #000;
+}
+
+.contacts__form {
+  width: 670px;
+  
+  .form__btn {
+    margin-left: 0;
+  }
+  .form__comment {
+    text-align: left;
+  }
+}
+
+.contacts__map {
+  min-height: 668px;
+  background-image: url(../img/images/map.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  iframe {
+    border: 0;
+    width: 100%;
+    display: block;
+    height: 668px;
+  }
+}
+
+.contacts__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+}
+
+.contacts__address {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 20px;
+    background-image: url(../img/icons/70.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.contacts__opt,
+.contacts__phones a,
+.contacts__time {
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.contacts__time {
+  margin-bottom: 30px;
+  
+  &::before {
+    background-image: url(../img/icons/81.svg);
+  }
+}
+
+.contacts__phones {
+  margin-bottom: 30px;
+  font-size: 16px;
+  
+  a {
+    display: block;
+    margin-bottom: 15px;
+    
+    &::before {
+      background-image: url(../img/icons/73.svg);
+    }
+    
+    &:nth-of-type(2)::before {
+      background-image: url(../img/icons/71.svg);
+    }
+
+    &:nth-of-type(3)::before {
+      background-image: url(../img/icons/72.svg);
+    }
+  }
+}
+
+.contacts__opt::before {
+  background-image: url(../img/icons/82.svg);
+}
+
+.contacts__opt a {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.contacts__phones a,
+.contacts__opt a {
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    color: @blue;
+  }
+}
