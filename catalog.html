@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -278,7 +279,132 @@
     
     <section class="catalog catalog--internal">
       <div class="wrapper">
-        <h1 class="title-main">Ортопедическая обувь</h1>
+        <h1 class="title-main">Детская ортопедическая обувь</h1>
+        
+        <div class="filter">
+          <button type="button" class="filter__btn">Фильтры</button>
+          <div class="filter__drop">
+            <div class="filter__wrap">
+              <p class="title">Фильтры</p>
+              <button type="button" class="filter__close"></button>
+              <form action="#" class="filter__form">
+                <div class="filter__field filter__field--sort">
+                  <p class="filter__title">Сортировка:<span>цена по убыванию</span></p>
+                  <div class="filter__selection">
+                    <a href="#" class="filter__link">Цена по возрастанию</a>
+                    <a href="#" class="filter__link">По дате поступления</a>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--brand">
+                  <p class="filter__title">Бренд</p>
+                  <div class="filter__selection">
+                    <input type="checkbox" id="check6" class="checkbox" checked="">
+                    <label for="check6" class="checkbox__label">Бренд 1</label>
+                    <input type="checkbox" id="check7" class="checkbox">
+                    <label for="check7" class="checkbox__label">Бренд 2</label>
+                    <input type="checkbox" id="check8" class="checkbox" checked="">
+                    <label for="check8" class="checkbox__label">Бренд 3</label>
+                    <input type="checkbox" id="check9" class="checkbox">
+                    <label for="check9" class="checkbox__label">Бренд 4</label>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--who">
+                  <p class="filter__title">Для кого</p>
+                  <div class="filter__selection">
+                    <input type="checkbox" id="check4" class="checkbox" checked="">
+                    <label for="check4" class="checkbox__label">Для мальчиков</label>
+                    <input type="checkbox" id="check5" class="checkbox">
+                    <label for="check5" class="checkbox__label">Для девочек</label>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--season">
+                  <p class="filter__title">Сезон</p>
+                  <div class="filter__selection">
+                    <input type="checkbox" id="check1" class="checkbox" checked="">
+                    <label for="check1" class="checkbox__label">лето</label>
+                    <input type="checkbox" id="check2" class="checkbox">
+                    <label for="check2" class="checkbox__label">зима</label>
+                    <input type="checkbox" id="check3" class="checkbox" checked="">
+                    <label for="check3" class="checkbox__label">демисезонный</label>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--color">
+                  <p class="filter__title">Цвет</p>
+                  <div class="filter__selection">
+                    <input type="checkbox" id="color1" class="filter__color" checked="">
+                    <label for="color1" class="filter__label">
+                      <img src="img/images/color1.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color2" class="filter__color">
+                    <label for="color2" class="filter__label">
+                      <img src="img/images/color2.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color3" class="filter__color">
+                    <label for="color3" class="filter__label">
+                      <img src="img/images/color3.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color4" class="filter__color">
+                    <label for="color4" class="filter__label">
+                      <img src="img/images/color4.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color5" class="filter__color">
+                    <label for="color5" class="filter__label">
+                      <img src="img/images/color5.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color6" class="filter__color">
+                    <label for="color6" class="filter__label">
+                      <img src="img/images/color6.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color7" class="filter__color">
+                    <label for="color7" class="filter__label">
+                      <img src="img/images/color7.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color8" class="filter__color">
+                    <label for="color8" class="filter__label">
+                      <img src="img/images/color8.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color9" class="filter__color">
+                    <label for="color9" class="filter__label">
+                      <img src="img/images/color9.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color10" class="filter__color">
+                    <label for="color10" class="filter__label">
+                      <img src="img/images/color10.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color11" class="filter__color">
+                    <label for="color11" class="filter__label">
+                      <img src="img/images/color11.jpg" alt="Цвет">
+                    </label>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--size">
+                  <p class="filter__title">Размер</p>
+                  <div class="filter__selection">
+                    
+                  </div>
+                </div>
+                <div class="filter__field filter__field--price">
+                  <p class="filter__title">Цена</p>
+                  <div class="filter__selection">
+                    <div class="filter__price">
+                      <input type="text" id="amount-min" class="filter__input">
+                      <input type="text" id="amount-max" class="filter__input">
+                    </div>
+                    <div class="filter__range">
+                      <div id="slider-range"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__tags">
+                  <a href="#" class="filter__tag">4Rest-Orto</a>
+                  <a href="#" class="filter__tag">Для мальчиков</a>
+                  <a href="#" class="filter__cancel">Сбросить</a>
+                </div>
+              </form>
+              <button type="button" class="filter__closebtn">Закрыть</button>
+            </div>
+          </div>
+        </div>
 
         <ul class="catalog__list">
           <div class="catalog__item">
@@ -1028,9 +1154,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/scrolling.js"></script>
+  <script src="js/filter.js"></script>
   
   <!-- Tabs -->
   <script>
