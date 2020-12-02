@@ -379,8 +379,24 @@
                 </div>
                 <div class="filter__field filter__field--size">
                   <p class="filter__title">Размер</p>
-                  <div class="filter__selection">
-                    
+                  <div class="filter__selection" id="size">
+                    <ul class="modal__list">
+                      <li class="modal__name"><a href="#size-1">По длине стопы</a></li>
+                      <li class="modal__name"><a href="#size-2">По размеру</a></li>
+                    </ul>
+                    <div class="modal__field" id="size-1">
+                      <a href="#" class="filter__modal">Как правильно определить размер?</a>
+                      <div class="filter__choice">
+                        <label for="amount">По длине стопы:</label>
+                        <input type="text" id="amount" readonly>
+                      </div>
+                      <div class="filter__slider">
+                        <div id="slider"></div>
+                      </div>
+                    </div>
+                    <div class="modal__field" id="size-2">
+                      <a href="#" class="filter__modal">Как правильно определить размер?</a>
+                    </div>
                   </div>
                 </div>
                 <div class="filter__field filter__field--price">
@@ -1163,6 +1179,7 @@
   <script>
     $(function() {
       $("#enter").tabs();
+      $("#size").tabs();
     });
   </script>
   

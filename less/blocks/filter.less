@@ -11,11 +11,19 @@
   position: absolute;
   top: 100%;
   left: 0;
+  width: 330px;
   min-width: 100%;
   z-index: 10;
   padding: 10px;
+  font-size: 14px;
   background-color: #fff;
   border: 1px solid rgb(230, 230, 230);
+
+  .checkbox__label {
+    width: 49%;
+    display: inline-block;
+    vertical-align: baseline;
+  }
 }
 
 .filter__form {
@@ -203,6 +211,7 @@
   text-align: center;
 }
 
+.filter__slider,
 .filter__range {
   padding-bottom: 10px;
   
@@ -264,5 +273,69 @@
   }
   .ui-widget.ui-widget-content {
     border: 0;
+  }
+}
+
+.filter__selection {
+  .modal__list {
+    margin-top: 0;
+  }
+}
+
+.filter__modal {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  color: @blue !important;
+  font-size: 14px;
+  
+  &::before {
+    content: "?";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: @blue;
+  }
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.filter__choice {
+  margin-bottom: 15px;
+  
+  label {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  input {
+    width: 90px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 4px;
+  }
+}
+
+.filter__slider {
+  .ui-widget-content { 
+    border: 2px solid #fff;
+    background-color: @red;
+  }
+  .ui-slider-horizontal {
+    height: 6px;
   }
 }
