@@ -1,0 +1,268 @@
+.filter__color,
+.filter .title,
+.filter__close,
+.filter__closebtn,
+.filter__btn {
+  display: none;
+}
+
+.filter__selection {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  z-index: 10;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.filter__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter__tags {
+  width: 100%;
+  order: 8;
+}
+
+.filter__cancel,
+.filter__tag {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+}
+
+.filter__tag {
+  padding-right: 25px;
+  color: @blue;
+  border: 1px solid @blue;
+  background-image: url(../img/icons/26.svg);
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 12px 12px;
+}
+
+.filter__cancel {
+  color: @red;
+  border: 1px solid @red;
+}
+
+.filter__field {
+  position: relative;
+  min-width: 120px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid rgb(230, 230, 230);
+  
+  &--sort {
+    order: 7;
+    margin-left: auto;
+    margin-right: 0;
+    border: 0;
+    
+    .filter__title {
+      padding: 0;
+      background-image: none;
+      
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px;
+        padding-right: 30px;
+        margin-left: 10px;
+        border-radius: 4px;
+        border: 1px solid rgb(230, 230, 230);
+        background-image: url(../img/icons/28.svg);
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: right 10px center;
+        .transition();
+      }
+    }
+    
+    &:hover,
+    &:active {
+      .filter__title span {
+        border-color: #000;
+        .transition();
+      }
+    }
+  }
+  &--brand {
+    order: 1;
+  }
+  &--who {
+    order: 2;
+  }
+  &--season {
+    order: 3;
+  }
+  &--color {
+    order: 4;
+  }
+  &--size {
+    order: 5;
+  }
+  &--price {
+    order: 6;
+  }
+  
+  &:hover,
+  &:active {
+    border-color: #000;
+    .transition();
+    
+    .filter__selection {
+      border-color: #000;
+    }
+  }
+}
+
+.filter__title {
+  margin: 0;
+  padding: 10px;
+  padding-right: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000;
+  line-height: 1;
+  background-image: url(../img/icons/28.svg);
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: right 10px center;
+  .transition();
+}
+
+.filter__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  
+  img {
+    display: block;
+  }
+  
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/icons/57.svg);
+    background-repeat: no-repeat;
+    background-size: 12px 9px;
+    background-position: center;
+  }
+}
+
+.filter__color:checked + .filter__label::after  {
+  display: block;
+}
+
+.filter__price {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: #000;
+  
+  &::before {
+    content: "-";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.filter__input {
+  width: 100px;
+  text-align: center;
+}
+
+.filter__range {
+  padding-bottom: 10px;
+  
+  .ui-slider {
+    position: relative;
+  }
+  /* Ползунок */
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: @red;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    overflow: hidden;
+  }
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  .ui-slider-horizontal {
+    height: 8px;
+  }
+  /* позиционируем ползунки */
+  .ui-slider-horizontal .ui-slider-handle { 
+    top: -6px;
+    margin-left: -8px;
+  }
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+  .ui-slider-horizontal .ui-slider-range-min { 
+    left: 0;
+  }
+  .ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+  }
+  /* оформление полосы по которой ходит ползунок */
+  .ui-widget-content { 
+    border: 2px solid #fff;
+    background-color: rgb(230, 230, 230);
+  }
+  /* оформление активного участка (между двумя ползунками) */
+  .ui-widget-header { 
+    border: 1px solid @blue;
+    background-color: @blue;
+  }
+  /* скругление для полосы слайдера */
+  .ui-corner-all {
+    border-radius: 4px;
+  }
+  .ui-widget.ui-widget-content {
+    border: 0;
+  }
+}

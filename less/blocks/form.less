@@ -53,3 +53,34 @@
     font-size: 24px;
   }
 }
+
+.checkbox {
+  display: none;
+}
+
+.checkbox__label {
+  display: block;
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 30px;
+  font-size: 14px;
+  color: #000;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.checkbox:checked + .checkbox__label::before {
+  background-image: url(../img/icons/39.svg);
+  border-color: rgba(255,255,255,0);
+}

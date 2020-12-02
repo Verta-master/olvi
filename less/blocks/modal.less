@@ -32,13 +32,23 @@
   }
 }
 
-.modal__list {
+.modal .modal__enter {
+  border: 0;
+}
+
+.modal .modal__field {
+  padding: 0;
+}
+
+.modal .modal__list {
   .reset();
   list-style: none;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
   margin-top: 25px;
+  border: 0;
+  background-color: #fff;
   
   .ui-tabs-active a {
     color: @blue;
@@ -46,8 +56,11 @@
   }
 }
 
-.modal__name {
+.modal .modal__name {
   width: 50%;
+  border: 0;
+  margin: 0 !important;
+  background-color: #fff;
   
   a {
     display: block;
@@ -59,5 +72,6 @@
     outline: none;
     color: #000;
     border: 1px solid rgb(230, 230, 230);
+    background-color: #fff;
   }
 }
