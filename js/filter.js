@@ -17,3 +17,16 @@ $( function() {
   $( "#amount-min" ).val( $( "#slider-range" ).slider( "values", 0 ) + " грн" );
   $( "#amount-max" ).val( $( "#slider-range" ).slider( "values", 1 ) + " грн" );
 });
+
+$( function() {
+  $( "#slider" ).slider({
+    value: 24,
+    min: 10,
+    max: 32,
+    step: 2,
+    slide: function( event, ui ) {
+      $( "#amount" ).val( ui.value + " см" );
+    }
+  });
+  $( "#amount" ).val( $( "#slider" ).slider( "value" ) + " см" );
+});

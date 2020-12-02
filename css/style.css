@@ -1993,9 +1993,11 @@ h2,
 .modal .modal__enter {
   border: 0;
 }
+.filter__selection .modal__field,
 .modal .modal__field {
   padding: 0;
 }
+.filter__selection .modal__list,
 .modal .modal__list {
   margin: 0;
   padding: 0;
@@ -2011,16 +2013,19 @@ h2,
   border: 0;
   background-color: #fff;
 }
+.filter__selection .modal__list .ui-tabs-active a,
 .modal .modal__list .ui-tabs-active a {
   color: #00a0e3;
   border-top: 3px solid #00a0e3;
 }
+.filter__selection .modal__name,
 .modal .modal__name {
   width: 50%;
   border: 0;
   margin: 0 !important;
   background-color: #fff;
 }
+.filter__selection .modal__name a,
 .modal .modal__name a {
   display: block;
   width: 100%;
@@ -2041,6 +2046,7 @@ h2,
 }
 .form {
   width: 100%;
+  font: inherit;
 }
 .form__label {
   display: block;
@@ -2538,11 +2544,18 @@ a.breadcrumbs__link:active {
   position: absolute;
   top: 100%;
   left: 0;
+  width: 330px;
   min-width: 100%;
   z-index: 10;
   padding: 10px;
+  font-size: 14px;
   background-color: #fff;
   border: 1px solid #e6e6e6;
+}
+.filter__selection .checkbox__label {
+  width: 49%;
+  display: inline-block;
+  vertical-align: baseline;
 }
 .filter__form {
   display: -webkit-box;
@@ -2741,6 +2754,7 @@ a.breadcrumbs__link:active {
   width: 100px;
   text-align: center;
 }
+.filter__slider,
 .filter__range {
   padding-bottom: 10px;
   /* Ползунок */
@@ -2750,9 +2764,11 @@ a.breadcrumbs__link:active {
   /* оформление активного участка (между двумя ползунками) */
   /* скругление для полосы слайдера */
 }
+.filter__slider .ui-slider,
 .filter__range .ui-slider {
   position: relative;
 }
+.filter__slider .ui-slider .ui-slider-handle,
 .filter__range .ui-slider .ui-slider-handle {
   position: absolute;
   z-index: 2;
@@ -2764,6 +2780,7 @@ a.breadcrumbs__link:active {
   cursor: pointer;
   outline: none;
 }
+.filter__slider .ui-slider .ui-slider-range,
 .filter__range .ui-slider .ui-slider-range {
   position: absolute;
   z-index: 1;
@@ -2772,36 +2789,98 @@ a.breadcrumbs__link:active {
   border: 0;
   overflow: hidden;
 }
+.filter__slider .ui-slider-horizontal,
 .filter__range .ui-slider-horizontal {
   height: 8px;
 }
+.filter__slider .ui-slider-horizontal .ui-slider-handle,
 .filter__range .ui-slider-horizontal .ui-slider-handle {
   top: -6px;
   margin-left: -8px;
 }
+.filter__slider .ui-slider-horizontal .ui-slider-range,
 .filter__range .ui-slider-horizontal .ui-slider-range {
   top: 0;
   height: 100%;
 }
+.filter__slider .ui-slider-horizontal .ui-slider-range-min,
 .filter__range .ui-slider-horizontal .ui-slider-range-min {
   left: 0;
 }
+.filter__slider .ui-slider-horizontal .ui-slider-range-max,
 .filter__range .ui-slider-horizontal .ui-slider-range-max {
   right: 0;
 }
+.filter__slider .ui-widget-content,
 .filter__range .ui-widget-content {
   border: 2px solid #fff;
   background-color: #e6e6e6;
 }
+.filter__slider .ui-widget-header,
 .filter__range .ui-widget-header {
   border: 1px solid #00a0e3;
   background-color: #00a0e3;
 }
+.filter__slider .ui-corner-all,
 .filter__range .ui-corner-all {
   border-radius: 4px;
 }
+.filter__slider .ui-widget.ui-widget-content,
 .filter__range .ui-widget.ui-widget-content {
   border: 0;
+}
+.filter__selection .modal__list {
+  margin-top: 0;
+}
+.filter__modal {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  color: #00a0e3 !important;
+  font-size: 14px;
+}
+.filter__modal::before {
+  content: "?";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: #00a0e3;
+}
+.filter__modal:hover,
+.filter__modal:active {
+  text-decoration: underline;
+}
+.filter__choice {
+  margin-bottom: 15px;
+}
+.filter__choice label {
+  margin-right: 15px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.filter__choice input {
+  width: 90px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+.filter__slider .ui-widget-content {
+  border: 2px solid #fff;
+  background-color: #e5097f;
+}
+.filter__slider .ui-slider-horizontal {
+  height: 6px;
 }
 @media (max-width: 1720px) {
   .wrapper {
