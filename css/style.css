@@ -2253,6 +2253,9 @@ a.breadcrumbs__link:active {
   background-color: #ffffff;
   border-top: 3px solid #b0cb1f;
 }
+.about__info--red {
+  border-top: 3px solid #e5097f;
+}
 .about__info .h1,
 .about__info .title-main,
 .about__info .title-2,
