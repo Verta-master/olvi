@@ -2256,6 +2256,9 @@ a.breadcrumbs__link:active {
 .about__info--red {
   border-top: 3px solid #e5097f;
 }
+.about__info--blue {
+  border-top: 3px solid #00a0e3;
+}
 .about__info .h1,
 .about__info .title-main,
 .about__info .title-2,
@@ -2268,6 +2271,9 @@ a.breadcrumbs__link:active {
 .about__info a:hover,
 .about__info a:active {
   text-decoration: underline;
+}
+.about__info ul {
+  padding-left: 20px;
 }
 .about__text {
   width: 750px;
