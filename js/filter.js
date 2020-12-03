@@ -1,6 +1,27 @@
 $('.filter__title').click(function() {
   $(this).next().slideToggle();
-})
+  $(this).toggleClass('filter__title--top');
+});
+
+if (window.innerWidth < 1170) {
+  $('.filter__btn').click(function() {
+    event.preventDefault();
+    $('.filter__drop').addClass('filter__drop--open');
+    $('.overlay').addClass('overlay--show');
+  })
+  
+  $('.filter__close').click(function() {
+    $('.filter__drop').removeClass('filter__drop--open');
+    $('.overlay').removeClass('overlay--show');
+  })
+  
+  $('.filter__closebtn').click(function() {
+    $('.filter__drop').removeClass('filter__drop--open');
+    $('.overlay').removeClass('overlay--show');
+  })
+  
+  $('.filter__wrap').niceScroll();
+}
 
 // Range sliders
 $( function() {

@@ -283,6 +283,7 @@
     line-height: 55px;
     letter-spacing: 0.04em;
   }
+  .filter__close,
   .menu__closebtn {
     display: block;
     position: absolute;
@@ -359,6 +360,8 @@
       border-top: 1px solid #fff;
     }
   }
+  .blog--catalog::before,
+  .blog--video-catalog::before,
   .menu__img,
   .menu__block--hidden {
     display: none;
@@ -506,5 +509,101 @@
   .faq__block .title-main {
     font-size: 16px;
     line-height: 24px;
+  }
+  .catalog--internal .title-main {
+    text-align: center;
+  }
+  .catalog__list {
+    margin-right: -10px;
+  }
+  .catalog__item {
+    width: 240px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .filter__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 46px;
+    padding-left: 30px;
+    margin-left: auto;
+    color: #fff;
+    font-size: 14px;
+    background-color: @blue;
+    border-radius: 4px;
+    background-image: url(../img/icons/83.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: left 80px center;
+  }
+  .filter__drop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    max-width: 100%;
+    display: block;
+    opacity: 0;
+    width: 0;
+    background-color: #fff;
+    .transition();
+    
+    &--open {
+      opacity: 1;
+      width: 360px;
+      z-index: 1000;
+      .transition();
+    }
+  }
+  .filter {
+    margin-bottom: 30px;
+  }
+  .filter__wrap {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .filter__top {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .filter__form {
+    display: block;
+  }
+  .filter__field--sort .filter__selection,
+  .filter__field--price .filter__selection,
+  .filter__field--size .filter__selection,
+  .filter__field {
+    width: 100%;
+  }
+  .filter__closebtn {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+  }
+  .filter__field--sort .filter__title {
+    padding: 12px 10px;
+    padding-right: 30px;
+    border: 1px solid #e6e6e6;
+  }
+  .filter__field--sort .filter__title span {
+    border: 0;
+    padding: 0;
+  }
+  .filter__selection {
+    position: static;
+    box-shadow: none;
+    border: 1px solid #e6e6e6;
+    
+    .checkbox__label {
+      width: 49%;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }
