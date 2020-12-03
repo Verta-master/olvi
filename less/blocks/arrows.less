@@ -1,0 +1,44 @@
+.arrows {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.arrows__link {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 4px;
+  
+  svg {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .fil0 {
+    fill: #E6E6E6;
+  }
+
+  .fil1 {
+    fill: #333333;
+  }
+  
+  &--next {
+    transform: rotate(180deg);
+    margin-left: 5px;
+  }
+  
+  &:hover,
+  &:active {
+    background-color: @blue;
+    
+    .fil0 {
+      fill: @blue;
+    }
+
+    .fil1 {
+      fill: #fff;
+    }
+  }
+}
