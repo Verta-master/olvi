@@ -2089,6 +2089,10 @@ h2,
   color: #666666;
   opacity: 1;
 }
+.form__message:focus,
+.form__input:focus {
+  border-color: #00a0e3;
+}
 .form__input {
   height: 46px;
   padding: 0 10px;
@@ -2211,6 +2215,8 @@ h2,
 .breadcrumbs {
   margin-top: 20px;
   margin-bottom: 12px;
+}
+.breadcrumbs .wrapper {
   padding-right: 60px;
 }
 .breadcrumbs__link {
@@ -3043,7 +3049,7 @@ a.breadcrumbs__link:active {
 .arrows {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 15px;
 }
 .arrows__link {
   width: 26px;
@@ -3081,6 +3087,7 @@ a.breadcrumbs__link:active {
 }
 .card {
   margin-bottom: 100px;
+  padding-top: 30px;
 }
 .card__wrap {
   display: -webkit-box;
@@ -3093,13 +3100,17 @@ a.breadcrumbs__link:active {
 }
 .card__slider {
   width: calc(100% - 426px);
+  position: relative;
+  padding-left: 65px;
+  padding-right: 65px;
 }
 .card__info {
   width: 396px;
   max-width: 100%;
 }
 .card__info .title-main {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 .card__info .catalog__rating {
   text-align: left;
@@ -3108,10 +3119,8 @@ a.breadcrumbs__link:active {
 .card__info .filter__sizes {
   margin-bottom: 30px;
 }
-.card__slider {
-  position: relative;
-  padding-left: 65px;
-  padding-right: 65px;
+.card__info .filter__modal {
+  margin-bottom: 8px;
 }
 .gallery-top {
   width: 100%;
@@ -3125,7 +3134,14 @@ a.breadcrumbs__link:active {
           box-sizing: border-box;
 }
 .card__slide {
+  position: relative;
   height: auto;
+}
+.card__labels {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
 }
 .card__thumb,
 .card__img {
@@ -3179,6 +3195,20 @@ a.breadcrumbs__link:active {
 .gallery-thumbs .swiper-slide-thumb-active {
   border-top: 2px solid #00a0e3;
 }
+.card__pagination {
+  display: none;
+}
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 4px;
+  margin: 4px;
+  border-radius: 0;
+  background-color: #f0f0f0;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #00a0e3;
+}
 .card__prev {
   left: 0;
 }
@@ -3202,6 +3232,9 @@ a.breadcrumbs__link:active {
 .card__brand:active {
   text-decoration: underline;
 }
+.card__brand {
+  margin-bottom: 10px;
+}
 .card__articul {
   margin-bottom: 15px;
   font-size: 14px;
@@ -3210,7 +3243,7 @@ a.breadcrumbs__link:active {
 .card__price {
   width: 100%;
   height: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: center;
   border-radius: 4px;
   background-color: #fafafa;
@@ -3346,7 +3379,7 @@ a.breadcrumbs__link:active {
 .card .card__name a {
   position: relative;
   display: block;
-  padding: 10px 30px;
+  padding: 10px 27px !important;
   font-size: 14px;
   color: #000;
   border-top: 3px solid rgba(255, 255, 255, 0);
@@ -3373,6 +3406,9 @@ a.breadcrumbs__link:active {
   margin-top: 0;
   padding-left: 20px;
 }
+.card__field ul li p {
+  margin-top: 0;
+}
 .card__field a {
   color: #00a0e3;
 }
@@ -3391,6 +3427,9 @@ a.breadcrumbs__link:active {
 }
 .review .form__btn {
   font-size: 14px;
+}
+.review .title {
+  font-size: 24px;
 }
 .review__sublist,
 .review__list {
@@ -3421,10 +3460,10 @@ a.breadcrumbs__link:active {
   border: 1px solid #f8f8f8;
 }
 .review__rating {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .review__name {
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: 14px;
   line-height: 1;
 }
@@ -3438,13 +3477,17 @@ a.breadcrumbs__link:active {
   border-radius: 11px;
 }
 .review__text {
-  padding: 5px 15px;
+  padding: 10px 15px;
   font-size: 14px;
   color: #000;
   border: 1px solid #f8f8f8;
 }
+.review__text p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
 .review__reply {
-  margin-right: 30px;
+  margin-right: 25px;
   font-size: 14px;
 }
 .review__comment {
@@ -3456,7 +3499,7 @@ a.breadcrumbs__link:active {
   display: block;
   position: relative;
   padding-left: 25px;
-  margin-right: 30px;
+  margin-right: 15px;
   min-width: 40px;
   height: 22px;
   line-height: 22px;
@@ -3476,6 +3519,7 @@ a.breadcrumbs__link:active {
   background-image: url(../img/icons/34.svg);
 }
 .review__dislike::before {
+  top: 0;
   background-image: url(../img/icons/35.svg);
 }
 .review__ava {
@@ -3599,6 +3643,48 @@ a.breadcrumbs__link:active {
   }
   .catalog__item {
     width: 270px;
+  }
+  .card__slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card__slider .card__prev {
+    left: -20px;
+  }
+  .card__slider .card__next {
+    right: -20px;
+  }
+  .card__info {
+    width: 270px;
+  }
+  .card__info .title-main {
+    font-size: 18px;
+  }
+  .card__info .filter__sizes {
+    margin-bottom: 20px;
+  }
+  .card__shop {
+    height: 46px;
+    font-size: 14px;
+  }
+  .card__slider {
+    width: calc(100% - 340px);
+  }
+  .card {
+    padding-top: 0;
+  }
+  .card .card__field {
+    font-size: 14px;
+  }
+  .card__articul {
+    margin-bottom: 10px;
+  }
+  .card__wrap {
+    margin-bottom: 65px;
+  }
+  .card .card__about {
+    width: 770px;
+    max-width: 100%;
   }
 }
 @media (max-width: 1400px) {
@@ -4287,6 +4373,24 @@ a.breadcrumbs__link:active {
     display: inline-block;
     vertical-align: middle;
   }
+  .card__pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .gallery-thumbs {
+    display: none;
+  }
+  .card__slider {
+    width: calc(100% - 300px);
+  }
 }
 @media (max-width: 766px) {
   .search__input {
@@ -4791,5 +4895,61 @@ a.breadcrumbs__link:active {
   }
   .catalog__item .catalog__img {
     height: 145px;
+  }
+  .form__line,
+  .card__wrap {
+    display: block;
+  }
+  .review .form__btn,
+  .form__input--video,
+  .form__label-file,
+  .form__field,
+  .form__line,
+  .review__comment,
+  .card__slider,
+  .card__info {
+    width: 100%;
+  }
+  .card__slider {
+    padding-bottom: 30px;
+  }
+  .card__slider .card__prev {
+    left: 0;
+  }
+  .card__slider .card__next {
+    right: 0;
+  }
+  .card__info .title-main {
+    font-size: 20px;
+  }
+  .card__info .filter__modal {
+    font-size: 12px;
+  }
+  .card .card__title {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-bottom: 0;
+  }
+  .card .card__name {
+    width: 50%;
+    margin: 0 !important;
+  }
+  .card .card__name a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+  }
+  .card .card__title .ui-tabs-active a::after {
+    display: none;
+  }
+  .review__sublist {
+    margin-left: 20px !important;
+  }
+  .form__line .form__comment {
+    text-align: left;
+  }
+  .card {
+    margin-bottom: 75px;
   }
 }

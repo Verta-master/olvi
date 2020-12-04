@@ -309,6 +309,9 @@
                   <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="card__img card__img--video">
                     <img src="img/images/card.jpg" alt="Olvi">
                   </a>
+                  <div class="card__labels">
+                    <div class="catalog__sale">sale</div>
+                  </div>
                 </div>
                 <div class="swiper-slide card__slide">
                   <a data-fancybox="gallery" href="img/images/12.png" class="card__img">
@@ -338,6 +341,7 @@
                 </div>
               </div>
             </div>
+            <div class="swiper-pagination card__pagination"></div>
             <div class="swiper-button-prev card__prev"></div>
             <div class="swiper-button-next card__next"></div>
           </div>
@@ -893,12 +897,21 @@
     var galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 5,
       slidesPerView: 2,
+      pagination: {
+        el: '.card__pagination',
+        clickable: true,
+      },
       navigation: {
         nextEl: '.card__next',
         prevEl: '.card__prev',
       },
       thumbs: {
         swiper: galleryThumbs
+      },
+      breakpoints: {
+        1022: {
+          slidesPerView: 1,
+        }
       }
     });
   </script>
