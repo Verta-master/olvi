@@ -2990,6 +2990,9 @@ a.breadcrumbs__link:active {
 .arrows__link:active .fil1 {
   fill: #fff;
 }
+.card {
+  margin-bottom: 100px;
+}
 .card__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3219,6 +3222,77 @@ a.breadcrumbs__link:active {
   background-image: url(../img/icons/14.svg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+.card .card__about {
+  width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+}
+.card .card__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  border: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid #e6e6e6;
+}
+.card .card__title .ui-tabs-active a {
+  color: #00a0e3;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-top: 3px solid #00a0e3;
+}
+.card .card__title .ui-tabs-active a::after {
+  display: block;
+}
+.card .card__name {
+  bottom: 0;
+  margin: 0;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+.card .card__name a {
+  position: relative;
+  display: block;
+  padding: 10px 30px;
+  font-size: 14px;
+  color: #000;
+  border-top: 3px solid rgba(255, 255, 255, 0);
+  outline: none;
+}
+.card .card__name a:hover,
+.card .card__name a:active {
+  color: #00a0e3;
+}
+.card .card__name a::after {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #fff;
+}
+.card .card__field {
+  padding: 0;
+}
+.card__field ul {
+  margin-top: 0;
+  padding-left: 20px;
+}
+.card__field a {
+  color: #00a0e3;
+}
+.card__field a:hover,
+.card__field a:active {
+  text-decoration: underline;
+}
+.card__subtitle {
+  margin-bottom: 0;
 }
 @media (max-width: 1720px) {
   .wrapper {
