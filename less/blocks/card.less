@@ -1,5 +1,6 @@
 .card {
   margin-bottom: 100px;
+  padding-top: 30px;
 }
 
 .card__wrap {
@@ -10,6 +11,9 @@
 
 .card__slider {
   width: ~"calc(100% - 426px)";
+  position: relative;
+  padding-left: 65px;
+  padding-right: 65px;
 }
 
 .card__info {
@@ -17,7 +21,8 @@
   max-width: 100%;
   
   .title-main {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 5px;
   }
   
   .catalog__rating {
@@ -28,12 +33,10 @@
   .filter__sizes {
     margin-bottom: 30px;
   }
-}
-
-.card__slider {
-  position: relative;
-  padding-left: 65px;
-  padding-right: 65px;
+  
+  .filter__modal {
+    margin-bottom: 8px;
+  }
 }
 
 .gallery-top {
@@ -49,7 +52,15 @@
 }
 
 .card__slide {
+  position: relative;
   height: auto;
+}
+
+.card__labels {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
 }
 
 .card__thumb,
@@ -103,6 +114,23 @@
   border-top: 2px solid @blue;
 }
 
+.card__pagination {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 4px;
+  margin: 4px;
+  border-radius: 0;
+  background-color: rgb(240, 240, 240);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: @blue;
+}
+
 .card__prev {
   left: 0;
 }
@@ -129,6 +157,10 @@
   }
 }
 
+.card__brand {
+  margin-bottom: 10px;
+}
+
 .card__articul {
   margin-bottom: 15px;
   font-size: 14px;
@@ -138,7 +170,7 @@
 .card__price {
   width: 100%;
   height: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: center;
   border-radius: 4px;
   background-color: rgb(250, 250, 250);
@@ -272,7 +304,7 @@
     a {
       position: relative;
       display: block;
-      padding: 10px 30px;
+      padding: 10px 27px !important;
       font-size: 14px;
       color: #000;
       border-top: 3px solid rgba(255,255,255,0);
@@ -305,6 +337,10 @@
   ul {
     margin-top: 0;
     padding-left: 20px;
+    
+    li p {
+      margin-top: 0;
+    }
   }
   a {
     color: @blue;
