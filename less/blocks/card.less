@@ -1,3 +1,7 @@
+.card {
+  margin-bottom: 100px;
+}
+
 .card__wrap {
   display: flex;
   justify-content: space-between;
@@ -229,4 +233,89 @@
       background-size: contain;
     }
   }
+}
+
+.card {
+  .card__about {
+    width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+  }
+
+  .card__title {
+    display: flex;
+    margin-bottom: 30px;
+    border: 0;
+    padding: 0;
+    background-color: rgba(255,255,255,0);
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+    .ui-tabs-active a {
+      color: @blue;
+      border-left: 1px solid rgb(230, 230, 230);
+      border-right: 1px solid rgb(230, 230, 230);
+      border-top: 3px solid @blue;
+      
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  .card__name {
+    bottom: 0;
+    margin: 0;
+    border: 0;
+    background-color: rgba(255,255,255,0);
+    
+    a {
+      position: relative;
+      display: block;
+      padding: 10px 30px;
+      font-size: 14px;
+      color: #000;
+      border-top: 3px solid rgba(255,255,255,0);
+      outline: none;
+      
+      &:hover,
+      &:active {
+        color: @blue;
+      }
+      
+      &::after {
+        display: none;
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .card__field {
+    padding: 0;
+  }
+}
+
+.card__field {
+  ul {
+    margin-top: 0;
+    padding-left: 20px;
+  }
+  a {
+    color: @blue;
+    
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.card__subtitle {
+  margin-bottom: 0;
 }
