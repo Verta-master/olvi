@@ -298,7 +298,48 @@
       <div class="wrapper">
         <div class="card__wrap">
           <div class="card__slider">
-            
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card__slide">
+                  <a data-fancybox="gallery" href="img/images/card-1.jpg" class="card__img">
+                    <img src="img/images/card-1.jpg" alt="Olvi">
+                  </a>
+                </div>
+                <div class="swiper-slide card__slide">
+                  <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="card__img card__img--video">
+                    <img src="img/images/card.jpg" alt="Olvi">
+                  </a>
+                </div>
+                <div class="swiper-slide card__slide">
+                  <a data-fancybox="gallery" href="img/images/card-1.jpg" class="card__img">
+                    <img src="img/images/12.png" alt="Olvi">
+                  </a>
+                </div>
+                <div class="swiper-slide card__slide">
+                  <a data-fancybox="gallery" href="img/images/card-1.jpg" class="card__img">
+                    <img src="img/images/img-3.jpg" alt="Olvi">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/card-1.jpg" alt="Olvi">
+                </div>
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/card.jpg" alt="Olvi">
+                </div>
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/12.png" alt="Olvi">
+                </div>
+                <div class="swiper-slide card__thumb">
+                  <img src="img/images/img-3.jpg" alt="Olvi">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev card__prev"></div>
+            <div class="swiper-button-next card__next"></div>
           </div>
           
           <div class="card__info">
@@ -338,20 +379,20 @@
             <div class="card__block">
               <a href="#" class="card__click">Купить в один клик</a>
               <div class="card__btns">
-                <form action="#" class="catalog__icon catalog__icon--compare catalog__icon--compare-active">
+                <form action="#" class="catalog__icon catalog__icon--compare">
                   <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
                     <use href="#icon-compare"></use>
                   </svg>
                 </form>
-                <a href="#" class="catalog__icon catalog__icon--like catalog__icon--like-active">
+                <a href="#" class="catalog__icon catalog__icon--like">
                   <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
                     <use href="#icon-like"></use>
                   </svg>
                 </a>
               </div>
             </div>
-            <div class="card__bonus">Скидка за ссылку 7%</div>
-            <div class="card__bonus card__bonus--video">+100 грн за видеообзор</div>
+            <div class="card__bonus"><span>Скидка за ссылку 7%</span></div>
+            <div class="card__bonus card__bonus--video"><span>+100 грн за видеообзор</span></div>
           </div>
         </div>
         
@@ -718,6 +759,25 @@
         480: {
           slidesPerView: 1,
         }
+      }
+    });
+    
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 'auto',
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 5,
+      slidesPerView: 2,
+      navigation: {
+        nextEl: '.card__next',
+        prevEl: '.card__prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs
       }
     });
   </script>
