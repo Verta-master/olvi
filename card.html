@@ -520,9 +520,37 @@
                 </li>
               </ul>
               
-              <p class="title-main"></p>
-              <form action="#" class="review__form">
-                
+              <p class="title">Отзыв о товаре</p>
+              <form action="#" class="form">
+                <div class="form__line">
+                  <div class="form__field">
+                    <label for="positive" class="form__label">Достоинства:</label>
+                    <input type="text" id="positive" class="form__input">
+                  </div>
+                  <div class="form__field">
+                    <label for="negative" class="form__label">Недостатки:</label>
+                    <input type="text" id="negative" class="form__input">
+                  </div>
+                </div>
+                <label for="comment" class="form__label">Комментарий:</label>
+                <textarea id="comment" class="form__message"></textarea>
+                <div class="form__line">
+                  <input type="file" id="file" class="form__file">
+                  <label for="file" class="form__label-file"><span>Добавить фото</span></label>
+                  <input type="text" class="form__input form__input--video" placeholder="Вставьте ссылку на YouTube-видео:">
+                </div>
+                <label for="name1" class="form__label">Имя:<span>*</span></label>
+                <input type="text" id="name1" class="form__input" required="">
+                <label for="tel1" class="form__label">Телефон:<span>*</span></label>
+                <input type="tel" id="tel1" class="form__input" required="">
+                <label for="email1" class="form__label">E-mail:<span>*</span></label>
+                <input type="email" id="email1" class="form__input" required="">
+                <div class="form__line">
+                  <input type="checkbox" id="checkbox" class="checkbox" checked="">
+                  <label for="checkbox" class="checkbox__label">Уведомлять об ответах по эл. почте</label>
+                  <p class="form__comment"><span>*</span> — Поля, обязательные для заполнения</p>
+                </div>
+                <button type="submit" class="btn form__btn">Добавить свой отзыв</button>
               </form>
             </div>
           </div>
