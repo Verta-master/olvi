@@ -19,13 +19,18 @@
 }
 
 .nets__list {
-  .reset();
+  .reset() !important;
   list-style: none;
 }
 
 .nets__item {
   margin-left: 3px;
   margin-right: 3px;
+  padding-left: 0 !important;
+  
+  &::before {
+    display: none;
+  }
 }
 
 .nets__link {

@@ -1,0 +1,51 @@
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.nav__link {
+//  position: relative;
+  display: block;
+  width: 42%;
+  color: @blue;
+  font-size: 14px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 50%;
+    background-image: url(../img/icons/21.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &--prev {
+    padding-left: 45px;
+    
+    &::before {
+      transform: translateY(-50%) rotate(180deg);
+      left: 0;
+    }
+  }
+  
+  &--next {
+    padding-right: 45px;
+    
+    &::before {
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}

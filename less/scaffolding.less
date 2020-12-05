@@ -91,3 +91,27 @@ button {
     display: block;
   }
 }
+
+blockquote {
+  position: relative;
+  margin: 35px 0;
+  padding: 20px 25px;
+  color: #1a1a1a;
+  font-weight: 300;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 23.75px 1.25px rgba(0, 0, 0, 0.1);
+  border-left: 3px solid @blue;
+  
+  a {
+    color: @blue;
+    
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.blockquote-big {
+  font-size: 20px;
+}

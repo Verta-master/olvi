@@ -555,6 +555,9 @@
       border: 1px solid #e6e6e6;
     }
   }
+  .card .card__title .ui-tabs-active a {
+    padding-bottom: 13px !important;
+  }
   .card .card__title .ui-tabs-active a::after {
     display: none;
   }
@@ -566,5 +569,37 @@
   }
   .card {
     margin-bottom: 75px;
+  }
+  .modal--size {
+    padding: 20px;
+  }
+  .blog__article {
+    font-size: 14px;
+    
+    .title-main {
+      font-size: 20px;
+    }
+  }
+  blockquote {
+    padding: 10px 15px;
+  }
+  .blockquote-big {
+    font-size: 16px;
+  }
+  .nav__link {
+    width: 47%;
+    font-size: 12px;
+    
+    &::before {
+      width: 16px;
+      height: 16px;
+    }
+    
+    &--prev {
+      padding-left: 25px;
+    }
+    &--next {
+      padding-right: 25px;
+    }
   }
 }
