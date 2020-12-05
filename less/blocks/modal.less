@@ -4,6 +4,43 @@
   padding: 30px;
   padding-top: 20px;
   background-color: rgb(255, 255, 255);
+  
+  &--size {
+    width: 670px;
+    padding-left: 45px;
+    padding-right: 45px;
+    font-size: 14px;
+    
+    .modal__title {
+      max-width: 100%;
+    }
+  }
+  
+  a {
+    color: @blue;
+    
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+  
+  ol {
+    padding-left: 20px;
+    
+    li {
+      margin-bottom: 5px;
+    }
+    img {
+      display: block;
+      margin: 10px auto;
+    }
+  }
+  
+  .subtitle {
+    font-weight: 400;
+    text-align: center;
+  }
 }
 
 .modal__title {
@@ -76,5 +113,44 @@
     color: #000;
     border: 1px solid rgb(230, 230, 230);
     background-color: #fff;
+  }
+}
+
+.modal__table {
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: center;
+  
+  th {
+    font-weight: 400;
+    height: 37px;
+    border: 1px solid rgb(230, 230, 230);
+  }
+  td {
+    height: 37px;
+    border: 1px solid rgb(230, 230, 230);
+  }
+}
+
+.modal__video {
+  margin-bottom: 30px;
+  
+  iframe {
+    display: block;
+    width: 100%;
+    height: 365px;
+    border: 0;
+  }
+}
+
+.modal__banner {
+  width: 100%;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }

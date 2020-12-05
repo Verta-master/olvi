@@ -362,7 +362,7 @@
               <div class="catalog__newprice">777 грн</div>
               <div class="catalog__oldprice">1150 грн</div>
             </div>
-            <a href="#" class="filter__modal">Как правильно определить размер?</a>
+            <a data-fancybox data-src="#size" href="javascript:;" class="filter__modal">Как правильно определить размер?</a>
             <div class="filter__sizes">
               <input type="checkbox" id="size1" class="filter__check">
               <label for="size1" class="filter__label-size">30</label>
@@ -381,7 +381,7 @@
             </div>
             <a href="#" class="btn card__shop">В корзину</a>
             <div class="card__block">
-              <a href="#" class="card__click">Купить в один клик</a>
+              <a data-fancybox data-src="#click" href="javascript:;" class="card__click">Купить в один клик</a>
               <div class="card__btns">
                 <form action="#" class="catalog__icon catalog__icon--compare">
                   <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
@@ -395,8 +395,8 @@
                 </a>
               </div>
             </div>
-            <div class="card__bonus"><span>Скидка за ссылку 7%</span></div>
-            <div class="card__bonus card__bonus--video"><span>+100 грн за видеообзор</span></div>
+            <a data-fancybox data-src="#discount" href="javascript:;" class="card__bonus"><span>Скидка за ссылку 7%</span></a>
+            <a data-fancybox data-src="#video" href="javascript:;" class="card__bonus card__bonus--video"><span>+100 грн за видеообзор</span></a>
           </div>
         </div>
         
@@ -817,6 +817,136 @@
         </form>
       </div>
     </div>
+  </div>
+  
+  <div style="display: none;" id="alert" class="modal">
+    <p class="modal__title">Уведомить о поступлении</p>
+    <form action="#" class="form">
+      <label for="tel4" class="form__label">Ваш телефон:<span>*</span></label>
+      <input type="tel" id="tel4" class="form__input" required>
+      <div class="form__captcha">
+        <img src="img/images/captcha.jpg" alt="captcha">
+      </div>
+      <button type="submit" class="btn form__btn">Отправить</button>
+    </form>
+  </div>
+  
+  <div style="display: none;" id="click" class="modal">
+    <p class="modal__title">Купить в 1 клик</p>
+    <form action="#" class="form">
+      <label for="name5" class="form__label">ФИО:<span>*</span></label>
+      <input type="text" id="name5" class="form__input" required>
+      <label for="tel5" class="form__label">Ваш телефон:<span>*</span></label>
+      <input type="tel" id="tel5" class="form__input" required>
+      <button type="submit" class="btn form__btn">Заказать</button>
+    </form>
+  </div>
+  
+  <div style="display: none;" id="size" class="modal modal--size">
+    <p class="modal__title">Таблица размеров</p>
+    <table class="modal__table">
+      <tr>
+        <th>Размер</th>
+        <th>Длина стельки, см</th>
+        <th>Высота задника, см</th>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>13.5</td>
+        <td>10.5</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>14.2</td>
+        <td>10.5</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>15</td>
+        <td>10.5</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>15.5</td>
+        <td>10.5</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>16.5</td>
+        <td>11.5</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>17</td>
+        <td>11.5</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>17.7</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td>18.5</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>19</td>
+        <td>12.5</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>19.5</td>
+        <td>12.5</td>
+      </tr>
+    </table>
+    <p class="modal__title">Как правильно определить размер?</p>
+    <div class="modal__video">
+      <iframe src="https://youtu.be/uwHLTg8ZXRA"></iframe>
+    </div>
+  </div>
+  
+  <div style="display: none;" id="discount" class="modal modal--size">
+    <p class="modal__title">Поделись ссылкой, получи 7% скидки</p>
+    <p>Новости: <a href="#">Поделись ссылкой - получи скидку!</a></p>
+    <figure class="modal__banner">
+      <img src="img/images/banner-3.jpg" alt="скидки">
+    </figure>
+    <p>Если вы или ваши знакомые покупали у нас какую-либо продукцию – у вас есть возможность покупать наши товары со скидкой 7%! Для этого оставьте отзыв или рекомендацию на тематическом форуме в виде ссылки на любую страницу нашего сайта.</p>
+    <p>Если покупаете впервые - можете на форуме высказать намерение о покупке со ссылкой на наш сайт.</p>
+    <p>Для подтверждения такого отзыва – вышлите нам адрес страницы, на которой была оставлена ссылка-рекомендация с помощью раздела «<a href="#">Контакты</a>».</p>
+    <p>Ссылка в соцсетях ( vk.com, FB, пр.) не подходит.</p>
+    <p>Удачных покупок!</p>
+    <p><b>Внимание!</b> Акции не суммируются, то есть если ваша покупка попадает под две акции – выберите одну, которая для вас интереснее.</p>
+  </div>
+  
+  <div style="display: none;" id="video" class="modal modal--size">
+    <p class="modal__title">100грн за ваше видео!</p>
+    <figure class="modal__banner">
+      <img src="img/images/banner-2.jpg" alt="скидки">
+    </figure>
+    <p><b>Оплатим 100 грн</b> за видеоролик с примеркой ортопедической обуви 4rest-orto или обзором другого товара из нашего ассортимента!</p>
+    <p>Хотите получить в подарок 100 грн? - Покажите нам видео с примеркой обуви или Вашим использованием другого товара из нашего интернет-магазина! Для этого Вам необходимо сделать несколько шагов:</p>
+    <ol>
+      <li>Покупаете товар в нашем интернет-магазине, в карточке которого присутствует значок <img src="img/images/modal-1.jpg" alt="скидки"></li>
+      <li>Снимаете на видео примерку своей обновки;</li>
+      <li>В ролике подробно демонстрируете внешний вид обуви или другого товара, а также упаковку и комплектацию;</li>
+      <li>Делитесь впечатлениями о сервисе нашего интернет-магазина (консультация, приём и обработка заказа, доставка);</li>
+      <li>Выкладываете видеоролик на свой YouTube-канал, или же публикуете его в своём блоге, либо на странице в соцсетях. Напишите при этом к нему комментарий (не менее 100 символов), поместив в комментарий ссылку на страницу товара на нашем сайте;</li>
+      <li>Переходите на страницу товара, на который Вы сделали видеообзор. Жмете кнопку "Написать отзыв" (находится под описанием товара). Под формой комментария найдете такую форму, в которую в соответствующее поле нужно вставить ссылку на Youtube видео: <img src="img/images/modal-2.jpg" alt="скидки"></li>
+    </ol>
+    <p>На этом ваши шаги к получению приятного бонуса заканчиваются и дело за нами. В течении недели ваше видео и комментарий пройдут модерацию, и в случае успеха (соблюдение требований к видео) вы получите <b>100 грн на карточный или телефонный счет.</b></p>
+    <p class="subtitle">Требования к видеоролику:</p>
+    <ol>
+      <li>Качество видео - от 480 p и выше. Ориентация картинки – горизонтальная;</li>
+      <li>Дополнительным плюсом автору будет голосовое сопровождение и чистый звук;</li>
+      <li>Продолжительность видео - до 5 минут;</li>
+      <li>Один видеоролик должен соответствовать одному товару. Если вы купили, скажем,  две пары обуви, вы можете снять два видеоролика и получить в подарок 200 грн. :)</li>
+      <li>Описание видео непременно должно начинаться со ссылки на страницу товара на нашем сайте;</li>
+      <li>Видеоролик должен оставаться в открытом доступе не менее года.</li>
+    </ol>
+    <p>Кроме того, авторов лучших роликов по итогам года ждут призы - <a href="#">массажные коврики</a> и <a href="#">ортопедические подушки</a> из ассортимента нашего магазина.</p>
   </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
