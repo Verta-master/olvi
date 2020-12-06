@@ -15,6 +15,7 @@
   }
 }
 
+.form__select,
 .form__message,
 .form__input {
   display: block;
@@ -70,6 +71,7 @@
   }
 }
 
+.form__radio,
 .form__file,
 .checkbox {
   display: none;
@@ -159,4 +161,79 @@
 
 .form__captcha {
   text-align: center;
+}
+
+.form__radiolabel {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  font-size: 14px;
+  color: #666666;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  
+  b {
+    display: block;
+    color: #000;
+    font-weight: 400;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 50%;
+    background-color: rgb(230, 230, 230);
+  }
+}
+
+.form__radio:checked + .form__radiolabel::before {
+  background-color: @blue;
+  border: 6px solid rgb(220, 220, 220);
+}
+
+.form__select {
+  height: 46px;
+  padding: 0 10px;
+  outline: none;
+  color: #000;
+}
+
+.form__number {
+  display: flex;
+  justify-content: center;
+}
+
+.form__num {
+  display: block;
+  width: 25px;
+  height: 34px;
+  text-align: center;
+  left: 34px;
+  font-size: 24px;
+  
+  &--minus {
+    color: @red;
+  }
+  &--plus {
+    color: @blue;
+  }
+}
+
+.form__value {
+  display: block;
+  width: 40px;
+  height: 34px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
 }
