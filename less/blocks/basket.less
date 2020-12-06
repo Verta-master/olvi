@@ -30,16 +30,21 @@
   
   .form__comment {
     text-align: left;
-    margin-bottom: 10px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+  }
+  
+  .filter__modal {
+    margin-top: 10px;
   }
 }
 
 .basket__title {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   padding-left: 45px;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #fff;
   font-size: 20px;
   line-height: 1;
@@ -50,12 +55,15 @@
   background-size: 26px 26px;
   
   &--name {
+    margin-bottom: 18px;
     background-image: url(../img/icons/32.svg);
   }
   &--delivery {
+    margin-bottom: 35px;
     background-image: url(../img/icons/31.svg);
   }
   &--payment {
+    margin-bottom: 30px;
     background-image: url(../img/icons/33.svg);
   }
   &--order {
@@ -70,6 +78,10 @@
   max-width: 100%;
   margin-top: 70px;
   margin-bottom: 40px;
+  
+  .title-main {
+    margin-bottom: 12px;
+  }
 }
 
 .basket__alert {
@@ -88,6 +100,7 @@
     
     li {
       width: 50%;
+      margin-bottom: 3px;
     }
   }
   
@@ -97,6 +110,7 @@
 }
 
 .basket__bottom {
+  margin-top: -20px;
   text-align: center;
 }
 
@@ -189,7 +203,7 @@
 
 .basket__total {
   max-width: 400px;
-  margin-top: 30px;
+  margin-top: 5px;
   margin-left: auto;
   padding: 15px 85px;
   font-size: 14px;
@@ -200,5 +214,17 @@
   span {
     margin-left: 5px;
     font-size: 28px;
+  }
+}
+
+.basket__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+  img {
+    display: block;
+    flex: 0 0 auto;
   }
 }
