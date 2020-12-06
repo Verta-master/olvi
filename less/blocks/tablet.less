@@ -624,6 +624,7 @@
   .basket__wrap {
     flex-direction: column-reverse;
   }
+  .basket__finish,
   .basket__delivery,
   .basket__left,
   .basket__right {
@@ -637,5 +638,15 @@
   }
   .basket {
     margin-bottom: 75px;
+  }
+  .basket__report {
+    display: block;
+  }
+  .basket__finish {
+    margin-left: 0;
+    
+    ul li:first-child {
+      max-width: 240px;
+    }
   }
 }
