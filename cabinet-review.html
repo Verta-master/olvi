@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>OLVI</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <svg style="display:none">
+    <symbol id="icon-like">
+      <path d="M1627678 2479566c199269,-139270 791464,-563457 1056258,-868241 203463,-231294 316064,-470808 316064,-785965 0,-111637 -22815,-218144 -64023,-315270 -42909,-100981 -105799,-192042 -183710,-268196 -77854,-76096 -170814,-137484 -273977,-179344 -99223,-40245 -208026,-62550 -322072,-62550 -103871,0 -206893,18479 -304132,54784 -112034,41832 -227157,112431 -306343,202075 -16041,18138 -30750,36872 -45460,56031 -198,255 -368,283 -566,0 -14710,-19159 -29419,-37893 -45460,-56031 -79186,-89644 -194309,-160243 -306343,-202075 -97239,-36305 -200261,-54784 -304132,-54784 -114046,0 -222849,22305 -322072,62550 -103163,41860 -196123,103248 -273977,179344 -77911,76154 -140801,167215 -183710,268196 -41208,97126 -64023,203633 -64023,315270 0,315157 112601,554671 316064,785965 264794,304784 856989,728971 1056258,868241 35370,24714 82643,65355 127621,65355 45148,0 92252,-40556 127735,-65355zm-127678 -1864670c77996,-482 93243,-57533 126885,-111297 24260,-38856 52743,-74651 85279,-106705 34803,-34208 74311,-65271 116002,-90353 32507,-19527 66857,-36050 102284,-49314 72016,-26839 148906,-40528 225768,-40528 84373,0 165061,16466 238664,46225 76295,30864 145108,76125 202613,132326 116398,113876 182008,267430 182008,430053 0,263377 -91542,449127 -263717,644570 -63031,72356 -150039,154773 -247279,239230 -97240,84458 -204880,171098 -309120,251899 -94717,73405 -186771,141991 -265900,199864 -64108,46905 -128670,93130 -193487,139015 -64817,-45885 -129379,-92110 -193487,-139015 -79129,-57873 -171183,-126459 -265900,-199864 -104240,-80801 -211880,-167441 -309120,-251899 -97240,-84457 -184248,-166874 -247279,-239230 -172175,-195443 -263717,-381193 -263717,-644570 0,-162623 65610,-316177 182008,-430053 57505,-56201 126318,-101462 202613,-132326 73603,-29759 154291,-46225 238664,-46225 76862,0 153752,13689 225768,40528 35427,13264 69777,29787 102284,49314 41691,25082 81199,56145 116002,90353 32536,32054 61019,67849 85279,106705 33642,53764 48889,110815 126885,111297z"/>
+    </symbol>
+    <symbol id="icon-compare">
+      <path d="M1865759 1208793c0,313289 254413,568155 567135,568155 151485,0 293899,-59074 401022,-166424 107123,-107292 166112,-249962 166112,-401731 0,-20580 -5584,-40819 -16186,-58451l-355922 -594348c40904,-17178 69648,-57629 69648,-104826 0,-62760 -50826,-113642 -113444,-113642l-970708 0 0 -223884c0,-62759 -50770,-113642 -113388,-113642 -62674,0 -113444,50883 -113444,113642l0 223884 -970708 0c-62618,0 -113444,50882 -113444,113642 0,47197 28744,87648 69648,104826l-355922 594348c-10602,17632 -16158,37871 -16158,58451 0,313289 254384,568155 567106,568155 312722,0 567163,-254866 567163,-568155 0,-20580 -5584,-40819 -16186,-58451l-350650 -585532 619151 0 0 1908024 -869623 0c-62618,0 -113416,50854 -113416,113614 0,62760 50798,113643 113416,113643l1966078 0c62647,0 113416,-50883 113416,-113643 0,-62760 -50769,-113614 -113416,-113614l-869623 0 0 -1908024 619151 0 -350622 585532c-10602,17632 -16186,37871 -16186,58451zm-1298653 340899c-147857,0 -273915,-95019 -320715,-227285l641460 0c-46829,132266 -172859,227285 -320745,227285zm253393 -454541l-506785 0 253392 -423105 253393 423105zm1612395 -423105l253392 423105 -506785 0 253393 -423105zm320744 650361c-46829,132266 -172859,227285 -320744,227285 -147857,0 -273916,-95019 -320773,-227285l641517 0z"/>
+    </symbol>
+    <symbol id="icon-basket">
+      <path d="M81 90c-8,0 -14,7 -14,14 0,8 6,14 14,14l47 0c23,58 46,116 69,174l-21 51c-2,4 -2,9 1,13 3,4 7,6 12,6l234 0c8,0 14,-6 14,-14 0,-7 -6,-14 -14,-14l-213 0 12 -29 226 -18c6,0 11,-5 12,-11l28 -122c2,-8 -5,-17 -13,-17l-310 0 -15 -38c-2,-5 -7,-9 -13,-9l-56 0zm96 75l87 0 0 42 -70 0 -17 -42zm115 0l56 0 0 42 -56 0 0 -42zm84 0l81 0 -10 42 -71 0 0 -42zm-171 71l59 0 0 38 -43 3 -16 -41zm87 0l56 0 0 31 -56 4 0 -35zm84 0l65 0 -6 24 -59 5 0 -29zm-136 136c-25,0 -47,21 -47,46 0,26 22,47 47,47 26,0 47,-21 47,-47 0,-25 -21,-46 -47,-46zm132 0c-26,0 -47,21 -47,46 0,26 21,47 47,47 25,0 46,-21 46,-47 0,-25 -21,-46 -46,-46zm-132 28c11,0 19,8 19,18 0,11 -8,19 -19,19 -10,0 -18,-8 -18,-19 0,-10 8,-18 18,-18zm132 0c10,0 18,8 18,18 0,11 -8,19 -18,19 -11,0 -19,-8 -19,-19 0,-10 8,-18 19,-18z"/>
+    </symbol>
+  </svg>
+ 
+  <header class="header">
+    <div class="wrapper header__wrap">
+      <div class="logo">
+        <img src="img/images/1.png" alt="Logo">
+      </div>
+      <div class="header__phones">
+        <button type="button" class="header__mobilebtn"></button>
+        <a href="tel:+380977360649" class="header__phone">+38 (097) 736 06 49</a>
+        <a href="tel:+380668588806" class="header__phone">+38 (066) 858 88 06</a>
+        <a href="tel:+380635925786" class="header__phone">+38 (063) 592 57 86</a>
+        <button type="button" class="header__dropbtn"></button>
+        <div class="header__droptablet">
+          <p class="header__title">Контакты</p>
+          <button type="button" class="header__closebtn"></button>
+          <div class="header__block">
+            <div class="header__time">Мы работаем: Пн-Сб 9:00-19:00</div>
+          </div>
+          <div class="header__block">
+            <a href="tel:+380977360649" class="header__tel">+38 (097) 736 06 49</a>
+            <a href="tel:+380668588806" class="header__tel">+38 (066) 858 88 06</a>
+            <a href="tel:+380635925786" class="header__tel">+38 (063) 592 57 86</a>
+          </div>
+          <div class="header__block">
+            <p class="header__opt">Оптовикам:<a href="tel:+380977115588">+38 (097) 711 55 88</a></p>
+          </div>
+          <div class="header__block">
+            <a href="skype:Olvi_shop" class="header__skype">Olvi_shop</a>
+          </div>
+          <div class="header__block">
+            <a data-fancybox data-src="#call" href="javascript:;" class="header__mobilecall">Обратный звонок</a>
+          </div>
+          <div class="header__block">
+            <a href="mailto:" class="header__mail">Написать нам</a>
+          </div>
+        </div>
+      </div>
+      <a data-fancybox data-src="#call" href="javascript:;" class="header__call">Обратный звонок</a>
+      <span class="header__time">Мы работаем: Пн-Сб 9:00-19:00</span>
+      <a data-fancybox data-src="#login" href="javascript:;" class="header__login">Войти в кабинет</a>
+      <div class="header__icons">
+        <a href="#" class="header__icon header__icon--like" title="Избранное">
+          <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+            <use href="#icon-like"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__icon header__icon--compare" title="Сравнение">
+          <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+            <use href="#icon-compare"></use>
+          </svg>
+          <span class="header__number">9</span>
+        </a>
+        <div class="header__basket">
+          <a href="#" class="header__icon header__icon--basket" title="Корзина">
+            <svg width="0.555551in" height="0.555551in" viewBox="0 0 556 556">
+              <use href="#icon-basket"></use>
+            </svg>
+            <span class="header__number">3</span>
+          </a>
+          <div class="header__drop">
+            <p>В корзин 3 товара</p>
+            <p>На сумму 2256 грн</p>
+            <a href="#" class="btn header__btn">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="menu">
+    <div class="wrapper menu__wrap">
+      <div class="menu__catalog">
+        <a href="#" class="menu__btn">
+          <div class="menu__btn__wrap">
+            <svg width="0.333331in" height="0.333331in" viewBox="0 0 333 333">
+              <path d="M28 56l278 0 0 27 -278 0 0 -27zm0 194l278 0 0 28 -278 0 0 -28zm0 -97l278 0 0 28 -278 0 0 -28z"/>
+            </svg>
+            <span>Каталог</span>
+          </div>
+        </a>
+        <div class="menu__drop">
+          <p class="menu__title">Каталог</p>
+          <button type="button" class="menu__closebtn"></button>
+          <div class="wrapper menu__main">
+            <div class="menu__block">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">ДЕТСКАЯ ОРТОПЕДИЧЕСКАЯ ОБУВЬ</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><a href="#">Туфли</a></li>
+                  <li><a href="#">Демисезонные ботинки</a></li>
+                  <li><a href="#">Сандалии</a></li>
+                  <li><a href="#">Антиварусная обувь</a></li>
+                  <li><a href="#">Ортопедические тапочки</a></li>
+                  <li><a href="#">Зимние ортопедические ботинки</a></li>
+                  <li><a href="#">Ортопедические кроссовки</a></li>
+                  <li><a href="#">Термоботинки</a></li>
+                  <li><a href="#">Сменная ортопедическая обувь</a></li>
+                  <li><a href="#">Сандалии анатомические</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu__block">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Стельки</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><a href="#">Ортопедические стельки для взрослых</a></li>
+                  <li><a href="#">Ортопедические стельки для детей</a></li>
+                  <li><a href="#">Стельки при плоскостопии</a></li>
+                  <li><a href="#">Стельки при вальгусной деформации</a></li>
+                  <li><a href="#">Стельки силиконовые</a></li>
+                  <li><a href="#">Стельки при пяточной шпоре</a></li>
+                  <li><a href="#">Каркасные стельки и полустельки</a></li>
+                  <li><a href="#">Стельки с супинатором</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu__block menu__block--hidden">
+              <a href="#" class="menu__subcategory">ПО НАЗНАЧЕНИЮ</a>
+              <ul class="menu__category__list">
+                <li><a href="#">Обувь при плоскостопии</a></li>
+                <li><a href="#">Варусные стопы</a></li>
+                <li><a href="#">Обувь при вальгусной деформации</a></li>
+                <li><a href="#">Профилактическая обувь</a></li>
+              </ul>
+              <a href="#" class="menu__subcategory">ПО МАРКАМ</a>
+              <ul class="menu__category__list">
+                <li><a href="#">4Rest-Orto</a></li>
+                <li><a href="#">4Rest-Orto для взрослых</a></li>
+                <li><a href="#">Ортекс</a></li>
+                <li><a href="#">Ортекс для взрослых</a></li>
+                <li><a href="#">Теллус и другая обувь</a></li>
+              </ul>
+            </div>
+            <div class="menu__block">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Ортопедические подушки</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><a href="#">Подушки для взрослых</a></li>
+                  <li><a href="#">Ортопедические подушки для детей</a></li>
+                  <li><a href="#">Подушки для сидения</a></li>
+                  <li><a href="#">Ортопедические подушки для сна и отдыха</a></li>
+                  <li><a href="#">Подушки для младенцев</a></li>
+                  <li><a href="#">Подушки для водителей</a></li>
+                  <li><a href="#">Подушки с эффектом памяти</a></li>
+                  <li><a href="#">Подушки для беременных</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu__block">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Ортопедическая обувь для взрослых</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><span class="menu__subcategory">ВИДЫ ОБУВИ</span></li>
+                  <li><a href="#">Сандалии</a></li>
+                  <li><a href="#">Туфли</a></li>
+                  <li><a href="#">Ботинки</a></li>
+                  <li><a href="#">Ортопедическая обувь для врачей</a></li>
+                  <li><span class="menu__subcategory">ВИДЫ ОБУВИ</span></li>
+                  <li><a href="#">Комфортная обувь</a></li>
+                  <li><a href="#">Диабетическая обувь</a></li>
+                  <li><a href="#">Обувь при hallux valgus</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu__block">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Массажные коврики</a>
+              </div>
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Бандажи</a>
+              </div>
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Другие товары</a>
+              </div>
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Маски, антисептики и защитные экраны</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><a href="#">Многоразовые защитные маски</a></li>
+                  <li><a href="#">Спиртовые санитайзеры для рук</a></li>
+                  <li><a href="#">Защитные экраны</a></li>
+                </ul>
+              </div>
+            </div>
+            <figure class="menu__img">
+              <img src="img/images/12.png" alt="Каталог">
+            </figure>
+            <div class="menu__mobile">
+              <div class="menu__block">
+                <a href="#" class="menu__category">О нас</a>
+              </div>
+              <div class="menu__block">
+                <a href="#" class="menu__category">Оплата и доставка</a>
+              </div>
+              <div class="menu__block">
+                <a href="#" class="menu__category">Оптовикам</a>
+              </div>
+              <div class="menu__block">
+                <a href="#" class="menu__category">контакты</a>
+              </div>
+              <div class="menu__block">
+                <a href="#" class="menu__category menu__category--sale">Акции %</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Оплата и доставка</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Оптовикам</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Контакты</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">АКЦИИ%</a>
+        </li>
+      </ul>
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Поиск">
+        <button type="submit" class="search__btn"></button>
+      </form>
+      <div class="menu__langs">
+        <a href="#" class="menu__lang">UA</a>
+        <a href="#" class="menu__lang menu__lang--active">RU</a>
+      </div>
+    </div>
+  </nav>
+  <div class="overlay"></div>
+  
+  <main>
+    <nav class="breadcrumbs">
+      <div class="wrapper">
+        <a href="#" class="breadcrumbs__link">Главная</a>
+        <a href="#" class="breadcrumbs__link">Личный кабинет</a>
+        <span class="breadcrumbs__link">Мои отзывы</span>
+      </div>
+    </nav>
+    
+    <section class="order">
+      <div class="wrapper">
+        <h1 class="title-main">Мои отзывы</h1>
+        <div class="order__block">
+          <nav class="sidebar">
+            <button type="button" class="sidebar__btn">
+              <svg width="0.22222in" height="0.22222in" viewBox="0 0 222 222">
+                <path class="fil0" d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/>
+              </svg>
+            </button>
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+                    <use href="#icon-like"></use>
+                  </svg>
+                  <span>Избранное</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+                    <use href="#icon-compare"></use>
+                  </svg>
+                  <span>Сравнение</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg width="16px" height="18px" version="1.0" viewBox="0 0 1600028 1782706">
+                    <path class="fil0" d="M1273751 1181668l-85 -410556c0,-117238 -31190,-213448 -89612,-285935 -59405,-73610 -148709,-125098 -263644,-151376 -33380,-7636 -56008,-37366 -55980,-70241l-168 -59686c0,-16142 -6766,-30769 -17631,-41241 -11679,-11229 -28130,-18220 -46631,-18220 -18473,0 -34952,6991 -46603,18220 -10893,10500 -17631,25099 -17631,41241l0 59686c0,35935 -26249,65749 -60640,71308 -112801,26586 -200505,77653 -259124,150309 -58450,72459 -89612,168697 -89612,285935l0 410556c0,22206 -10051,42083 -25800,55306l-140764 135794 365020 0 550393 0 364991 0 -144273 -139191c-14682,-14122 -22066,-32987 -22206,-51909zm-473751 456625c56766,0 107945,-21982 144722,-57440 18669,-17995 33689,-39612 43768,-63672l-376923 0c10078,24060 25126,45677 43795,63672 36749,35458 87900,57440 144638,57440zm244582 46379c-62774,60527 -149298,98034 -244582,98034 -95255,0 -181780,-37507 -244497,-98034 -46744,-45059 -80349,-102836 -94863,-167491l-388433 0c-39866,0 -72207,-32313 -72207,-72206l0 -87760c225,-18922 7608,-37788 22291,-51909l159685 -154043 0 -380151c0,-151067 42336,-277766 121758,-376221 69680,-86385 166732,-149467 287619,-186581l0 -4436c0,-56709 23779,-108001 62184,-145059 37676,-36356 89444,-58815 146463,-58815 57019,0 108843,22487 146491,58815 38433,37058 62212,88350 62212,145059l0 4464c120831,37114 217911,100168 287619,186553 79394,98484 121758,225182 121758,376221l0 380151 156148 150646c15750,13251 25800,33099 25800,55306l0 87760c0,39893 -32341,72206 -72207,72206l-388377 0c-14514,64655 -48147,122432 -94862,167491z"/>
+                  </svg>
+                  <span>Рассылки</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg width="0.555551in" height="0.555551in" viewBox="0 0 556 556">
+                    <use href="#icon-basket"></use>
+                  </svg>
+                  <span>Мои заказы</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg width="18px" height="18px" viewBox="0 0 1800000 1800000">
+                    <path class="fil0" d="M263509 263480c83338,-82885 182636,-149811 292790,-195392 105931,-43852 222010,-68088 343701,-68088 121748,0 237827,24265 343729,68117 110013,45581 209084,112507 292025,195363 83226,83311 150293,182523 195988,292564 43993,106016 68258,222151 68258,343956 0,121805 -24265,237940 -68258,343956 -45695,110041 -112762,209253 -195959,292535 -82970,82885 -182041,149811 -292054,195392 -105902,43852 -221981,68117 -343729,68117 -121691,0 -237770,-24236 -343701,-68088 -110154,-45581 -209452,-112507 -292790,-195392 -82914,-83367 -149840,-182665 -195421,-292819 -43852,-105931 -68088,-222010 -68088,-343701 0,-121691 24236,-237770 68088,-343701 45581,-110154 112507,-209452 195421,-292819zm689414 183374l0 437555 293811 0 0 180256 -474180 0 0 -623452 180369 0 0 5641zm-337692 -236410c-45042,18595 -88072,41839 -128239,68825 -40989,27496 -79228,59103 -113896,93799 -34724,34696 -66331,72935 -93827,113924 -26986,40167 -50230,83197 -68825,128239 -18312,44136 -32485,90596 -41953,138870 -9269,46970 -14116,95754 -14116,145899 0,50145 4847,98929 14088,145871 9496,48189 23669,94705 41981,138898 18595,45042 41839,88072 68825,128239 27496,40989 59103,79228 93799,113896 34696,34724 72935,66331 113924,93827 40167,26986 83197,50230 128239,68825 44136,18312 90596,32485 138813,41953 46970,9269 95783,14116 145956,14116 50173,0 98986,-4847 145928,-14088 48245,-9468 94677,-23669 138841,-41981 45042,-18595 88072,-41839 128239,-68825 40989,-27496 79228,-59103 113896,-93799 34724,-34696 66331,-72935 93827,-113924 26986,-40167 50230,-83197 68825,-128239 18312,-44136 32485,-90596 41953,-138813 9269,-46970 14116,-95783 14116,-145956 0,-50173 -4847,-98986 -14088,-145928 -9468,-48245 -23669,-94677 -41981,-138841 -18595,-45042 -41839,-88072 -68825,-128239 -27496,-40989 -59103,-79228 -93799,-113896 -34696,-34724 -72935,-66331 -113924,-93827 -40167,-26986 -83197,-50230 -128239,-68825 -44136,-18312 -90596,-32485 -138870,-41953 -46970,-9269 -95754,-14116 -145899,-14116 -50145,0 -98929,4847 -145871,14088 -48189,9496 -94705,23669 -138898,41981z"/>
+                  </svg>
+                  <span>Просмотренные товары</span>
+                </a>
+              </li>
+              <li class="sidebar__item sidebar__item--active">
+                <a href="#" class="sidebar__link">
+                  <svg width="19px" height="18px" viewBox="0 0 1900028 1764484">
+                    <path class="fil0" d="M1684486 138294l-1468917 0c-21312,0 -40652,8753 -54573,22813 -14004,14116 -22702,33900 -22702,55852l0 1034833c0,21951 8726,41763 22702,55879 13921,14060 33261,22840 54573,22840l1242650 0 296734 294678c667,667 1445,1001 2057,1001l2111 -362 1834 -1139c473,-472 778,-1584 778,-3306l0 -1404424c0,-21952 -8697,-41736 -22701,-55852 -13922,-14060 -33233,-22813 -54546,-22813zm-1289359 591191c0,-38513 30927,-69717 69022,-69717l690611 0c38124,0 68995,31204 68995,69717 0,38540 -30871,69744 -68995,69744l-690611 0c-38095,0 -69022,-31204 -69022,-69744zm1035861 -254360l-966783 0c-38124,0 -69050,-31260 -69050,-69745 0,-38512 30926,-69716 69050,-69716l966783 0c38123,0 69078,31204 69078,69716 0,38513 -30955,69745 -69078,69745zm0 648181l-966783 0c-38124,0 -69050,-31205 -69050,-69717 0,-38513 30926,-69745 69050,-69745l966783 0c38123,0 69078,31232 69078,69745 0,38512 -30955,69717 -69078,69717zm-1215419 -1123306l1468889 0c59381,0 113315,24480 152355,63909 39040,39346 63215,93531 63215,153050l0 1404424c0,40735 -16283,75329 -41291,100504 -13505,13616 -29454,24258 -46654,31427 -17450,7280 -36234,11170 -55073,11170 -34873,0 -70412,-12893 -99255,-41513l-255943 -254165 -1186243 0c-59380,0 -113314,-24480 -152354,-63910 -39041,-39373 -63215,-93585 -63215,-153104l0 -1034833c0,-59519 24174,-113704 63215,-153050 39040,-39429 92974,-63909 152354,-63909z"/>
+                  </svg>
+                  <span>Мои отзывы</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg width="18px" height="18px" viewBox="0 0 1800000 1800000">
+                    <path class="fil0" d="M1016646 624983c0,-36029 -14400,-67692 -36709,-90709l-709 0c-22337,-23074 -54028,-37474 -89319,-37474 -34555,0 -66218,14400 -89263,37474 -23074,23017 -36709,54680 -36709,90709 0,35263 13635,66954 36709,89971l0 709c23045,22337 54000,36737 89263,36737 35291,0 66982,-14400 89319,-36737l709 -709c22309,-23017 36709,-54708 36709,-89971zm-753109 -361446c163417,-162737 388091,-263537 636463,-263537 248372,0 473046,100800 635754,263537 163446,163417 264246,388091 264246,636463 0,248372 -100800,473046 -264246,636463 -162708,162737 -387382,263537 -635754,263537 -248372,0 -473046,-100800 -636463,-263537 -162737,-163417 -263537,-388091 -263537,-636463 0,-248372 100800,-473046 263537,-636463zm347754 -62646c-92154,38155 -175663,95046 -245508,164892 -69846,69845 -126737,153354 -164892,245508 -36708,88555 -56891,185755 -56891,288709 0,102954 20183,200154 56891,288709 38155,92154 95046,175663 164892,245508 69845,69846 153354,126737 245508,164892 88555,36708 185755,56891 288709,56891 102954,0 200154,-20183 288709,-56891 92154,-38155 175663,-95046 245508,-164892 69846,-69845 126737,-153354 164892,-245508 36708,-88555 56891,-185755 56891,-288709 0,-102954 -20183,-200154 -56891,-288709 -38155,-92154 -95046,-175663 -164892,-245508 -69845,-69846 -153354,-126737 -245508,-164892 -88555,-36708 -185755,-56891 -288709,-56891 -102954,0 -200154,20183 -288709,56891zm463663 236892c47509,48217 77046,113754 77046,187200 0,72708 -29537,138954 -77046,186463l-7908 8617c48245,21628 91417,52583 128154,89320 78463,79171 126709,188617 126709,309571 0,113755 -118800,182155 -271446,208092 -51817,8617 -106554,12954 -160554,12954 -53972,0 -108709,-4337 -159846,-12954 -152589,-25937 -272154,-94337 -272154,-208092 0,-120954 48274,-230400 126737,-309571 36737,-36737 80645,-67692 128863,-89320l-8646 -8617c-47509,-47509 -76309,-113755 -76309,-186463 0,-73446 29537,-138983 76309,-187200 47537,-48246 113046,-77783 185046,-77783 72000,0 137537,29537 185045,77783zm-185045 480926c-82063,0 -156246,33137 -209509,87845 -54000,54000 -87109,129572 -87109,212400 0,32372 69846,58309 159109,73418 42491,7228 90000,10828 137509,10828 48274,0 95045,-3600 138245,-10828 89292,-15109 158400,-41046 158400,-73418 0,-82828 -33108,-158400 -86400,-212400 -54000,-54708 -128154,-87845 -210245,-87845z"/>
+                  </svg>
+                  <span>Личные данные</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          
+          <div class="order__content">
+            <div class="order__review">
+              <ul class="review__list">
+                <li class="review__item">
+                  <div class="review__top">
+                    <div class="review__rating">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/24.png" alt="Отзывы">
+                    </div>
+                    <b class="review__name">Вита</b>
+                    <time datetime="2020-04-21" class="review__date">21 апреля</time>
+                    <div class="review__product">Товар: <a href="#">Сандалии ортопедические 08-802 Антиварус р-р. 21-30</a></div>
+                    <a href="#" class="basket__remove-btn" title="Удалить">
+                      <svg viewBox="0 0 333 333">
+                        <path d="M175 101l-3 159 29 0 3 -159 -29 0zm-19 0l-29 0 3 159 29 0 -3 -159zm67 174l0 0c0,1 -1,2 -2,2l-112 0c0,0 -1,-1 -1,-2l-6 -174 -29 0 6 175c0,16 14,30 30,30l112 0c17,0 30,-14 30,-30l6 -175 -29 0 -5 174zm-5 -220l-6 -27 -94 0 -6 27 -56 0 0 29 222 0 0 -29 -60 0z"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="review__text">
+                    <p>Хорошие кроссовки. Ребёнок проносил два сезона с удовольствием. После гонок по двору они, конечно, потеряли вид. Но это неизбежно :)</p>
+                    <p><b>Достоинства:</b>Удобные, симпатичные, на липучках</p>
+                    <p><b>Недостатки:</b>Мало доступных расцветок</p>
+                  </div>
+                  <div class="review__bottom">
+                    <a href="#" class="review__reply">Ответить</a>
+                    <a href="#" class="review__like">1</a>
+                    <a href="#" class="review__dislike"></a>
+                    <span class="review__comment">100% пользователей считают этот отзыв полезным</span>
+                  </div>
+                  <ul class="review__sublist">
+                    <li class="review__item">
+                      <div class="review__top">
+                        <figure class="review__ava">
+                          <img src="img/icons/58.png" alt="отзыв">
+                        </figure>
+                        <b class="review__name">Яна Olvi (yana)</b>
+                        <time datetime="2020-04-22" class="review__date">22 апреля</time>
+                      </div>
+                      <div class="review__text">
+                        <p>Добрый день, Ольга!<br>Спасибо за отзыв, мы рады, что вам подошли кроссовки!</p>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="review__item">
+                  <div class="review__top">
+                    <div class="review__rating">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/24.png" alt="Отзывы">
+                    </div>
+                    <b class="review__name">Вита</b>
+                    <time datetime="2020-04-21" class="review__date">21 апреля</time>
+                    <div class="review__product">Товар: <a href="#">Кроссовки ортопедические 06-558 р. 31-36</a></div>
+                    <a href="#" class="basket__remove-btn" title="Удалить">
+                      <svg viewBox="0 0 333 333">
+                        <path d="M175 101l-3 159 29 0 3 -159 -29 0zm-19 0l-29 0 3 159 29 0 -3 -159zm67 174l0 0c0,1 -1,2 -2,2l-112 0c0,0 -1,-1 -1,-2l-6 -174 -29 0 6 175c0,16 14,30 30,30l112 0c17,0 30,-14 30,-30l6 -175 -29 0 -5 174zm-5 -220l-6 -27 -94 0 -6 27 -56 0 0 29 222 0 0 -29 -60 0z"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="review__text">
+                    <p>Очень довольна покупкой! Кроссовки действительно хорошо и устойчиво сидят на ножке малыша. Нашла то что искала. Уже не первая покупка у Вас, обувь просто шикарная! Спасибо!</p>
+                    <p><b>Достоинства:</b>Достоинства: Аккуратные, мягкие,удобные</p>
+                    <p><b>Недостатки:</b>Недостатки: Нет</p>
+                  </div>
+                  <div class="review__bottom">
+                    <a href="#" class="review__reply">Ответить</a>
+                    <a href="#" class="review__like"></a>
+                    <a href="#" class="review__dislike"></a>
+                    <span class="review__comment">100% пользователей считают этот отзыв полезным</span>
+                  </div>
+                </li>
+                <li class="review__item">
+                  <div class="review__top">
+                    <div class="review__rating">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/23.png" alt="Отзывы">
+                      <img src="img/icons/24.png" alt="Отзывы">
+                    </div>
+                    <b class="review__name">Вита</b>
+                    <time datetime="2020-04-21" class="review__date">21 апреля</time>
+                    <div class="review__product">Товар: <a href="#">Ортопедические кроссовки для мальчика 06-551 р.21-30</a></div>
+                    <a href="#" class="basket__remove-btn" title="Удалить">
+                      <svg viewBox="0 0 333 333">
+                        <path d="M175 101l-3 159 29 0 3 -159 -29 0zm-19 0l-29 0 3 159 29 0 -3 -159zm67 174l0 0c0,1 -1,2 -2,2l-112 0c0,0 -1,-1 -1,-2l-6 -174 -29 0 6 175c0,16 14,30 30,30l112 0c17,0 30,-14 30,-30l6 -175 -29 0 -5 174zm-5 -220l-6 -27 -94 0 -6 27 -56 0 0 29 222 0 0 -29 -60 0z"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="review__text">
+                    <p>Вчера забрали нашу посылку. Очень крутые кроссовки. Очень аккуратные и легкие. Ребенок очень доволен. Мама тоже. Наконец то мы нашли что то полезное и красивое и удобное. Спасибо за скидку.</p>
+                    <p><b>Достоинства:</b>Очень аккуратные и очень красивые.</p>
+                    <p><b>Недостатки:</b>Нет</p>
+                  </div>
+                  <div class="review__bottom">
+                    <a href="#" class="review__reply">Ответить</a>
+                    <a href="#" class="review__like">9</a>
+                    <a href="#" class="review__dislike">1</a>
+                    <span class="review__comment">100% пользователей считают этот отзыв полезным</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__wrap">
+        <div class="footer__logo">
+          <div class="logo">
+            <img src="img/images/1.png" alt="Logo">
+          </div>
+          <div class="footer__info">© Интернет-магазин ОЛВИ, 2010-2017</div>
+        </div>
+        <nav class="footer__menu footer__menu--info">
+          <p class="footer__title">Инфо</p>
+          <ul class="footer__list">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Карта сайта</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__menu footer__menu--buyer">
+          <p class="footer__title">Покупателям</p>
+          <ul class="footer__list">
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">Вопрос-ответ</a></li>
+            <li><a href="#">Детская обувь оптом в Украине</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <p class="footer__title">КОНТАКТЫ</p>
+          <a href="tel:+380977360649" class="footer__tel"><span>Тел:</span><b>+38 (097) 736 06 49</b></a>
+          <a href="tel:+380668588806" class="footer__tel"><b>+38 (066) 858 88 06</b></a>
+          <a href="tel:+380635925786" class="footer__tel"><b>+38 (063) 592 57 86</b></a>
+          <a href="tel:+380977115588" class="footer__tel footer__tel--opt"><span>Опт:</span><b>+38 (097) 711 55 88</b></a>
+          <a href="skype:Olvi_shop" class="footer__tel footer__tel--skype"><span>Skype:</span>Olvi_shop</a>
+        </div>
+        <div class="footer__social">
+          <p class="footer__title">МЫ В СОЦСЕТЯХ</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link" title="Instagram">
+                <svg viewBox="0 0 556 556">
+                  <path d="M278 35c134,0 243,109 243,243 0,134 -109,243 -243,243 -134,0 -243,-109 -243,-243 0,-134 109,-243 243,-243zm-41 137c18,-1 87,-1 104,1 16,3 26,10 33,20 8,12 9,28 10,44 0,17 0,35 0,53 0,30 4,68 -22,84 -12,8 -27,9 -43,10 -20,0 -87,1 -104,-2 -16,-2 -27,-10 -34,-20 -8,-12 -8,-27 -9,-43 -1,-18 0,-36 0,-53 0,-31 -4,-68 21,-85 13,-9 27,-8 44,-9zm-88 152c1,20 3,38 13,52 7,11 20,22 37,27 18,5 41,4 61,4 21,0 43,1 64,0 20,-1 38,-4 52,-13 33,-23 31,-61 31,-98 0,-21 1,-43 0,-65 -1,-20 -4,-37 -13,-51 -9,-13 -22,-23 -38,-27 -17,-5 -41,-5 -60,-5 -21,0 -43,0 -64,1 -21,0 -38,3 -52,13 -33,22 -32,60 -32,98 0,21 0,43 1,64zm86 -43c-2,-25 17,-44 40,-46 24,-2 44,17 46,39 2,25 -17,45 -40,47 -25,2 -45,-17 -46,-40zm35 -69c-34,4 -63,34 -58,73 4,34 34,63 73,59 34,-4 64,-35 59,-74 -4,-34 -35,-63 -74,-58zm73 -16c-19,4 -13,34 7,30 8,-1 14,-9 12,-18 -1,-8 -9,-14 -19,-12z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" title="Facebook">
+                <svg viewBox="0 0 556 556">
+                  <path d="M278 35c134,0 243,109 243,243 0,134 -109,243 -243,243 -134,0 -243,-109 -243,-243 0,-134 109,-243 243,-243l0 0zm-30 239c1,1 1,6 1,7l0 107 46 0c0,-28 0,-57 0,-86 0,0 0,-27 0,-28 0,0 0,0 0,0 0,0 30,0 31,0l0 0 4 -39 -35 0c0,-6 0,-12 0,-18 0,-5 0,-12 3,-14l32 -4 0 -39c-6,0 -13,0 -19,0 -7,0 -13,0 -19,0 -13,1 -22,5 -29,11 -11,16 -14,2 -15,64l-23 0 0 39 23 0z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Modal windows -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="modal__title">Оставьте номер телефона, и мы вам перезвоним</p>
+    <form action="#" class="form">
+      <label for="name" class="form__label">Ваше имя:<span>*</span></label>
+      <input type="text" id="name" class="form__input" required>
+      <label for="tel" class="form__label">Ваш телефон:<span>*</span></label>
+      <input type="tel" id="tel" class="form__input" required>
+      <button type="submit" class="btn form__btn">Отправить</button>
+      <p class="form__comment"><span>*</span> — Поля, обязательные для заполнения</p>
+    </form>
+  </div>
+  
+  <div style="display: none;" id="login" class="modal">
+    <p class="modal__title">Войти в личный кабинет</p>
+    <div class="modal__enter" id="enter">
+      <ul class="modal__list">
+        <li class="modal__name"><a href="#enter-1">Вход</a></li>
+        <li class="modal__name"><a href="#enter-2">Регистрация</a></li>
+      </ul>
+      <div class="modal__field" id="enter-1">
+        <form action="#" class="form">
+          <label for="email" class="form__label">Введите Ваш e-mail:</label>
+          <input type="email" id="email" class="form__input">
+          <label for="password" class="form__label">Введите пароль:</label>
+          <input type="password" id="password" class="form__input">
+          <button type="submit" class="btn form__btn">Войти</button>
+        </form>
+      </div>
+      <div class="modal__field" id="enter-2">
+        <form action="#" class="form">
+          <label for="email2" class="form__label">Введите Ваш e-mail:</label>
+          <input type="email" id="email2" class="form__input">
+          <label for="tel2" class="form__label">Ваш номер телефона:</label>
+          <input type="tel" id="tel2" class="form__input">
+          <label for="password" class="form__label">Придумайте пароль:</label>
+          <input type="password" id="password" class="form__input">
+          <button type="submit" class="btn form__btn">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/script.js"></script>
+  
+  <!-- Tabs -->
+  <script>
+    $(function() {
+      $("#enter").tabs();
+    });
+  </script>
+  
+  <!-- Sidebar -->
+  <script>
+    if (window.innerWidth < 766) {
+      $('.sidebar__btn').click(function() {
+        $(this).toggleClass('sidebar__btn--top');
+        $('.sidebar__item:not(.sidebar__item--active)').slideToggle();
+      });
+    }
+  </script>
+</body>
+</html>
