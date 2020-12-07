@@ -1,0 +1,46 @@
+.cabinet {
+  .form__line {
+    align-items: flex-end;
+  }
+}
+
+.cabinet__data {
+  width: 570px;
+  max-width: 100%;
+}
+
+.cabinet__btn {
+  width: 270px;
+  margin-left: 30px;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.cabinet__title {
+  position: relative;
+  padding-left: 35px;
+  font-size: 20px;
+  color: #000;
+  font-weight: 400;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/icons/32.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &--address::before {
+    background-image: url(../img/icons/31.png);
+  }
+}
+
+.cabinet__save {
+  width: 270px;
+  margin-top: 40px;
+}
