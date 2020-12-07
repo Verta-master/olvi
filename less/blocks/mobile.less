@@ -651,9 +651,11 @@
   .find__comment {
     position: static;
   }
+  .order__filter,
   .order__block {
     display: block;
   }
+  .order__remove,
   .order__total,
   .sidebar,
   .order__content {
@@ -703,5 +705,20 @@
     &--active {
       display: block;
     }
+  }
+  .order__sort {
+    margin-left: 0;
+    justify-content: flex-start;
+    
+    .form__select {
+      flex-grow: 1;
+    }
+  }
+  .order__remove {
+    margin-bottom: 20px;
+    background-position: left 80px center;
+  }
+  .order .title-main {
+    text-align: center;
   }
 }
