@@ -651,4 +651,57 @@
   .find__comment {
     position: static;
   }
+  .order__block {
+    display: block;
+  }
+  .order__total,
+  .sidebar,
+  .order__content {
+    width: 100%;
+  }
+  .sidebar {
+    margin-bottom: 20px;
+  }
+  .order__top {
+    font-size: 14px;
+  }
+  .order__total {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .sidebar {
+    position: relative;
+  }
+  .sidebar__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+    
+    &--top {
+      transform: rotate(180deg);
+    }
+  }
+  .sidebar__link {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 50px;
+  }
+  .sidebar__item {
+    display: none;
+    
+    &--active {
+      display: block;
+    }
+  }
 }

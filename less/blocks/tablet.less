@@ -624,6 +624,8 @@
   .basket__wrap {
     flex-direction: column-reverse;
   }
+  .order__status,
+  .order__details,
   .basket__finish,
   .basket__delivery,
   .basket__left,
@@ -666,5 +668,34 @@
   .find__input {
     flex-grow: 1;
     width: auto;
+  }
+  .sidebar {
+    width: 225px;
+  }
+  .order__content {
+    width: ~"calc(100% - 255px)";
+  }
+  .sidebar__link {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .order__top {
+    justify-content: space-between;
+  }
+  .order__number,
+  .order__comment {
+    width: auto;
+  }
+  .order__wrap {
+    display: block;
+  }
+  .order__total {
+    margin-left: auto;
+  }
+  .order__details .basket__table tr:last-of-type {
+    border-bottom: 1px solid #f8f8f8;
+  }
+  .order {
+    margin-bottom: 80px;
   }
 }
