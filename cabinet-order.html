@@ -277,7 +277,7 @@
     
     <section class="order">
       <div class="wrapper">
-        <h1 class="title-main">Избранное</h1>
+        <h1 class="title-main">Мои заказы</h1>
         <div class="order__block">
           <nav class="sidebar">
             <button type="button" class="sidebar__btn">
@@ -286,7 +286,7 @@
               </svg>
             </button>
             <ul class="sidebar__list">
-              <li class="sidebar__item sidebar__item--active">
+              <li class="sidebar__item">
                 <a href="#" class="sidebar__link">
                   <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
                     <use href="#icon-like"></use>
@@ -310,7 +310,7 @@
                   <span>Рассылки</span>
                 </a>
               </li>
-              <li class="sidebar__item">
+              <li class="sidebar__item sidebar__item--active">
                 <a href="#" class="sidebar__link">
                   <svg width="0.555551in" height="0.555551in" viewBox="0 0 556 556">
                     <use href="#icon-basket"></use>
@@ -346,230 +346,226 @@
           </nav>
           
           <div class="order__content">
-            <div class="order__filter">
-              <a href="#" class="order__remove">Очистить список</a>
-              <div class="order__sort">
-                <span>Сортировка: </span>
-                <select class="form__select">
-                  <option value="1">Новинки</option>
-                  <option value="2" selected="">Цена по убыванию</option>
-                  <option value="3">Цена по возростанию</option>
-                  <option value="4">Хиты продаж</option>
-                </select>
-              </div>
-            </div>
-            <ul class="catalog__list">
-              <div class="catalog__item">
-                <div class="catalog__labels">
-                  <div class="catalog__sale">sale</div>
+            <ul class="order__list">
+              <li class="order__item">
+                <div class="order__top">
+                  <div class="order__number">Заказ: № 9416273</div>
+                  <div class="order__comment">Статус: <span class="order__onway">В дороге</span></div>
                 </div>
-                <div class="catalog__btns">
-                  <a href="#" class="catalog__icon catalog__icon--like catalog__icon--like-active">
-                    <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
-                      <use href="#icon-like"></use>
-                    </svg>
-                  </a>
-                  <form action="#" class="catalog__icon catalog__icon--compare catalog__icon--compare-active">
-                    <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
-                      <use href="#icon-compare"></use>
-                    </svg>
-                  </form>
-                </div>
-                <a href="#" class="catalog__img">
-                  <img src="img/images/05.png" alt="Сандалии ортопедические 08-802 Антиварус р-р.21-30">
-                </a>
-                <div class="catalog__info">
-                  <div class="catalog__rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/24.png" alt="rating">
-                    <a href="#">5 отзывов</a>
+                <div class="order__wrap">
+                  <div class="order__details">
+                    <table class="basket__table">
+                      <tr>
+                        <td>
+                          <a href="#" class="basket__img">
+                            <img src="img/images/01.png" alt="Ортопедические ботинки для ребенка 06-615 р.21-30">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="#" class="basket__name">Ортопедические ботинки для ребенка 06-615 р.21-30</a>
+                          <div class="basket__size">Размер обуви: 23,  Артикул: 06-615</div>
+                          <div class="basket__line">
+                            <div class="basket__number">
+                              <span>Количество</span>
+                              <div class="basket__value">02</div>
+                            </div>
+                            <div class="basket__price">
+                              <span>Цена, грн</span>
+                              <b>3100</b>
+                            </div>
+                            <div class="basket__discount basket__discount--hidden">
+                              <span>Цена со скидкой, грн</span>
+                              <b>2800</b>
+                            </div>
+                            <div class="basket__discount">
+                              <span>Скидка</span>
+                              <b>300</b>
+                            </div>
+                            <div class="basket__price">
+                              <span>Сумма, грн</span>
+                              <b>2800</b>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="basket__img">
+                            <img src="img/images/02.png" alt="Ортопедические ботинки для ребенка 06-615 р.21-30">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="#" class="basket__name">Ортопедические ботинки для ребенка 06-615 р.21-30</a>
+                          <div class="basket__size">Размер обуви: 23,  Артикул: 06-615</div>
+                          <div class="basket__line">
+                            <div class="basket__number">
+                              <span>Количество</span>
+                              <div class="basket__value">01</div>
+                            </div>
+                            <div class="basket__price">
+                              <span>Цена, грн</span>
+                              <b>3100</b>
+                            </div>
+                            <div class="basket__discount basket__discount--hidden">
+                              <span>Цена со скидкой, грн</span>
+                              <b>2800</b>
+                            </div>
+                            <div class="basket__discount">
+                              <span>Скидка</span>
+                              <b>300</b>
+                            </div>
+                            <div class="basket__price">
+                              <span>Сумма, грн</span>
+                              <b>2800</b>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
                   </div>
-                  <a href="#" class="catalog__title">Сандалии ортопедические 08-802 Антиварус р-р.21-30</a>
-                  <p>Производитель: <a href="#">4Rest-Orto</a></p>
-                  <div class="catalog__price">
-                    <div class="catalog__newprice">1777 грн</div>
-                    <div class="catalog__oldprice">2170 грн</div>
-                  </div>
-                </div>
-              </div>
-              <div class="catalog__item">
-                <div class="catalog__labels">
-                  <div class="catalog__sale catalog__sale--new">new</div>
-                </div>
-                <div class="catalog__btns">
-                  <a href="#" class="catalog__icon catalog__icon--like">
-                    <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
-                      <use href="#icon-like"></use>
-                    </svg>
-                  </a>
-                  <form action="#" class="catalog__icon catalog__icon--compare">
-                    <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
-                      <use href="#icon-compare"></use>
-                    </svg>
-                  </form>
-                </div>
-                <a href="#" class="catalog__img">
-                  <img src="img/images/04.png" alt="Кроссовки ортопедические 06-558 р. 31-36">
-                </a>
-                <div class="catalog__info">
-                  <div class="catalog__rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/24.png" alt="rating">
-                    <a href="#">1 отзыв</a>
-                  </div>
-                  <a href="#" class="catalog__title">Кроссовки ортопедические 06-558 р. 31-36</a>
-                  <p>Производитель: <a href="#">4Rest-Orto</a></p>
-                  <div class="catalog__price">
-                    <div class="catalog__newprice">999 грн</div>
-                    <div class="catalog__oldprice">1170 грн</div>
-                  </div>
-                </div>
-              </div>
-              <div class="catalog__item">
-                <div class="catalog__labels">
-                  <div class="catalog__sale catalog__sale--hit">top</div>
-                </div>
-                <div class="catalog__btns">
-                  <a href="#" class="catalog__icon catalog__icon--like">
-                    <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
-                      <use href="#icon-like"></use>
-                    </svg>
-                  </a>
-                  <form action="#" class="catalog__icon catalog__icon--compare">
-                    <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
-                      <use href="#icon-compare"></use>
-                    </svg>
-                  </form>
-                </div>
-                <a href="#" class="catalog__img">
-                  <img src="img/images/03.png" alt="Ортопедические кроссовки для мальчика 06-551 р.21-30">
-                </a>
-                <div class="catalog__info">
-                  <div class="catalog__rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/24.png" alt="rating">
-                    <a href="#">8 отзывов</a>
-                  </div>
-                  <a href="#" class="catalog__title">Ортопедические кроссовки для мальчика 06-551 р.21-30</a>
-                  <p>Производитель: <a href="#">4Rest-Orto</a></p>
-                  <div class="catalog__price">
-                    <div class="catalog__newprice">777 грн</div>
-                    <div class="catalog__oldprice">1150 грн</div>
+                  <div class="order__status">
+                    <div class="order__data">
+                      <div class="order__info">Данные заказчика: Иванов Кирил, +38 095 997 55 55,<br>randomkiril@gmail.com<br>Доставка и оплата: г. Киев, Новая Почта, Отделение №1,<br>Адрес отделения, 110/2, Наложенный платеж</div>
+                      <div class="order__total">Сумма заказ: <span>4200 грн</span></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="catalog__item">
-                <div class="catalog__labels">
-                  <div class="catalog__sale">sale</div>
+              </li>
+              <li class="order__item">
+                <div class="order__top">
+                  <div class="order__number">Заказ: № 9416273</div>
+                  <div class="order__comment">Статус: <span class="order__cancel">Возврат / Не выкуплен</span></div>
                 </div>
-                <div class="catalog__btns">
-                  <a href="#" class="catalog__icon catalog__icon--like">
-                    <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
-                      <use href="#icon-like"></use>
-                    </svg>
-                  </a>
-                  <form action="#" class="catalog__icon catalog__icon--compare">
-                    <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
-                      <use href="#icon-compare"></use>
-                    </svg>
-                  </form>
-                </div>
-                <a href="#" class="catalog__img">
-                  <img src="img/images/02.png" alt="Кроссовки ортопедические 06-557 р.21-30">
-                </a>
-                <div class="catalog__info">
-                  <div class="catalog__rating">
-                    <a href="#">Оставить отзыв</a>
+                <div class="order__wrap">
+                  <div class="order__details">
+                    <table class="basket__table">
+                      <tr>
+                        <td>
+                          <a href="#" class="basket__img">
+                            <img src="img/images/01.png" alt="Ортопедические ботинки для ребенка 06-615 р.21-30">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="#" class="basket__name">Ортопедические ботинки для ребенка 06-615 р.21-30</a>
+                          <div class="basket__size">Размер обуви: 23,  Артикул: 06-615</div>
+                          <div class="basket__line">
+                            <div class="basket__number">
+                              <span>Количество</span>
+                              <div class="basket__value">02</div>
+                            </div>
+                            <div class="basket__price">
+                              <span>Цена, грн</span>
+                              <b>3100</b>
+                            </div>
+                            <div class="basket__discount basket__discount--hidden">
+                              <span>Цена со скидкой, грн</span>
+                              <b>2800</b>
+                            </div>
+                            <div class="basket__discount">
+                              <span>Скидка</span>
+                              <b>300</b>
+                            </div>
+                            <div class="basket__price">
+                              <span>Сумма, грн</span>
+                              <b>2800</b>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="basket__img">
+                            <img src="img/images/02.png" alt="Ортопедические ботинки для ребенка 06-615 р.21-30">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="#" class="basket__name">Ортопедические ботинки для ребенка 06-615 р.21-30</a>
+                          <div class="basket__size">Размер обуви: 23,  Артикул: 06-615</div>
+                          <div class="basket__line">
+                            <div class="basket__number">
+                              <span>Количество</span>
+                              <div class="basket__value">01</div>
+                            </div>
+                            <div class="basket__price">
+                              <span>Цена, грн</span>
+                              <b>3100</b>
+                            </div>
+                            <div class="basket__discount basket__discount--hidden">
+                              <span>Цена со скидкой, грн</span>
+                              <b>2800</b>
+                            </div>
+                            <div class="basket__discount">
+                              <span>Скидка</span>
+                              <b>300</b>
+                            </div>
+                            <div class="basket__price">
+                              <span>Сумма, грн</span>
+                              <b>2800</b>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
                   </div>
-                  <a href="#" class="catalog__title">Кроссовки ортопедические 06-557 р.21-30</a>
-                  <p>Производитель: <a href="#">4Rest-Orto</a></p>
-                  <div class="catalog__price">
-                    <div class="catalog__newprice">1205 грн</div>
-                    <div class="catalog__oldprice">1870 грн</div>
-                  </div>
-                </div>
-              </div>
-              <div class="catalog__item">
-                <div class="catalog__labels">
-                  <div class="catalog__sale">sale</div>
-                </div>
-                <div class="catalog__btns">
-                  <a href="#" class="catalog__icon catalog__icon--like">
-                    <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
-                      <use href="#icon-like"></use>
-                    </svg>
-                  </a>
-                  <form action="#" class="catalog__icon catalog__icon--compare">
-                    <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
-                      <use href="#icon-compare"></use>
-                    </svg>
-                  </form>
-                </div>
-                <a href="#" class="catalog__img">
-                  <img src="img/images/05.png" alt="Сандалии ортопедические 08-802 Антиварус р-р.21-30">
-                </a>
-                <div class="catalog__info">
-                  <div class="catalog__rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/24.png" alt="rating">
-                    <a href="#">5 отзывов</a>
-                  </div>
-                  <a href="#" class="catalog__title">Сандалии ортопедические 08-802 Антиварус р-р.21-30</a>
-                  <p>Производитель: <a href="#">4Rest-Orto</a></p>
-                  <div class="catalog__price">
-                    <div class="catalog__newprice">1777 грн</div>
-                    <div class="catalog__oldprice">2170 грн</div>
-                  </div>
-                </div>
-              </div>
-              <div class="catalog__item">
-                <div class="catalog__labels">
-                  <div class="catalog__sale catalog__sale--new">new</div>
-                </div>
-                <div class="catalog__btns">
-                  <a href="#" class="catalog__icon catalog__icon--like">
-                    <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
-                      <use href="#icon-like"></use>
-                    </svg>
-                  </a>
-                  <form action="#" class="catalog__icon catalog__icon--compare">
-                    <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
-                      <use href="#icon-compare"></use>
-                    </svg>
-                  </form>
-                </div>
-                <a href="#" class="catalog__img">
-                  <img src="img/images/04.png" alt="Кроссовки ортопедические 06-558 р. 31-36">
-                </a>
-                <div class="catalog__info">
-                  <div class="catalog__rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/23.png" alt="rating">
-                    <img src="img/icons/24.png" alt="rating">
-                    <a href="#">1 отзыв</a>
-                  </div>
-                  <a href="#" class="catalog__title">Кроссовки ортопедические 06-558 р. 31-36</a>
-                  <p>Производитель: <a href="#">4Rest-Orto</a></p>
-                  <div class="catalog__price">
-                    <div class="catalog__newprice">999 грн</div>
-                    <div class="catalog__oldprice">1170 грн</div>
+                  <div class="order__status">
+                    <div class="order__data">
+                      <div class="order__info">Данные заказчика: Иванов Кирил, +38 095 997 55 55,<br>randomkiril@gmail.com<br>Доставка и оплата: г. Киев, Новая Почта, Отделение №1,<br>Адрес отделения, 110/2, Наложенный платеж</div>
+                      <div class="order__total">Сумма заказ: <span>4200 грн</span></div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </li>
+              <li class="order__item">
+                <div class="order__top">
+                  <div class="order__number">Заказ: № 9416273</div>
+                  <div class="order__comment">Статус: <span>Выполнен</span></div>
+                </div>
+                <div class="order__wrap">
+                  <div class="order__details">
+                    <table class="basket__table">
+                      <tr>
+                        <td>
+                          <a href="#" class="basket__img">
+                            <img src="img/images/01.png" alt="Ортопедические ботинки для ребенка 06-615 р.21-30">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="#" class="basket__name">Ортопедические ботинки для ребенка 06-615 р.21-30</a>
+                          <div class="basket__size">Размер обуви: 23,  Артикул: 06-615</div>
+                          <div class="basket__line">
+                            <div class="basket__number">
+                              <span>Количество</span>
+                              <div class="basket__value">02</div>
+                            </div>
+                            <div class="basket__price">
+                              <span>Цена, грн</span>
+                              <b>3100</b>
+                            </div>
+                            <div class="basket__discount basket__discount--hidden">
+                              <span>Цена со скидкой, грн</span>
+                              <b>2800</b>
+                            </div>
+                            <div class="basket__discount">
+                              <span>Скидка</span>
+                              <b>300</b>
+                            </div>
+                            <div class="basket__price">
+                              <span>Сумма, грн</span>
+                              <b>2800</b>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="order__status">
+                    <div class="order__data">
+                      <div class="order__info">Данные заказчика: Иванов Кирил, +38 095 997 55 55,<br>randomkiril@gmail.com<br>Доставка и оплата: г. Киев, Новая Почта, Отделение №1,<br>Адрес отделения, 110/2, Наложенный платеж</div>
+                      <div class="order__total">Сумма заказ: <span>4200 грн</span></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
