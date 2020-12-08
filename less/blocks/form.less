@@ -140,33 +140,28 @@
   cursor: pointer;
   .transition();
   
-  span {
-    position: relative;
-    padding-left: 27px;
-    
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 16px;
-      height: 14px;
-      background-image: url(../img/icons/59.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
+  svg {
+    width: 16px;
+    height: 14px;
+    margin-right: 10px;
+    fill: @blue;
   }
   
   &:hover,
   &:active {
-    border-color: @blue;
+    color: #fff;
+    background-color: @blue;
     .transition();
+    
+    svg {
+      fill: #fff;
+    }
   }
 }
 
-.form__captcha {
-  text-align: center;
-}
+//.form__captcha {
+//  text-align: center;
+//}
 
 .form__radiolabel {
   display: block;
