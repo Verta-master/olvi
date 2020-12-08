@@ -2865,9 +2865,6 @@ a.breadcrumbs__link:active {
   margin-bottom: 15px;
 }
 .faq__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-bottom: 50px;
   color: #000;
 }
@@ -2875,11 +2872,17 @@ a.breadcrumbs__link:active {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: fixed;
+  top: 230px;
+  left: calc(50% - 837px);
   width: 710px;
+  height: calc(100vh - 500px);
   padding-right: 100px;
+  padding-bottom: 100px;
 }
 .faq__answer {
   width: 820px;
+  margin-left: auto;
 }
 .faq__block {
   margin-bottom: 25px;
@@ -4618,6 +4621,7 @@ a.breadcrumbs__link:active {
   .faq__list {
     width: 500px;
     padding-right: 50px;
+    left: calc(50% - 585px);
   }
   .faq__answer {
     width: calc(100% - 500px);
@@ -5312,8 +5316,15 @@ a.breadcrumbs__link:active {
     margin-top: -40px;
   }
   .faq__list {
+    position: static;
     width: 50%;
+    height: auto;
     padding-right: 10px;
+  }
+  .faq__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .faq__answer {
     width: 50%;
