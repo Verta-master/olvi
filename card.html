@@ -920,6 +920,7 @@
     <div class="modal__video">
       <iframe src="https://youtu.be/uwHLTg8ZXRA"></iframe>
     </div>
+    <button type="button" class="btn modal__close">Закрыть</button>
   </div>
   
   <div style="display: none;" id="discount" class="modal modal--size">
@@ -934,6 +935,7 @@
     <p>Ссылка в соцсетях ( vk.com, FB, пр.) не подходит.</p>
     <p>Удачных покупок!</p>
     <p><b>Внимание!</b> Акции не суммируются, то есть если ваша покупка попадает под две акции – выберите одну, которая для вас интереснее.</p>
+    <button type="button" class="btn modal__close">Закрыть</button>
   </div>
   
   <div style="display: none;" id="video" class="modal modal--size">
@@ -962,6 +964,7 @@
       <li>Видеоролик должен оставаться в открытом доступе не менее года.</li>
     </ol>
     <p>Кроме того, авторов лучших роликов по итогам года ждут призы - <a href="#">массажные коврики</a> и <a href="#">ортопедические подушки</a> из ассортимента нашего магазина.</p>
+    <button type="button" class="btn modal__close">Закрыть</button>
   </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
@@ -1059,6 +1062,12 @@
         }
       }
     });
+  </script>
+  
+  <script>
+    $('.modal__close').click(function() {
+      $.fancybox.close();
+    })
   </script>
 </body>
 </html>
