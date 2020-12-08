@@ -668,7 +668,7 @@
       </div>
       <div class="swiper-scrollbar modal__scroll"></div>
     </div>
-    <button type="button" class="btn modal__btn">Ознакомлен</button>
+    <button type="button" class="btn modal__close">Ознакомлен</button>
   </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
@@ -689,12 +689,21 @@
     var swiper = new Swiper('.modal__slider', {
       direction: 'vertical',
       slidesPerView: 'auto',
+      slidesOffsetAfter: 0,
       freeMode: true,
+      centeredSlides: true,
       scrollbar: {
-      el: '.modal__scroll',
+        el: '.modal__scroll',
+        draggable: true,
       },
       mousewheel: true,
     });
+  </script>
+  
+  <script>
+    $('.modal__close').click(function() {
+      $.fancybox.close();
+    })
   </script>
 </body>
 </html>
