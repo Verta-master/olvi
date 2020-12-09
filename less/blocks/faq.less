@@ -5,7 +5,7 @@
 }
 
 .faq__wrap {
-//  display: flex;
+  display: flex;
   margin-bottom: 50px;
   color: #000;
 }
@@ -13,13 +13,24 @@
 .faq__list {
   .reset();
   list-style: none;
-  position: fixed;
-  top: 230px;
-  left: ~"calc(50% - 837px)";
+//  position: fixed;
+//  top: 230px;
+//  left: ~"calc(50% - 837px)";
   width: 710px;
-  height: ~"calc(100vh - 500px)";
+//  height: ~"calc(100vh - 500px)";
   padding-right: 100px;
   padding-bottom: 100px;
+}
+
+.sticky {
+  position: fixed;
+  top: 30px;
+  z-index: 100;
+}
+
+.stop {
+  position: relative;
+  z-index: 100;
 }
 
 .faq__answer {

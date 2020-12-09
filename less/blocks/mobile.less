@@ -72,7 +72,7 @@
   }
   .tabs__name a {
     padding: 8px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .blog__slider {
     margin-bottom: 5px;
@@ -729,5 +729,23 @@
     padding: 0 10px;
     font-size: 14px;
     text-align: center;
+  }
+  .basket__ok-block {
+    margin-left: 0;
+    font-size: 14px;
+    z-index: 2;
+    width: 100%;
+    
+    &::after {
+      right: 0;
+      left: auto;
+      z-index: -1;
+      width: 136px;
+      height: 142px;
+    }
+  }
+  .catalog__item::before,
+  .catalog__slide::before {
+    bottom: -150px;
   }
 }
