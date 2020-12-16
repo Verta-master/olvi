@@ -226,14 +226,8 @@
   .review__product {
     width: 510px;
   }
-}
-
-@media (max-width: 1400px) {
-  .swiper-button-prev {
-    left: -10px;
-  }
-  .swiper-button-next {
-    right: -10px;
+  .catalog__img img {
+    transform: none;
   }
   .tabs__name a,
   .title {
@@ -247,6 +241,15 @@
   }
   .tabs__title {
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .swiper-button-prev {
+    left: -10px;
+  }
+  .swiper-button-next {
+    right: -10px;
   }
   .catalog__img {
     height: 180px;
@@ -306,5 +309,12 @@
   }
   .basket__ok {
     padding: 20px 10px;
+  }
+  .btn-top {
+    right: 20px;
+  }
+  .category::after {
+    height: 750px;
+    background-position: right top;
   }
 }
