@@ -21,7 +21,9 @@ if (window.innerWidth < 1170) {
     $('.overlay').removeClass('overlay--show');
   })
   
-  $('.filter__wrap').niceScroll();
+  $('.filter__wrap').niceScroll({
+    cursorcolor: '#00a0e3',
+  });
 }
 
 // Range sliders

@@ -5887,6 +5887,9 @@ a.breadcrumbs__link:active {
     line-height: 34px;
     text-align: center;
   }
+  .footer__menu--info {
+    width: 100%;
+  }
   .footer__menu--info .footer__list {
     display: -webkit-box;
     display: -ms-flexbox;
