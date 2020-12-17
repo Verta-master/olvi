@@ -22,6 +22,13 @@
       height: 27px;
     }
   }
+  h1,
+  .title-main,
+  h2,
+  .title-2,
+  .title {
+    margin-bottom: 30px;
+  }
   .info::before,
   .header__phones::before,
   .header__dropbtn,
@@ -44,17 +51,6 @@
   .type__title {
     font-size: 14px;
     line-height: 32px;
-  }
-  .type {
-    margin-bottom: 60px;
-  }
-  .tabs,
-  .blog,
-  .category {
-    margin-bottom: 80px;
-  }
-  .title {
-    margin-bottom: 30px;
   }
   .catalog .title {
     margin-bottom: 10px;
@@ -415,9 +411,6 @@
   .nets__list {
     flex-wrap: wrap;
   }
-  .about {
-    margin-bottom: 75px;
-  }
   .nets span {
     margin-right: 5px;
   }
@@ -484,7 +477,8 @@
     margin-right: auto;
   }
   .catalog__item {
-    width: 165px;
+    width: 45%;
+    margin-right: 0;
     
     .catalog__rating {
       font-size: 0;
@@ -566,9 +560,6 @@
   }
   .form__line .form__comment {
     text-align: left;
-  }
-  .card {
-    margin-bottom: 75px;
   }
   .modal--size {
     padding: 20px;
@@ -758,5 +749,9 @@
     .form__field {
       width: 48%;
     }
+  }
+  .catalog__list {
+    margin-right: 0;
+    justify-content: space-around;
   }
 }

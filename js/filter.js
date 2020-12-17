@@ -1,6 +1,7 @@
 $('.filter__title').click(function() {
   $(this).next().slideToggle();
   $(this).toggleClass('filter__title--top');
+  $('.filter__title').not(this).next().stop(true,true).slideUp();
 });
 
 if (window.innerWidth < 1170) {
