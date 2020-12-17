@@ -18,7 +18,9 @@ if (window.innerWidth < 1170) {
   
   $('.menu__arrow').prev().addClass('menu__category--blue');
   
-  $('.menu__drop').niceScroll();
+  $('.menu__drop').niceScroll({
+    cursorcolor: '#00a0e3',
+  });
 }
 
 //Search focus
