@@ -4,6 +4,7 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+  .footer--main::before,
   .header__title,
   .header__closebtn,
   .header__phones a::after,
@@ -15,7 +16,7 @@
     width: 460px;
   }
   .menu__lang {
-    margin-left: 15px;
+    margin-left: 7px;
   }
   .catalog__label {
     margin-right: 1px;
@@ -30,7 +31,7 @@
     margin-right: 0;
     
     &::before {
-      top: 0;
+      top: -3px;
     }
   }
   .header__login {
@@ -39,12 +40,6 @@
   .promo {
     padding-top: 20px;
     margin-bottom: 17px;
-  }
-  .swiper-button-prev {
-    left: -5px;
-  }
-  .swiper-button-next {
-    right: -5px;
   }
   .type__wrap {
     flex-direction: column;
@@ -76,15 +71,13 @@
     width: 215px;
     height: 430px;
     bottom: -135px;
+    top: auto;
   }
   .tabs__name {
     padding: 0;
   }
+  .footer--main::before,
   .blog--video::before {
-    width: 215px;
-    height: 430px;
-  }
-  .info::before {
     width: 215px;
     height: 430px;
   }
@@ -96,6 +89,10 @@
     width: 220px;
     order: 1;
     padding-right: 70px;
+    
+    .logo {
+      width: 112px;
+    }
   }
   .footer__wrap {
     flex-wrap: wrap;
@@ -181,6 +178,12 @@
   .swiper-button-next {
     right: 0;
   }
+  .btn-top,
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 38px;
+    height: 38px;
+  }
   .header__block {
     padding: 15px 10px;
     border-bottom: 1px solid rgb(240, 240, 240);
@@ -191,6 +194,7 @@
       padding-left: 25px;
       margin-bottom: 15px;
       color: @blue;
+      font-size: 16px;
       
       &:last-of-type {
         margin-bottom: 0;
@@ -243,6 +247,7 @@
       display: inline-block;
       vertical-align: baseline;
       margin-left: 10px;
+      font-size: 16px;
     }
     &::before {
       background-image: url(../img/icons/82.svg);
@@ -259,8 +264,10 @@
     color: @blue;
     
     &::before {
-      width: 20px;
-      height: 20px;
+      top: -5px;
+      left: -3px;
+      width: 27px;
+      height: 27px;
       background-image: url(../img/icons/3-blue.svg);
     }
   }
@@ -397,9 +404,6 @@
   .logo {
     width: 100px;
   }
-  .menu__langs {
-    padding-right: 0;
-  }
   .search {
     margin-left: auto;
   }
@@ -436,9 +440,6 @@
   }
   .blog--video::before {
     top: -130px;
-  }
-  .info::before {
-    top: -60px;
   }
   .info__logo {
     display: none;
@@ -733,5 +734,20 @@
   }
   .btn-top {
     right: 0;
+  }
+  .info::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: -60px;
+    width: 215px;
+    height: 430px;
+    background-image: url(../img/images/deco-3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .blog__img {
+    height: 165px;
   }
 }

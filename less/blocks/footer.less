@@ -1,8 +1,24 @@
 .footer {
+  position: relative;
   padding-top: 35px;
   padding-bottom: 30px;
   color: #fff;
   background-color: #000;
+  
+  &--main {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 20px;
+      width: 416px;
+      height: 832px;
+      background-image: url(../img/images/deco-3.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
 }
 
 .footer__wrap {
