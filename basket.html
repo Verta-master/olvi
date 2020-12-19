@@ -27,7 +27,7 @@
   <header class="header">
     <div class="wrapper header__wrap">
       <div class="logo">
-        <img src="img/images/1.png" alt="Logo">
+        <img src="img/images/1.svg" alt="Logo">
       </div>
       <div class="header__phones">
         <button type="button" class="header__mobilebtn"></button>
@@ -487,7 +487,7 @@
       <div class="footer__wrap">
         <div class="footer__logo">
           <div class="logo">
-            <img src="img/images/1.png" alt="Logo">
+            <img src="img/images/1.svg" alt="Logo">
           </div>
           <div class="footer__info">© Интернет-магазин ОЛВИ, 2010-2017</div>
         </div>
@@ -686,22 +686,26 @@
     });
   </script>
   
+  <!-- Scrolling in the modal window -->
   <script>
-    var swiper = new Swiper('.modal__slider', {
-      direction: 'vertical',
-      slidesPerView: 'auto',
-      slidesOffsetAfter: 0,
-      freeMode: true,
-      centeredSlides: true,
-      scrollbar: {
-        el: '.modal__scroll',
-        draggable: true,
-      },
-      mousewheel: true,
+    $('.basket__bottom a[data-fancybox]').fancybox({
+      backFocus : false,
+      touch: false,
+      afterShow : function() {
+
+        var mySwiper = new Swiper('.fancybox-container .modal__slider', {
+          direction: 'vertical',
+          slidesPerView: 'auto',
+          freeMode: true,
+          mousewheel: true,
+          scrollbar: {
+            el: '.modal__scroll',
+            draggable: true,
+          },
+        });
+      }
     });
-  </script>
-  
-  <script>
+    
     $('.modal__close').click(function() {
       $.fancybox.close();
     })
