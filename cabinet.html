@@ -27,7 +27,7 @@
   <header class="header">
     <div class="wrapper header__wrap">
       <div class="logo">
-        <img src="img/images/1.png" alt="Logo">
+        <img src="img/images/1.svg" alt="Logo">
       </div>
       <div class="header__phones">
         <button type="button" class="header__mobilebtn"></button>
@@ -349,6 +349,16 @@
             <div class="order__filter">
               <a href="#" class="order__remove">Очистить список</a>
               <div class="order__sort">
+                <div class="filter__field filter__field--sort">
+                  <p class="filter__title">Сортировка:<span>Цена по убыванию</span></p>
+                  <div class="filter__selection">
+                    <a href="#" class="filter__link">Новинки</a>
+                    <a href="#" class="filter__link">Цена по убыванию</a>
+                    <a href="#" class="filter__link">Цена по возростанию</a>
+                    <a href="#" class="filter__link">Хиты продаж</a>
+                  </div>
+                </div>
+<!--
                 <span>Сортировка: </span>
                 <select class="form__select">
                   <option value="1">Новинки</option>
@@ -356,6 +366,7 @@
                   <option value="3">Цена по возростанию</option>
                   <option value="4">Хиты продаж</option>
                 </select>
+-->
               </div>
             </div>
             <ul class="catalog__list">
@@ -582,7 +593,7 @@
       <div class="footer__wrap">
         <div class="footer__logo">
           <div class="logo">
-            <img src="img/images/1.png" alt="Logo">
+            <img src="img/images/1.svg" alt="Logo">
           </div>
           <div class="footer__info">© Интернет-магазин ОЛВИ, 2010-2017</div>
         </div>
@@ -699,6 +710,15 @@
         $('.sidebar__item:not(.sidebar__item--active)').slideToggle();
       });
     }
+  </script>
+  
+  <!-- Sorting -->
+  <script>
+    $('.filter__title').click(function() {
+      $(this).next().slideToggle();
+      $(this).toggleClass('filter__title--top');
+      $('.filter__title').not(this).next().stop(true,true).slideUp();
+    });
   </script>
 </body>
 </html>

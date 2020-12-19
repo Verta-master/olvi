@@ -1,3 +1,11 @@
+.nets,
+.nets__share,
+.nets__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nets {
   font-size: 14px;
   text-align: center;
@@ -9,13 +17,10 @@
   span {
     margin-right: 17px;
   }
-}
-
-.nets,
-.nets__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
+  &--plugin {
+    justify-content: space-between;
+  }
 }
 
 .nets__list {
