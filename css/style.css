@@ -5277,7 +5277,7 @@ a.breadcrumbs__link:active {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    bottom: 0;
     z-index: -1;
     max-width: 100%;
     display: block;
