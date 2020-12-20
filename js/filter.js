@@ -9,6 +9,9 @@ if (window.innerWidth < 1170) {
     event.preventDefault();
     $('.filter__drop').addClass('filter__drop--open');
     $('.overlay').addClass('overlay--show');
+    $('.filter__wrap').scroll(function(){
+      $('.filter__wrap').getNiceScroll().resize();
+    });
   })
   
   $('.filter__close').click(function() {
