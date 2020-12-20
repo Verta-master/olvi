@@ -14,6 +14,9 @@ if (window.innerWidth < 1170) {
   $('.menu__arrow').click(function() {
     $(this).next().slideToggle();
     $(this).toggleClass('menu__arrow--top');
+    $(".menu__drop").scroll(function(){
+      $(".menu__drop").getNiceScroll().resize();
+    });
   })
   
   $('.menu__arrow').prev().addClass('menu__category--blue');
