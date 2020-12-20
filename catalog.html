@@ -1144,6 +1144,48 @@
     </div>
   </footer>
   
+  <div class="boxscroll do-nicescroll" tabindex="1" style="overflow: hidden; outline: none;height: 400px;width:50%;border: 2px solid #00F;padding: 0 12px;">
+    <h1>All Complex Ecosystems Have Parasites</h1>
+    <p><strong>All Complex Ecosystems Have Parasites</strong></p>
+    <p><strong> Cory Doctorow</strong></p>
+    <p><strong> doctorow@craphound.com</strong></p>
+    <p><strong> For the O’Reilly Emerging Technology Conference</strong></p>
+    <p><strong> San Diego, California</strong></p>
+    <p><strong> 16 March 2005</strong></p>
+    <p>—</p>
+    <p>This text is dedicated to the public domain, using a Creative Commons public domain dedication:</p>
+    <p>&gt; Copyright-Only Dedication (based on United States law) &gt; &gt; The person or persons who have associated their<br>
+    work with this &gt; document (the “Dedicator”) hereby dedicate the entire copyright &gt; in the work of authorship<br>
+    identified below (the “Work”) to the &gt; public domain. &gt; &gt; Dedicator makes this dedication for the<br>
+    benefit of the public at &gt; large and to the detriment of Dedicator’s heirs and successors. &gt; Dedicator intends<br>
+    this dedication to be an overt act of &gt; relinquishment in perpetuity of all present and future rights &gt; under<br>
+    copyright law, whether vested or contingent, in the Work. &gt; Dedicator understands that such relinquishment of all<br>
+    rights &gt; includes the relinquishment of all rights to enforce (by lawsuit &gt; or otherwise) those copyrights in<br>
+    the Work. &gt; &gt; Dedicator recognizes that, once placed in the public domain, the &gt; Work may be freely reproduced,<br>
+    distributed, transmitted, used, &gt; modified, built upon, or otherwise exploited by anyone for any &gt; purpose, commercial<br>
+    or non-commercial, and in any way, including &gt; by methods that have not yet been invented or conceived.</p>
+    <p>—</p>
+    <p>AOL hates spam. AOL could eliminate nearly 100 percent of its subscribers’ spam with one easy change: it could simply<br>
+    shut off its internet gateway. Then, as of yore, the only email an AOL subscriber could receive would come from another<br>
+    AOL subscriber. If an AOL subscriber sent a spam to another AOL subscriber and AOL found out about it, they could terminate<br>
+    the spammer’s account. Spam costs AOL millions, and represents a substantial disincentive for AOL customers to remain<br>
+    with the service, and yet AOL chooses to permit virtually anyone who can connect to the Internet, anywhere in the world,<br>
+    to send email to its customers, with any software at all.</p>
+    <p>Email is a sloppy, complicated ecosystem. It has organisms of sufficient diversity and sheer number as to beggar the<br>
+    imagination: thousands of SMTP agents, millions of mail-servers, hundreds of millions of users. That richness and diversity<br>
+    lets all kinds of innovative stuff happen: if you go to nytimes.com and “send a story to a friend,” the NYT<br>
+    can convincingly spoof your return address on the email it sends to your friend, so that it appears that the email<br>
+    originated on your computer. Also: a spammer can harvest your email and use it as a fake return address on the spam<br>
+    he sends to your friend. Sysadmins have server processes that send them mail to secret pager-addresses when something<br>
+    goes wrong, and GPLed mailing-list software gets used by spammers and people running high-volume mailing lists alike.</p>
+    <p>You could stop spam by simplifying email: centralize functions like identity verification, limit the number of authorized<br>
+    mail agents and refuse service to unauthorized agents, even set up tollbooths where small sums of money are collected<br>
+    for every email, ensuring that sending ten million messages was too expensive to contemplate without a damned high<br>
+    expectation of return on investment. If you did all these things, you’d solve spam.</p>
+    <p>[…]</p>
+    <p>A free ebook from http://manybooks.net/</p>
+  </div>
+  
   <!-- Modal windows -->
   <div style="display: none;" id="call" class="modal">
     <p class="modal__title">Оставьте номер телефона, и мы вам перезвоним</p>
@@ -1195,6 +1237,7 @@
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/filter.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
   
   <!-- Tabs -->
   <script>
@@ -1254,6 +1297,10 @@
         }
       }
     });
+  </script>
+  
+  <script>
+    $(".do-nicescroll").niceScroll(); 
   </script>
 </body>
 </html>
