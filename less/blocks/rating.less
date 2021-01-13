@@ -1,11 +1,56 @@
-.comments_form_param5 {
-  margin-bottom: 18px;
-  text-align: center;
-  position: relative;
+//.comments_form_param5 {
+//  margin-bottom: 18px;
+//  text-align: center;
+//  position: relative;
+//}
+//
+//.comments_form_param5 label.comment_rank_star {
+//  display: inline-block;
+//  vertical-align: middle;
+//  margin-bottom: 5px;
+//  margin-left: 5px;
+//  margin-right: 5px;
+//  text-align: center;
+//  cursor: pointer;
+//}
+//
+//.comments_form_param5 label input {
+//  display: none;
+//}
+//
+//.comments_form_param5 label .comments_form_rating_star {
+//  display: block;
+//  width: 40px;
+//  height: 37px;
+//  background: url(../img/icons/36.svg) center center no-repeat;
+//  background-size: 40px 37px;
+//}
+
+//.comments_form_param5 label .comments_form_rating_star.active {
+//  background: url(../img/icons/23.svg) center center no-repeat;
+//  background-size: 40px 37px;
+//}
+
+.review .title {
+  margin-bottom: 24px;
 }
 
-.comments_form_param5 label.comment_rank_star {
-  display: inline-block;
+.rating-area {
+	margin-bottom: 18px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.rating-area > input {
+	display: none;
+}
+
+.rating-area > label {
+	display: inline-block;
   vertical-align: middle;
   margin-bottom: 5px;
   margin-left: 5px;
@@ -14,11 +59,8 @@
   cursor: pointer;
 }
 
-.comments_form_param5 label input {
-  display: none;
-}
-
-.comments_form_param5 label .comments_form_rating_star {
+.rating-area > label::before {
+	content: '';
   display: block;
   width: 40px;
   height: 37px;
@@ -26,11 +68,22 @@
   background-size: 40px 37px;
 }
 
-.comments_form_param5 label .comments_form_rating_star.active {
-  background: url(../img/icons/23.svg) center center no-repeat;
+.rating-area > input:checked ~ label::before {
+	background: url(../img/icons/23.svg) center center no-repeat;
   background-size: 40px 37px;
 }
 
-.review .title {
-  margin-bottom: 24px;
+.rating-area > label:hover::before,
+.rating-area > label:hover ~ label::before {
+	background: url(../img/icons/23.svg) center center no-repeat;
+  background-size: 40px 37px;
 }
+
+//.rating-area > input:checked + label:hover::before,
+//.rating-area > input:checked + label:hover ~ label,
+//.rating-area > input:checked ~ label:hover::before,
+//.rating-area > input:checked ~ label:hover ~ label,
+//.rating-area > label:hover ~ input:checked ~ label::before {
+//	background: url(../img/icons/23.svg) center center no-repeat;
+//  background-size: 40px 37px;
+//}
