@@ -6667,12 +6667,31 @@ a.breadcrumbs__link:active {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
-.comments_form_param5 {
+.review .title {
+  margin-bottom: 24px;
+}
+.rating-area {
   margin-bottom: 18px;
   text-align: center;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
-.comments_form_param5 label.comment_rank_star {
+.rating-area > input {
+  display: none;
+}
+.rating-area > label {
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 5px;
@@ -6681,20 +6700,20 @@ a.breadcrumbs__link:active {
   text-align: center;
   cursor: pointer;
 }
-.comments_form_param5 label input {
-  display: none;
-}
-.comments_form_param5 label .comments_form_rating_star {
+.rating-area > label::before {
+  content: '';
   display: block;
   width: 40px;
   height: 37px;
   background: url(../img/icons/36.svg) center center no-repeat;
   background-size: 40px 37px;
 }
-.comments_form_param5 label .comments_form_rating_star.active {
+.rating-area > input:checked ~ label::before {
   background: url(../img/icons/23.svg) center center no-repeat;
   background-size: 40px 37px;
 }
-.review .title {
-  margin-bottom: 24px;
+.rating-area > label:hover::before,
+.rating-area > label:hover ~ label::before {
+  background: url(../img/icons/23.svg) center center no-repeat;
+  background-size: 40px 37px;
 }
