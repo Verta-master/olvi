@@ -1,0 +1,55 @@
+1) Обернуть форму поиска в строке меню дополнительным дивом, в котором поместить выпадашку:
+
+	  <div class="search-block">
+        <form action="#" class="search">
+          <input type="text" class="search__input" placeholder="Поиск">
+          <button type="submit" class="search__btn"></button>
+        </form>
+        <div class="search-drop">
+          <ul>
+            <li><a href="#">Ботинки</a></li>
+            <li><a href="#">Ботинки зимние</a></li>
+            <li><a href="#">Ботинки демисезонные</a></li>
+            <li><a href="#">Ботинки ортопедические</a></li>
+          </ul>
+        </div>
+      </div>
+	  
+2) Стили (выпадашка .search-drop скрыта):
+
+.search-block {
+  position: relative;
+}
+.search-drop {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding-top: 5px;
+}
+.search-drop ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 23.75px 1.25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 23.75px 1.25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.search-drop ul li a {
+  display: block;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 1.2;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.search-drop ul li a:hover,
+.search-drop ul li a:active {
+  background-color: #f4f4f4;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
