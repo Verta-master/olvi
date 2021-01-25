@@ -4363,6 +4363,27 @@ a.breadcrumbs__link:active {
   margin-top: 0;
   margin-bottom: 5px;
 }
+.find__form {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 12px;
+}
+.find__cross {
+  display: block;
+  width: 26px;
+  height: 24px;
+  background-image: url(../img/icons/2.svg);
+  background-repeat: no-repeat;
+  background-size: 34px 34px;
+  background-position: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.find__cross:hover,
+.find__cross:active {
+  opacity: 0.8;
+}
 .order {
   margin-bottom: 120px;
 }
@@ -6716,4 +6737,44 @@ a.breadcrumbs__link:active {
 .rating-area > label:hover ~ label::before {
   background: url(../img/icons/23.svg) center center no-repeat;
   background-size: 40px 37px;
+}
+.info__read {
+  position: relative;
+  height: 438px;
+  overflow: hidden;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.info__read::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(71%, rgba(255, 255, 255, 0.8)), to(#ffffff));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 71%, #ffffff 100%);
+  background-size: 100%;
+  pointer-events: none;
+}
+.info__read--show {
+  height: auto;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.info__read--show::after {
+  opacity: 0;
+}
+.info__link--hide {
+  position: relative;
+}
+.info__link--hide::after {
+  content: "Свернуть";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
 }
