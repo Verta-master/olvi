@@ -1,0 +1,31 @@
+1) Разметка:
+
+<form action="#" class="find__form">
+  <button type="button" class="find__cross"></button>
+  <input type="text" class="find__input" placeholder="" value="Сандалии">
+  <button type="submit" class="find__btn"></button>
+</form>
+
+2) Стили:
+
+.find__form {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 12px;
+}
+.find__cross {
+  display: block;
+  width: 26px;
+  height: 24px;
+  background-image: url(../img/icons/2.svg);
+  background-repeat: no-repeat;
+  background-size: 34px 34px;
+  background-position: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.find__cross:hover,
+.find__cross:active {
+  opacity: 0.8;
+}

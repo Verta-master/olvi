@@ -1,0 +1,73 @@
+1) Разметка
+
+<div class="rating-area">
+  <input type="radio" id="star-5" name="rating" value="5">
+  <label for="star-5" title="Оценка «5»"></label>	
+  <input type="radio" id="star-4" name="rating" value="4">
+  <label for="star-4" title="Оценка «4»"></label>    
+  <input type="radio" id="star-3" name="rating" value="3">
+  <label for="star-3" title="Оценка «3»"></label>  
+  <input type="radio" id="star-2" name="rating" value="2">
+  <label for="star-2" title="Оценка «2»"></label>    
+  <input type="radio" id="star-1" name="rating" value="1">
+  <label for="star-1" title="Оценка «1»"></label>
+</div>
+
+2) Стили
+
+.review .title {
+  margin-bottom: 24px;
+}
+
+.rating-area {
+	margin-bottom: 18px;
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.rating-area > input {
+	display: none;
+}
+
+.rating-area > label {
+	display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.rating-area > label::before {
+	content: '';
+  display: block;
+  width: 40px;
+  height: 37px;
+  background: url(../img/icons/36.svg) center center no-repeat;
+  background-size: 40px 37px;
+}
+
+.rating-area > input:checked ~ label::before {
+	background: url(../img/icons/23.svg) center center no-repeat;
+  background-size: 40px 37px;
+}
+
+.rating-area > label:hover::before,
+.rating-area > label:hover ~ label::before {
+	background: url(../img/icons/23.svg) center center no-repeat;
+  background-size: 40px 37px;
+}
