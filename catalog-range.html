@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>OLVI</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/nouislider.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <svg style="display:none">
+    <symbol id="icon-like">
+      <path d="M1627678 2479566c199269,-139270 791464,-563457 1056258,-868241 203463,-231294 316064,-470808 316064,-785965 0,-111637 -22815,-218144 -64023,-315270 -42909,-100981 -105799,-192042 -183710,-268196 -77854,-76096 -170814,-137484 -273977,-179344 -99223,-40245 -208026,-62550 -322072,-62550 -103871,0 -206893,18479 -304132,54784 -112034,41832 -227157,112431 -306343,202075 -16041,18138 -30750,36872 -45460,56031 -198,255 -368,283 -566,0 -14710,-19159 -29419,-37893 -45460,-56031 -79186,-89644 -194309,-160243 -306343,-202075 -97239,-36305 -200261,-54784 -304132,-54784 -114046,0 -222849,22305 -322072,62550 -103163,41860 -196123,103248 -273977,179344 -77911,76154 -140801,167215 -183710,268196 -41208,97126 -64023,203633 -64023,315270 0,315157 112601,554671 316064,785965 264794,304784 856989,728971 1056258,868241 35370,24714 82643,65355 127621,65355 45148,0 92252,-40556 127735,-65355zm-127678 -1864670c77996,-482 93243,-57533 126885,-111297 24260,-38856 52743,-74651 85279,-106705 34803,-34208 74311,-65271 116002,-90353 32507,-19527 66857,-36050 102284,-49314 72016,-26839 148906,-40528 225768,-40528 84373,0 165061,16466 238664,46225 76295,30864 145108,76125 202613,132326 116398,113876 182008,267430 182008,430053 0,263377 -91542,449127 -263717,644570 -63031,72356 -150039,154773 -247279,239230 -97240,84458 -204880,171098 -309120,251899 -94717,73405 -186771,141991 -265900,199864 -64108,46905 -128670,93130 -193487,139015 -64817,-45885 -129379,-92110 -193487,-139015 -79129,-57873 -171183,-126459 -265900,-199864 -104240,-80801 -211880,-167441 -309120,-251899 -97240,-84457 -184248,-166874 -247279,-239230 -172175,-195443 -263717,-381193 -263717,-644570 0,-162623 65610,-316177 182008,-430053 57505,-56201 126318,-101462 202613,-132326 73603,-29759 154291,-46225 238664,-46225 76862,0 153752,13689 225768,40528 35427,13264 69777,29787 102284,49314 41691,25082 81199,56145 116002,90353 32536,32054 61019,67849 85279,106705 33642,53764 48889,110815 126885,111297z"/>
+    </symbol>
+    <symbol id="icon-compare">
+      <path d="M1865759 1208793c0,313289 254413,568155 567135,568155 151485,0 293899,-59074 401022,-166424 107123,-107292 166112,-249962 166112,-401731 0,-20580 -5584,-40819 -16186,-58451l-355922 -594348c40904,-17178 69648,-57629 69648,-104826 0,-62760 -50826,-113642 -113444,-113642l-970708 0 0 -223884c0,-62759 -50770,-113642 -113388,-113642 -62674,0 -113444,50883 -113444,113642l0 223884 -970708 0c-62618,0 -113444,50882 -113444,113642 0,47197 28744,87648 69648,104826l-355922 594348c-10602,17632 -16158,37871 -16158,58451 0,313289 254384,568155 567106,568155 312722,0 567163,-254866 567163,-568155 0,-20580 -5584,-40819 -16186,-58451l-350650 -585532 619151 0 0 1908024 -869623 0c-62618,0 -113416,50854 -113416,113614 0,62760 50798,113643 113416,113643l1966078 0c62647,0 113416,-50883 113416,-113643 0,-62760 -50769,-113614 -113416,-113614l-869623 0 0 -1908024 619151 0 -350622 585532c-10602,17632 -16186,37871 -16186,58451zm-1298653 340899c-147857,0 -273915,-95019 -320715,-227285l641460 0c-46829,132266 -172859,227285 -320745,227285zm253393 -454541l-506785 0 253392 -423105 253393 423105zm1612395 -423105l253392 423105 -506785 0 253393 -423105zm320744 650361c-46829,132266 -172859,227285 -320744,227285 -147857,0 -273916,-95019 -320773,-227285l641517 0z"/>
+    </symbol>
+    <symbol id="icon-basket">
+      <path d="M81 90c-8,0 -14,7 -14,14 0,8 6,14 14,14l47 0c23,58 46,116 69,174l-21 51c-2,4 -2,9 1,13 3,4 7,6 12,6l234 0c8,0 14,-6 14,-14 0,-7 -6,-14 -14,-14l-213 0 12 -29 226 -18c6,0 11,-5 12,-11l28 -122c2,-8 -5,-17 -13,-17l-310 0 -15 -38c-2,-5 -7,-9 -13,-9l-56 0zm96 75l87 0 0 42 -70 0 -17 -42zm115 0l56 0 0 42 -56 0 0 -42zm84 0l81 0 -10 42 -71 0 0 -42zm-171 71l59 0 0 38 -43 3 -16 -41zm87 0l56 0 0 31 -56 4 0 -35zm84 0l65 0 -6 24 -59 5 0 -29zm-136 136c-25,0 -47,21 -47,46 0,26 22,47 47,47 26,0 47,-21 47,-47 0,-25 -21,-46 -47,-46zm132 0c-26,0 -47,21 -47,46 0,26 21,47 47,47 25,0 46,-21 46,-47 0,-25 -21,-46 -46,-46zm-132 28c11,0 19,8 19,18 0,11 -8,19 -19,19 -10,0 -18,-8 -18,-19 0,-10 8,-18 18,-18zm132 0c10,0 18,8 18,18 0,11 -8,19 -18,19 -11,0 -19,-8 -19,-19 0,-10 8,-18 19,-18z"/>
+    </symbol>
+  </svg>
+ 
+  <header class="header">
+    <div class="wrapper header__wrap">
+      <div class="logo">
+        <img src="img/images/1.svg" alt="Logo">
+      </div>
+      <div class="header__phones">
+        <button type="button" class="header__mobilebtn"></button>
+        <a href="tel:+380977360649" class="header__phone">+38 (097) 736 06 49</a>
+        <a href="tel:+380668588806" class="header__phone">+38 (066) 858 88 06</a>
+        <a href="tel:+380635925786" class="header__phone">+38 (063) 592 57 86</a>
+        <button type="button" class="header__dropbtn"></button>
+        <div class="header__droptablet">
+          <p class="header__title">Контакты</p>
+          <button type="button" class="header__closebtn"></button>
+          <div class="header__block">
+            <div class="header__time">Мы работаем: Пн-Сб 9:00-19:00</div>
+          </div>
+          <div class="header__block">
+            <a href="tel:+380977360649" class="header__tel">+38 (097) 736 06 49</a>
+            <a href="tel:+380668588806" class="header__tel">+38 (066) 858 88 06</a>
+            <a href="tel:+380635925786" class="header__tel">+38 (063) 592 57 86</a>
+          </div>
+          <div class="header__block">
+            <p class="header__opt">Оптовикам:<a href="tel:+380977115588">+38 (097) 711 55 88</a></p>
+          </div>
+          <div class="header__block">
+            <a href="skype:Olvi_shop" class="header__skype">Olvi_shop</a>
+          </div>
+          <div class="header__block">
+            <a data-fancybox data-src="#call" href="javascript:;" class="header__mobilecall">Обратный звонок</a>
+          </div>
+          <div class="header__block">
+            <a href="mailto:" class="header__mail">Написать нам</a>
+          </div>
+        </div>
+      </div>
+      <a data-fancybox data-src="#call" href="javascript:;" class="header__call">Обратный звонок</a>
+      <span class="header__time">Мы работаем: Пн-Сб 9:00-19:00</span>
+      <a data-fancybox data-src="#login" href="javascript:;" class="header__login">Войти в кабинет</a>
+      <div class="header__icons">
+        <a href="#" class="header__icon header__icon--like" title="Избранное">
+          <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+            <use href="#icon-like"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__icon header__icon--compare" title="Сравнение">
+          <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+            <use href="#icon-compare"></use>
+          </svg>
+          <span class="header__number">9</span>
+        </a>
+        <div class="header__basket">
+          <a href="#" class="header__icon header__icon--basket" title="Корзина">
+            <svg width="0.555551in" height="0.555551in" viewBox="0 0 556 556">
+              <use href="#icon-basket"></use>
+            </svg>
+            <span class="header__number">3</span>
+          </a>
+          <div class="header__drop">
+            <p>В корзин 3 товара</p>
+            <p>На сумму 2256 грн</p>
+            <a href="#" class="btn header__btn">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="menu">
+    <div class="wrapper menu__wrap">
+      <div class="menu__catalog">
+        <a href="#" class="menu__btn">
+          <div class="menu__btn__wrap">
+            <svg width="0.333331in" height="0.333331in" viewBox="0 0 333 333">
+              <path d="M28 56l278 0 0 27 -278 0 0 -27zm0 194l278 0 0 28 -278 0 0 -28zm0 -97l278 0 0 28 -278 0 0 -28z"/>
+            </svg>
+            <span>Каталог</span>
+          </div>
+        </a>
+        <div class="menu__drop">
+          <p class="menu__title">Каталог</p>
+          <button type="button" class="menu__closebtn"></button>
+          <div class="wrapper menu__main">
+            <div class="menu__block">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">ДЕТСКАЯ ОРТОПЕДИЧЕСКАЯ ОБУВЬ</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><a href="#">Туфли</a></li>
+                  <li><a href="#">Демисезонные ботинки</a></li>
+                  <li><a href="#">Сандалии</a></li>
+                  <li><a href="#">Антиварусная обувь</a></li>
+                  <li><a href="#">Ортопедические тапочки</a></li>
+                  <li><a href="#">Зимние ортопедические ботинки</a></li>
+                  <li><a href="#">Ортопедические кроссовки</a></li>
+                  <li><a href="#">Термоботинки</a></li>
+                  <li><a href="#">Сменная ортопедическая обувь</a></li>
+                  <li><a href="#">Сандалии анатомические</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu__block">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Стельки</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><a href="#">Ортопедические стельки для взрослых</a></li>
+                  <li><a href="#">Ортопедические стельки для детей</a></li>
+                  <li><a href="#">Стельки при плоскостопии</a></li>
+                  <li><a href="#">Стельки при вальгусной деформации</a></li>
+                  <li><a href="#">Стельки силиконовые</a></li>
+                  <li><a href="#">Стельки при пяточной шпоре</a></li>
+                  <li><a href="#">Каркасные стельки и полустельки</a></li>
+                  <li><a href="#">Стельки с супинатором</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu__block menu__block--hidden">
+              <span class="menu__subcategory">ПО НАЗНАЧЕНИЮ</span>
+              <ul class="menu__category__list">
+                <li><a href="#">Обувь при плоскостопии</a></li>
+                <li><a href="#">Варусные стопы</a></li>
+                <li><a href="#">Обувь при вальгусной деформации</a></li>
+                <li><a href="#">Профилактическая обувь</a></li>
+              </ul>
+              <span class="menu__subcategory">ПО МАРКАМ</span>
+              <ul class="menu__category__list">
+                <li><a href="#">4Rest-Orto</a></li>
+                <li><a href="#">4Rest-Orto для взрослых</a></li>
+                <li><a href="#">Ортекс</a></li>
+                <li><a href="#">Ортекс для взрослых</a></li>
+                <li><a href="#">Теллус и другая обувь</a></li>
+              </ul>
+            </div>
+            <div class="menu__block">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Ортопедические подушки</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><a href="#">Подушки для взрослых</a></li>
+                  <li><a href="#">Ортопедические подушки для детей</a></li>
+                  <li><a href="#">Подушки для сидения</a></li>
+                  <li><a href="#">Ортопедические подушки для сна и отдыха</a></li>
+                  <li><a href="#">Подушки для младенцев</a></li>
+                  <li><a href="#">Подушки для водителей</a></li>
+                  <li><a href="#">Подушки с эффектом памяти</a></li>
+                  <li><a href="#">Подушки для беременных</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu__block">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Ортопедическая обувь для взрослых</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><span class="menu__subcategory">ВИДЫ ОБУВИ</span></li>
+                  <li><a href="#">Сандалии</a></li>
+                  <li><a href="#">Туфли</a></li>
+                  <li><a href="#">Ботинки</a></li>
+                  <li><a href="#">Ортопедическая обувь для врачей</a></li>
+                  <li><span class="menu__subcategory menu__subcategory--top">ВИДЫ ОБУВИ</span></li>
+                  <li><a href="#">Комфортная обувь</a></li>
+                  <li><a href="#">Диабетическая обувь</a></li>
+                  <li><a href="#">Обувь при hallux valgus</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu__block menu__block--mobile">
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Массажные коврики</a>
+              </div>
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Бандажи</a>
+              </div>
+              <div class="menu__wraplink">
+                <a href="#" class="menu__category">Другие товары</a>
+              </div>
+              <div class="menu__wraplink menu__wraplink--top">
+                <a href="#" class="menu__category">Маски, антисептики и защитные экраны</a>
+                <button type="button" class="menu__arrow"><svg viewBox="0 0 222 222" fill-rule:nonzero><path d="M43 68l68 57 68 -57 18 22 -77 64 -9 7 -9 -7 -77 -64 18 -22z"/></svg>
+                </button>
+                <ul class="menu__category__list">
+                  <li><a href="#">Многоразовые защитные маски</a></li>
+                  <li><a href="#">Спиртовые санитайзеры для рук</a></li>
+                  <li><a href="#">Защитные экраны</a></li>
+                </ul>
+              </div>
+            </div>
+            <figure class="menu__img">
+              <img src="img/images/12.png" alt="Каталог">
+            </figure>
+            <div class="menu__mobile">
+              <div class="menu__block">
+                <a href="#" class="menu__category">О нас</a>
+              </div>
+              <div class="menu__block">
+                <a href="#" class="menu__category">Оплата и доставка</a>
+              </div>
+              <div class="menu__block">
+                <a href="#" class="menu__category">Оптовикам</a>
+              </div>
+              <div class="menu__block">
+                <a href="#" class="menu__category">контакты</a>
+              </div>
+              <div class="menu__block">
+                <a href="#" class="menu__category menu__category--sale">Акции %</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Оплата и доставка</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Оптовикам</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Контакты</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">АКЦИИ%</a>
+        </li>
+      </ul>
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Поиск">
+        <button type="submit" class="search__btn"></button>
+      </form>
+      <div class="menu__langs">
+        <a href="#" class="menu__lang">UA</a>
+        <a href="#" class="menu__lang menu__lang--active">RU</a>
+      </div>
+    </div>
+  </nav>
+  <div class="overlay"></div>
+  
+  <main>
+    <nav class="breadcrumbs">
+      <div class="wrapper">
+        <a href="#" class="breadcrumbs__link">Главная</a>
+        <a href="#" class="breadcrumbs__link">Каталог товаров</a>
+        <span class="breadcrumbs__link">Ортопедическая обувь</span>
+      </div>
+    </nav>
+    
+    <section class="catalog catalog--internal">
+      <div class="wrapper">
+        <h1 class="title-main">Детская ортопедическая обувь</h1>
+        
+        <div class="filter">
+          <button type="button" class="filter__btn">Фильтры</button>
+          <div class="filter__drop">
+            <div class="filter__wrap">
+              <p class="title filter__top">Фильтры</p>
+              <button type="button" class="filter__close"></button>
+              <form action="#" class="filter__form">
+                <div class="filter__field filter__field--sort">
+                  <p class="filter__title">Сортировка:<span>Цена по убыванию</span></p>
+                  <div class="filter__selection">
+                    <a href="#" class="filter__link">Новинки</a>
+                    <a href="#" class="filter__link">Цена по убыванию</a>
+                    <a href="#" class="filter__link">Цена по возростанию</a>
+                    <a href="#" class="filter__link">Хиты продаж</a>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--brand">
+                  <p class="filter__title">Бренд</p>
+                  <div class="filter__selection">
+                    <input type="checkbox" id="check6" class="checkbox" checked>
+                    <label for="check6" class="checkbox__label">Бренд 1</label>
+                    <input type="checkbox" id="check7" class="checkbox">
+                    <label for="check7" class="checkbox__label">Бренд 2</label>
+                    <input type="checkbox" id="check8" class="checkbox" checked>
+                    <label for="check8" class="checkbox__label">Бренд 3</label>
+                    <input type="checkbox" id="check9" class="checkbox">
+                    <label for="check9" class="checkbox__label">Бренд 4</label>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--who">
+                  <p class="filter__title">Для кого</p>
+                  <div class="filter__selection">
+                    <input type="checkbox" id="check4" class="checkbox" checked>
+                    <label for="check4" class="checkbox__label">Для мальчиков</label>
+                    <input type="checkbox" id="check5" class="checkbox">
+                    <label for="check5" class="checkbox__label">Для девочек</label>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--season">
+                  <p class="filter__title">Сезон</p>
+                  <div class="filter__selection">
+                    <input type="checkbox" id="check1" class="checkbox" checked>
+                    <label for="check1" class="checkbox__label">лето</label>
+                    <input type="checkbox" id="check2" class="checkbox">
+                    <label for="check2" class="checkbox__label">зима</label>
+                    <input type="checkbox" id="check3" class="checkbox" checked>
+                    <label for="check3" class="checkbox__label">демисезонный</label>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--color">
+                  <p class="filter__title">Цвет</p>
+                  <div class="filter__selection">
+                    <input type="checkbox" id="color1" class="filter__color" checked>
+                    <label for="color1" class="filter__label">
+                      <img src="img/images/color1.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color2" class="filter__color">
+                    <label for="color2" class="filter__label">
+                      <img src="img/images/color2.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color3" class="filter__color">
+                    <label for="color3" class="filter__label">
+                      <img src="img/images/color3.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color4" class="filter__color">
+                    <label for="color4" class="filter__label">
+                      <img src="img/images/color4.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color5" class="filter__color">
+                    <label for="color5" class="filter__label">
+                      <img src="img/images/color5.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color6" class="filter__color">
+                    <label for="color6" class="filter__label">
+                      <img src="img/images/color6.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color7" class="filter__color">
+                    <label for="color7" class="filter__label">
+                      <img src="img/images/color7.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color8" class="filter__color">
+                    <label for="color8" class="filter__label">
+                      <img src="img/images/color8.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color9" class="filter__color">
+                    <label for="color9" class="filter__label">
+                      <img src="img/images/color9.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color10" class="filter__color">
+                    <label for="color10" class="filter__label">
+                      <img src="img/images/color10.jpg" alt="Цвет">
+                    </label>
+                    <input type="checkbox" id="color11" class="filter__color">
+                    <label for="color11" class="filter__label">
+                      <img src="img/images/color11.jpg" alt="Цвет">
+                    </label>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--size">
+                  <p class="filter__title">Размер</p>
+                  <div class="filter__selection" id="size">
+                    <ul class="modal__list">
+                      <li class="modal__name"><a href="#size-1">По длине стопы</a></li>
+                      <li class="modal__name"><a href="#size-2">По размеру</a></li>
+                    </ul>
+                    <div class="modal__field" id="size-1">
+                      <a href="#" class="filter__modal">Как правильно определить размер?</a>
+                      <div class="filter__choice">
+                        <label for="amount-size">По длине стопы:</label>
+                        <input type="text" id="amount-size" value="" readonly>
+                      </div>
+                      <div class="filter__slider">
+                        <div id="slider-size"></div>
+                      </div>
+                    </div>
+                    <div class="modal__field" id="size-2">
+                      <a href="#" class="filter__modal">Как правильно определить размер?</a>
+                      <div class="filter__name">По размеру:</div>
+                      <div class="filter__sizes">
+                        <input type="checkbox" id="size1" class="filter__check">
+                        <label for="size1" class="filter__label-size">18</label>
+                        <input type="checkbox" id="size2" class="filter__check" checked>
+                        <label for="size2" class="filter__label-size">19</label>
+                        <input type="checkbox" id="size3" class="filter__check" checked>
+                        <label for="size3" class="filter__label-size">20</label>
+                        <input type="checkbox" id="size4" class="filter__check">
+                        <label for="size4" class="filter__label-size">20,5</label>
+                        <input type="checkbox" id="size5" class="filter__check">
+                        <label for="size5" class="filter__label-size">21</label>
+                        <input type="checkbox" id="size6" class="filter__check">
+                        <label for="size6" class="filter__label-size">22</label>
+                        <input type="checkbox" id="size7" class="filter__check">
+                        <label for="size7" class="filter__label-size">23</label>
+                        <input type="checkbox" id="size8" class="filter__check">
+                        <label for="size8" class="filter__label-size">24</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__field filter__field--price">
+                  <p class="filter__title">Цена</p>
+                  <div class="filter__selection">
+                    <div class="filter__price">
+                      <input type="text" id="amount-min" class="filter__input">
+                      <input type="text" id="amount-max" class="filter__input">
+                    </div>
+                    <div class="filter__range">
+                      <div id="slider-range"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__tags">
+                  <a href="#" class="filter__tag">4Rest-Orto</a>
+                  <a href="#" class="filter__tag">Для мальчиков</a>
+                  <a href="#" class="filter__cancel">Сбросить</a>
+                </div>
+              </form>
+              <button type="button" class="btn filter__closebtn">Закрыть</button>
+            </div>
+          </div>
+        </div>
+
+        <ul class="catalog__list">
+          <div class="catalog__item">
+            <div class="catalog__labels">
+              <div class="catalog__sale">sale</div>
+            </div>
+            <div class="catalog__btns">
+              <a href="#" class="catalog__icon catalog__icon--like catalog__icon--like-active">
+                <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+                  <use href="#icon-like"></use>
+                </svg>
+              </a>
+              <form action="#" class="catalog__icon catalog__icon--compare catalog__icon--compare-active">
+                <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+                  <use href="#icon-compare"></use>
+                </svg>
+              </form>
+            </div>
+            <a href="#" class="catalog__img">
+              <img src="img/images/05.png" alt="Сандалии ортопедические 08-802 Антиварус р-р.21-30">
+            </a>
+            <div class="catalog__info">
+              <div class="catalog__rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/24.png" alt="rating">
+                <a href="#">5 отзывов</a>
+              </div>
+              <a href="#" class="catalog__title">Сандалии ортопедические 08-802 Антиварус р-р.21-30</a>
+              <p>Производитель: <a href="#">4Rest-Orto</a></p>
+              <div class="catalog__price">
+                <div class="catalog__newprice">1777 грн</div>
+                <div class="catalog__oldprice">2170 грн</div>
+              </div>
+              <div class="catalog__size">
+                <p>Размеры:</p>
+                <input type="checkbox" id="check1" class="catalog__checkbox">
+                <label for="check1" class="catalog__label">21</label>
+                <input type="checkbox" id="check2" class="catalog__checkbox">
+                <label for="check2" class="catalog__label">22</label>
+                <input type="checkbox" id="check3" class="catalog__checkbox">
+                <label for="check3" class="catalog__label">23</label>
+                <input type="checkbox" id="check4" class="catalog__checkbox" disabled>
+                <label for="check4" class="catalog__label">24</label>
+                <input type="checkbox" id="check5" class="catalog__checkbox" disabled>
+                <label for="check5" class="catalog__label">25</label>
+                <input type="checkbox" id="check6" class="catalog__checkbox">
+                <label for="check6" class="catalog__label">26</label>
+                <input type="checkbox" id="check7" class="catalog__checkbox">
+                <label for="check7" class="catalog__label">27</label>
+                <input type="checkbox" id="check8" class="catalog__checkbox">
+                <label for="check8" class="catalog__label">28</label>
+                <input type="checkbox" id="check9" class="catalog__checkbox">
+                <label for="check9" class="catalog__label">29</label>
+                <input type="checkbox" id="check10" class="catalog__checkbox">
+                <label for="check10" class="catalog__label">30</label>
+                <input type="checkbox" id="check11" class="catalog__checkbox">
+                <label for="check11" class="catalog__label">31</label>
+                <input type="checkbox" id="check12" class="catalog__checkbox">
+                <label for="check12" class="catalog__label">32</label>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__labels">
+              <div class="catalog__sale catalog__sale--new">new</div>
+            </div>
+            <div class="catalog__btns">
+              <a href="#" class="catalog__icon catalog__icon--like">
+                <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+                  <use href="#icon-like"></use>
+                </svg>
+              </a>
+              <form action="#" class="catalog__icon catalog__icon--compare">
+                <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+                  <use href="#icon-compare"></use>
+                </svg>
+              </form>
+            </div>
+            <a href="#" class="catalog__img">
+              <img src="img/images/04.png" alt="Кроссовки ортопедические 06-558 р. 31-36">
+            </a>
+            <div class="catalog__info">
+              <div class="catalog__rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/24.png" alt="rating">
+                <a href="#">1 отзыв</a>
+              </div>
+              <a href="#" class="catalog__title">Кроссовки ортопедические 06-558 р. 31-36</a>
+              <p>Производитель: <a href="#">4Rest-Orto</a></p>
+              <div class="catalog__price">
+                <div class="catalog__newprice">999 грн</div>
+                <div class="catalog__oldprice">1170 грн</div>
+              </div>
+              <div class="catalog__size">
+                <p>Размеры:</p>
+                <input type="checkbox" id="check1" class="catalog__checkbox">
+                <label for="check1" class="catalog__label">21</label>
+                <input type="checkbox" id="check2" class="catalog__checkbox">
+                <label for="check2" class="catalog__label">22</label>
+                <input type="checkbox" id="check3" class="catalog__checkbox">
+                <label for="check3" class="catalog__label">23</label>
+                <input type="checkbox" id="check4" class="catalog__checkbox" disabled>
+                <label for="check4" class="catalog__label">24</label>
+                <input type="checkbox" id="check5" class="catalog__checkbox" disabled>
+                <label for="check5" class="catalog__label">25</label>
+                <input type="checkbox" id="check6" class="catalog__checkbox">
+                <label for="check6" class="catalog__label">26</label>
+                <input type="checkbox" id="check7" class="catalog__checkbox">
+                <label for="check7" class="catalog__label">27</label>
+                <input type="checkbox" id="check8" class="catalog__checkbox">
+                <label for="check8" class="catalog__label">28</label>
+                <input type="checkbox" id="check9" class="catalog__checkbox">
+                <label for="check9" class="catalog__label">29</label>
+                <input type="checkbox" id="check10" class="catalog__checkbox">
+                <label for="check10" class="catalog__label">30</label>
+                <input type="checkbox" id="check11" class="catalog__checkbox">
+                <label for="check11" class="catalog__label">31</label>
+                <input type="checkbox" id="check12" class="catalog__checkbox">
+                <label for="check12" class="catalog__label">32</label>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__labels">
+              <div class="catalog__sale catalog__sale--hit">top</div>
+            </div>
+            <div class="catalog__btns">
+              <a href="#" class="catalog__icon catalog__icon--like">
+                <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+                  <use href="#icon-like"></use>
+                </svg>
+              </a>
+              <form action="#" class="catalog__icon catalog__icon--compare">
+                <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+                  <use href="#icon-compare"></use>
+                </svg>
+              </form>
+            </div>
+            <a href="#" class="catalog__img">
+              <img src="img/images/03.png" alt="Ортопедические кроссовки для мальчика 06-551 р.21-30">
+            </a>
+            <div class="catalog__info">
+              <div class="catalog__rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/24.png" alt="rating">
+                <a href="#">8 отзывов</a>
+              </div>
+              <a href="#" class="catalog__title">Ортопедические кроссовки для мальчика 06-551 р.21-30</a>
+              <p>Производитель: <a href="#">4Rest-Orto</a></p>
+              <div class="catalog__price">
+                <div class="catalog__newprice">777 грн</div>
+                <div class="catalog__oldprice">1150 грн</div>
+              </div>
+              <div class="catalog__size">
+                <p>Размеры:</p>
+                <input type="checkbox" id="check1" class="catalog__checkbox">
+                <label for="check1" class="catalog__label">21</label>
+                <input type="checkbox" id="check2" class="catalog__checkbox">
+                <label for="check2" class="catalog__label">22</label>
+                <input type="checkbox" id="check3" class="catalog__checkbox">
+                <label for="check3" class="catalog__label">23</label>
+                <input type="checkbox" id="check4" class="catalog__checkbox" disabled>
+                <label for="check4" class="catalog__label">24</label>
+                <input type="checkbox" id="check5" class="catalog__checkbox" disabled>
+                <label for="check5" class="catalog__label">25</label>
+                <input type="checkbox" id="check6" class="catalog__checkbox">
+                <label for="check6" class="catalog__label">26</label>
+                <input type="checkbox" id="check7" class="catalog__checkbox">
+                <label for="check7" class="catalog__label">27</label>
+                <input type="checkbox" id="check8" class="catalog__checkbox">
+                <label for="check8" class="catalog__label">28</label>
+                <input type="checkbox" id="check9" class="catalog__checkbox">
+                <label for="check9" class="catalog__label">29</label>
+                <input type="checkbox" id="check10" class="catalog__checkbox">
+                <label for="check10" class="catalog__label">30</label>
+                <input type="checkbox" id="check11" class="catalog__checkbox">
+                <label for="check11" class="catalog__label">31</label>
+                <input type="checkbox" id="check12" class="catalog__checkbox">
+                <label for="check12" class="catalog__label">32</label>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__labels">
+              <div class="catalog__sale">sale</div>
+            </div>
+            <div class="catalog__btns">
+              <a href="#" class="catalog__icon catalog__icon--like">
+                <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+                  <use href="#icon-like"></use>
+                </svg>
+              </a>
+              <form action="#" class="catalog__icon catalog__icon--compare">
+                <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+                  <use href="#icon-compare"></use>
+                </svg>
+              </form>
+            </div>
+            <a href="#" class="catalog__img">
+              <img src="img/images/02.png" alt="Кроссовки ортопедические 06-557 р.21-30">
+            </a>
+            <div class="catalog__info">
+              <div class="catalog__rating">
+                <a href="#">Оставить отзыв</a>
+              </div>
+              <a href="#" class="catalog__title">Кроссовки ортопедические 06-557 р.21-30</a>
+              <p>Производитель: <a href="#">4Rest-Orto</a></p>
+              <div class="catalog__price">
+                <div class="catalog__newprice">1205 грн</div>
+                <div class="catalog__oldprice">1870 грн</div>
+              </div>
+              <div class="catalog__size">
+                <p>Размеры:</p>
+                <input type="checkbox" id="check1" class="catalog__checkbox">
+                <label for="check1" class="catalog__label">21</label>
+                <input type="checkbox" id="check2" class="catalog__checkbox">
+                <label for="check2" class="catalog__label">22</label>
+                <input type="checkbox" id="check3" class="catalog__checkbox">
+                <label for="check3" class="catalog__label">23</label>
+                <input type="checkbox" id="check4" class="catalog__checkbox" disabled>
+                <label for="check4" class="catalog__label">24</label>
+                <input type="checkbox" id="check5" class="catalog__checkbox" disabled>
+                <label for="check5" class="catalog__label">25</label>
+                <input type="checkbox" id="check6" class="catalog__checkbox">
+                <label for="check6" class="catalog__label">26</label>
+                <input type="checkbox" id="check7" class="catalog__checkbox">
+                <label for="check7" class="catalog__label">27</label>
+                <input type="checkbox" id="check8" class="catalog__checkbox">
+                <label for="check8" class="catalog__label">28</label>
+                <input type="checkbox" id="check9" class="catalog__checkbox">
+                <label for="check9" class="catalog__label">29</label>
+                <input type="checkbox" id="check10" class="catalog__checkbox">
+                <label for="check10" class="catalog__label">30</label>
+                <input type="checkbox" id="check11" class="catalog__checkbox">
+                <label for="check11" class="catalog__label">31</label>
+                <input type="checkbox" id="check12" class="catalog__checkbox">
+                <label for="check12" class="catalog__label">32</label>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__labels">
+              <div class="catalog__sale">sale</div>
+            </div>
+            <div class="catalog__btns">
+              <a href="#" class="catalog__icon catalog__icon--like">
+                <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+                  <use href="#icon-like"></use>
+                </svg>
+              </a>
+              <form action="#" class="catalog__icon catalog__icon--compare">
+                <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+                  <use href="#icon-compare"></use>
+                </svg>
+              </form>
+            </div>
+            <a href="#" class="catalog__img">
+              <img src="img/images/05.png" alt="Сандалии ортопедические 08-802 Антиварус р-р.21-30">
+            </a>
+            <div class="catalog__info">
+              <div class="catalog__rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/24.png" alt="rating">
+                <a href="#">5 отзывов</a>
+              </div>
+              <a href="#" class="catalog__title">Сандалии ортопедические 08-802 Антиварус р-р.21-30</a>
+              <p>Производитель: <a href="#">4Rest-Orto</a></p>
+              <div class="catalog__price">
+                <div class="catalog__newprice">1777 грн</div>
+                <div class="catalog__oldprice">2170 грн</div>
+              </div>
+              <div class="catalog__size">
+                <p>Размеры:</p>
+                <input type="checkbox" id="check1" class="catalog__checkbox">
+                <label for="check1" class="catalog__label">21</label>
+                <input type="checkbox" id="check2" class="catalog__checkbox">
+                <label for="check2" class="catalog__label">22</label>
+                <input type="checkbox" id="check3" class="catalog__checkbox">
+                <label for="check3" class="catalog__label">23</label>
+                <input type="checkbox" id="check4" class="catalog__checkbox" disabled>
+                <label for="check4" class="catalog__label">24</label>
+                <input type="checkbox" id="check5" class="catalog__checkbox" disabled>
+                <label for="check5" class="catalog__label">25</label>
+                <input type="checkbox" id="check6" class="catalog__checkbox">
+                <label for="check6" class="catalog__label">26</label>
+                <input type="checkbox" id="check7" class="catalog__checkbox">
+                <label for="check7" class="catalog__label">27</label>
+                <input type="checkbox" id="check8" class="catalog__checkbox">
+                <label for="check8" class="catalog__label">28</label>
+                <input type="checkbox" id="check9" class="catalog__checkbox">
+                <label for="check9" class="catalog__label">29</label>
+                <input type="checkbox" id="check10" class="catalog__checkbox">
+                <label for="check10" class="catalog__label">30</label>
+                <input type="checkbox" id="check11" class="catalog__checkbox">
+                <label for="check11" class="catalog__label">31</label>
+                <input type="checkbox" id="check12" class="catalog__checkbox">
+                <label for="check12" class="catalog__label">32</label>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__labels">
+              <div class="catalog__sale catalog__sale--new">new</div>
+            </div>
+            <div class="catalog__btns">
+              <a href="#" class="catalog__icon catalog__icon--like">
+                <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+                  <use href="#icon-like"></use>
+                </svg>
+              </a>
+              <form action="#" class="catalog__icon catalog__icon--compare">
+                <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+                  <use href="#icon-compare"></use>
+                </svg>
+              </form>
+            </div>
+            <a href="#" class="catalog__img">
+              <img src="img/images/04.png" alt="Кроссовки ортопедические 06-558 р. 31-36">
+            </a>
+            <div class="catalog__info">
+              <div class="catalog__rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/24.png" alt="rating">
+                <a href="#">1 отзыв</a>
+              </div>
+              <a href="#" class="catalog__title">Кроссовки ортопедические 06-558 р. 31-36</a>
+              <p>Производитель: <a href="#">4Rest-Orto</a></p>
+              <div class="catalog__price">
+                <div class="catalog__newprice">999 грн</div>
+                <div class="catalog__oldprice">1170 грн</div>
+              </div>
+              <div class="catalog__size">
+                <p>Размеры:</p>
+                <input type="checkbox" id="check1" class="catalog__checkbox">
+                <label for="check1" class="catalog__label">21</label>
+                <input type="checkbox" id="check2" class="catalog__checkbox">
+                <label for="check2" class="catalog__label">22</label>
+                <input type="checkbox" id="check3" class="catalog__checkbox">
+                <label for="check3" class="catalog__label">23</label>
+                <input type="checkbox" id="check4" class="catalog__checkbox" disabled>
+                <label for="check4" class="catalog__label">24</label>
+                <input type="checkbox" id="check5" class="catalog__checkbox" disabled>
+                <label for="check5" class="catalog__label">25</label>
+                <input type="checkbox" id="check6" class="catalog__checkbox">
+                <label for="check6" class="catalog__label">26</label>
+                <input type="checkbox" id="check7" class="catalog__checkbox">
+                <label for="check7" class="catalog__label">27</label>
+                <input type="checkbox" id="check8" class="catalog__checkbox">
+                <label for="check8" class="catalog__label">28</label>
+                <input type="checkbox" id="check9" class="catalog__checkbox">
+                <label for="check9" class="catalog__label">29</label>
+                <input type="checkbox" id="check10" class="catalog__checkbox">
+                <label for="check10" class="catalog__label">30</label>
+                <input type="checkbox" id="check11" class="catalog__checkbox">
+                <label for="check11" class="catalog__label">31</label>
+                <input type="checkbox" id="check12" class="catalog__checkbox">
+                <label for="check12" class="catalog__label">32</label>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__labels">
+              <div class="catalog__sale catalog__sale--hit">top</div>
+            </div>
+            <div class="catalog__btns">
+              <a href="#" class="catalog__icon catalog__icon--like">
+                <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+                  <use href="#icon-like"></use>
+                </svg>
+              </a>
+              <form action="#" class="catalog__icon catalog__icon--compare">
+                <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+                  <use href="#icon-compare"></use>
+                </svg>
+              </form>
+            </div>
+            <a href="#" class="catalog__img">
+              <img src="img/images/03.png" alt="Ортопедические кроссовки для мальчика 06-551 р.21-30">
+            </a>
+            <div class="catalog__info">
+              <div class="catalog__rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/23.png" alt="rating">
+                <img src="img/icons/24.png" alt="rating">
+                <a href="#">8 отзывов</a>
+              </div>
+              <a href="#" class="catalog__title">Ортопедические кроссовки для мальчика 06-551 р.21-30</a>
+              <p>Производитель: <a href="#">4Rest-Orto</a></p>
+              <div class="catalog__price">
+                <div class="catalog__newprice">777 грн</div>
+                <div class="catalog__oldprice">1150 грн</div>
+              </div>
+              <div class="catalog__size">
+                <p>Размеры:</p>
+                <input type="checkbox" id="check1" class="catalog__checkbox">
+                <label for="check1" class="catalog__label">21</label>
+                <input type="checkbox" id="check2" class="catalog__checkbox">
+                <label for="check2" class="catalog__label">22</label>
+                <input type="checkbox" id="check3" class="catalog__checkbox">
+                <label for="check3" class="catalog__label">23</label>
+                <input type="checkbox" id="check4" class="catalog__checkbox" disabled>
+                <label for="check4" class="catalog__label">24</label>
+                <input type="checkbox" id="check5" class="catalog__checkbox" disabled>
+                <label for="check5" class="catalog__label">25</label>
+                <input type="checkbox" id="check6" class="catalog__checkbox">
+                <label for="check6" class="catalog__label">26</label>
+                <input type="checkbox" id="check7" class="catalog__checkbox">
+                <label for="check7" class="catalog__label">27</label>
+                <input type="checkbox" id="check8" class="catalog__checkbox">
+                <label for="check8" class="catalog__label">28</label>
+                <input type="checkbox" id="check9" class="catalog__checkbox">
+                <label for="check9" class="catalog__label">29</label>
+                <input type="checkbox" id="check10" class="catalog__checkbox">
+                <label for="check10" class="catalog__label">30</label>
+                <input type="checkbox" id="check11" class="catalog__checkbox">
+                <label for="check11" class="catalog__label">31</label>
+                <input type="checkbox" id="check12" class="catalog__checkbox">
+                <label for="check12" class="catalog__label">32</label>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__labels">
+              <div class="catalog__sale">sale</div>
+            </div>
+            <div class="catalog__btns">
+              <a href="#" class="catalog__icon catalog__icon--like">
+                <svg width="30px" height="25px" viewBox="0 0 3000000 2544921">
+                  <use href="#icon-like"></use>
+                </svg>
+              </a>
+              <form action="#" class="catalog__icon catalog__icon--compare">
+                <svg width="30px" height="27px" viewBox="0 0 3000028 2700091">
+                  <use href="#icon-compare"></use>
+                </svg>
+              </form>
+            </div>
+            <a href="#" class="catalog__img">
+              <img src="img/images/02.png" alt="Кроссовки ортопедические 06-557 р.21-30">
+            </a>
+            <div class="catalog__info">
+              <div class="catalog__rating">
+                <a href="#">Оставить отзыв</a>
+              </div>
+              <a href="#" class="catalog__title">Кроссовки ортопедические 06-557 р.21-30</a>
+              <p>Производитель: <a href="#">4Rest-Orto</a></p>
+              <div class="catalog__price">
+                <div class="catalog__newprice">1205 грн</div>
+                <div class="catalog__oldprice">1870 грн</div>
+              </div>
+              <div class="catalog__size">
+                <p>Размеры:</p>
+                <input type="checkbox" id="check1" class="catalog__checkbox">
+                <label for="check1" class="catalog__label">21</label>
+                <input type="checkbox" id="check2" class="catalog__checkbox">
+                <label for="check2" class="catalog__label">22</label>
+                <input type="checkbox" id="check3" class="catalog__checkbox">
+                <label for="check3" class="catalog__label">23</label>
+                <input type="checkbox" id="check4" class="catalog__checkbox" disabled>
+                <label for="check4" class="catalog__label">24</label>
+                <input type="checkbox" id="check5" class="catalog__checkbox" disabled>
+                <label for="check5" class="catalog__label">25</label>
+                <input type="checkbox" id="check6" class="catalog__checkbox">
+                <label for="check6" class="catalog__label">26</label>
+                <input type="checkbox" id="check7" class="catalog__checkbox">
+                <label for="check7" class="catalog__label">27</label>
+                <input type="checkbox" id="check8" class="catalog__checkbox">
+                <label for="check8" class="catalog__label">28</label>
+                <input type="checkbox" id="check9" class="catalog__checkbox">
+                <label for="check9" class="catalog__label">29</label>
+                <input type="checkbox" id="check10" class="catalog__checkbox">
+                <label for="check10" class="catalog__label">30</label>
+                <input type="checkbox" id="check11" class="catalog__checkbox">
+                <label for="check11" class="catalog__label">31</label>
+                <input type="checkbox" id="check12" class="catalog__checkbox">
+                <label for="check12" class="catalog__label">32</label>
+              </div>
+            </div>
+          </div>
+        </ul>
+
+        <a href="#" class="btn catalog__btn">Показать еще...</a>
+
+        <nav class="pages">
+          <a href="#" class="pages__link pages__link--prev pages__link--hidden">&laquo;</a>
+          <a href="#" class="pages__link pages__link--active">1</a>
+          <a href="#" class="pages__link">2</a>
+          <a href="#" class="pages__link">3</a>
+          <a href="#" class="pages__link">4</a>
+          <a href="#" class="pages__link">5</a>
+          <a href="#" class="pages__link">6</a>
+          <a href="#" class="pages__link">7</a>
+          <a href="#" class="pages__link pages__link--next">&raquo;</a>
+        </nav>
+      </div>
+    </section>
+    
+    <section class="blog blog--catalog">
+      <div class="wrapper">
+        <p class="title">ПОЛЕЗНО ЗНАТЬ</p>
+        <div class="swiper-container blog__slider blog__slider--news">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide blog__slide">
+              <a href="#" class="blog__img">
+                <img src="img/images/blog-1.jpg" alt="Какую ортопедическую обувь выбрать">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Какую ортопедическую обувь выбрать? Три важных критерия.</a>
+                <time datetime="2020-11-12" class="blog__time">12 ноября 2020</time>
+              </div>
+            </div>
+            <div class="swiper-slide blog__slide">
+              <a href="#" class="blog__img">
+                <img src="img/images/blog-2.jpg" alt="Ортопедические коврики для детей">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Ортопедические коврики для детей - как выбрать</a>
+                <time datetime="2020-11-07" class="blog__time">07 ноября 2020</time>
+              </div>
+            </div>
+            <div class="swiper-slide blog__slide">
+              <a href="#" class="blog__img">
+                <img src="img/images/blog-3.jpg" alt="Как нельзя подбирать ортопедическую обувь!">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Как нельзя подбирать ортопедическую обувь!</a>
+                <time datetime="2020-10-24" class="blog__time">24 октября 2020</time>
+              </div>
+            </div>
+            <div class="swiper-slide blog__slide">
+              <a href="#" class="blog__img">
+                <img src="img/images/blog-4.jpg" alt="Как определить размер обуви">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Как определить размер обуви</a>
+                <time datetime="2020-09-14" class="blog__time">14 сентября 2020</time>
+              </div>
+            </div>
+            <div class="swiper-slide blog__slide">
+              <a href="#" class="blog__img">
+                <img src="img/images/blog-1.jpg" alt="Какую ортопедическую обувь выбрать">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Какую ортопедическую обувь выбрать? Три важных критерия.</a>
+                <time datetime="2020-11-12" class="blog__time">12 ноября 2020</time>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev blog__prev blog__prev--news"></div>
+        <div class="swiper-button-next blog__next blog__next--news"></div>
+        <a href="#" class="btn blog__btn">Читать все статьи</a>
+      </div>
+    </section>
+    
+    <section class="blog blog--video blog--video-catalog">
+      <div class="wrapper">
+        <p class="title">ВИДЕООБЗОРЫ <span>НАШИХ ПОКУПАТЕЛЕЙ</span></p>
+        <div class="swiper-container blog__slider blog__slider--video">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide blog__slide">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="blog__video">
+                <img src="img/images/video-1.jpg" alt="ВИДЕООБЗОРЫ">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Ботинки ортопедические 06-539 р. 21-30</a>
+                <p>Достоинства: <b>Выполнены из качественных материалов</b></p>
+                <p>Недостатки: <b>Необнаружила</b></p>
+                <p>Комментарий: <b>Замечательные сапожки, отличное сочетание</b></p>
+                <p><b>Тарануха Анна</b> (Дата отзыва: 29.07.2020)</p>
+              </div>
+            </div>
+            <div class="swiper-slide blog__slide">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="blog__video">
+                <img src="img/images/video-2.jpg" alt="ВИДЕООБЗОРЫ">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Сандалии ортопедические 06-249 р-р. 31-36</a>
+                <p>Достоинства: <b>Качество</b></p>
+                <p>Недостатки: <b>Необнаружила</b></p>
+                <p>Комментарий: <b>Второе приобретение на этом сайте</b></p>
+                <p><b>Оксана</b> (Дата отзыва: 10.06.2020)</p>
+              </div>
+            </div>
+            <div class="swiper-slide blog__slide">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="blog__video">
+                <img src="img/images/video-3.jpg" alt="ВИДЕООБЗОРЫ">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Ботинки ортопедические 06-572 р. 21-30</a>
+                <p>Достоинства: <b>Яркие, красивые, практичные</b></p>
+                <p>Недостатки: <b>Нет</b></p>
+                <p>Комментарий: <b>Заказываем обувь не первый раз, очень довольны</b></p>
+                <p><b>Наталия</b> (Дата отзыва: 07.05.2020)</p>
+              </div>
+            </div>
+            <div class="swiper-slide blog__slide">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="blog__video">
+                <img src="img/images/video-4.jpg" alt="ВИДЕООБЗОРЫ">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Сандалии ортопедические 06-249 р-р. 31-36</a>
+                <p>Достоинства: <b>Качество</b></p>
+                <p>Недостатки: <b>Необнаружила</b></p>
+                <p>Комментарий: <b>Второе приобретение на этом сайте</b></p>
+                <p><b>Оксана</b> (Дата отзыва: 10.06.2020)</p>
+              </div>
+            </div>
+            <div class="swiper-slide blog__slide">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="blog__video">
+                <img src="img/images/video-1.jpg" alt="ВИДЕООБЗОРЫ">
+              </a>
+              <div class="blog__info">
+                <a href="#" class="blog__title">Ботинки ортопедические 06-539 р. 21-30</a>
+                <p>Достоинства: <b>Выполнены из качественных материалов</b></p>
+                <p>Недостатки: <b>Необнаружила</b></p>
+                <p>Комментарий: <b>Замечательные сапожки, отличное сочетание</b></p>
+                <p><b>Тарануха Анна</b> (Дата отзыва: 29.07.2020)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev blog__prev blog__prev--video"></div>
+        <div class="swiper-button-next blog__next blog__next--video"></div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__wrap">
+        <div class="footer__logo">
+          <div class="logo">
+            <img src="img/images/1.svg" alt="Logo">
+          </div>
+          <div class="footer__info">© Интернет-магазин ОЛВИ, 2010-2017</div>
+        </div>
+        <nav class="footer__menu footer__menu--info">
+          <p class="footer__title">Инфо</p>
+          <ul class="footer__list">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Карта сайта</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__menu footer__menu--buyer">
+          <p class="footer__title">Покупателям</p>
+          <ul class="footer__list">
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">Вопрос-ответ</a></li>
+            <li><a href="#">Детская обувь оптом в Украине</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <p class="footer__title">КОНТАКТЫ</p>
+          <a href="tel:+380977360649" class="footer__tel"><span>Тел:</span><b>+38 (097) 736 06 49</b></a>
+          <a href="tel:+380668588806" class="footer__tel"><b>+38 (066) 858 88 06</b></a>
+          <a href="tel:+380635925786" class="footer__tel"><b>+38 (063) 592 57 86</b></a>
+          <a href="tel:+380977115588" class="footer__tel footer__tel--opt"><span>Опт:</span><b>+38 (097) 711 55 88</b></a>
+          <a href="skype:Olvi_shop" class="footer__tel footer__tel--skype"><span>Skype:</span>Olvi_shop</a>
+        </div>
+        <div class="footer__social">
+          <p class="footer__title">МЫ В СОЦСЕТЯХ</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link" title="Instagram">
+                <svg viewBox="0 0 556 556">
+                  <path d="M278 35c134,0 243,109 243,243 0,134 -109,243 -243,243 -134,0 -243,-109 -243,-243 0,-134 109,-243 243,-243zm-41 137c18,-1 87,-1 104,1 16,3 26,10 33,20 8,12 9,28 10,44 0,17 0,35 0,53 0,30 4,68 -22,84 -12,8 -27,9 -43,10 -20,0 -87,1 -104,-2 -16,-2 -27,-10 -34,-20 -8,-12 -8,-27 -9,-43 -1,-18 0,-36 0,-53 0,-31 -4,-68 21,-85 13,-9 27,-8 44,-9zm-88 152c1,20 3,38 13,52 7,11 20,22 37,27 18,5 41,4 61,4 21,0 43,1 64,0 20,-1 38,-4 52,-13 33,-23 31,-61 31,-98 0,-21 1,-43 0,-65 -1,-20 -4,-37 -13,-51 -9,-13 -22,-23 -38,-27 -17,-5 -41,-5 -60,-5 -21,0 -43,0 -64,1 -21,0 -38,3 -52,13 -33,22 -32,60 -32,98 0,21 0,43 1,64zm86 -43c-2,-25 17,-44 40,-46 24,-2 44,17 46,39 2,25 -17,45 -40,47 -25,2 -45,-17 -46,-40zm35 -69c-34,4 -63,34 -58,73 4,34 34,63 73,59 34,-4 64,-35 59,-74 -4,-34 -35,-63 -74,-58zm73 -16c-19,4 -13,34 7,30 8,-1 14,-9 12,-18 -1,-8 -9,-14 -19,-12z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" title="Facebook">
+                <svg viewBox="0 0 556 556">
+                  <path d="M278 35c134,0 243,109 243,243 0,134 -109,243 -243,243 -134,0 -243,-109 -243,-243 0,-134 109,-243 243,-243l0 0zm-30 239c1,1 1,6 1,7l0 107 46 0c0,-28 0,-57 0,-86 0,0 0,-27 0,-28 0,0 0,0 0,0 0,0 30,0 31,0l0 0 4 -39 -35 0c0,-6 0,-12 0,-18 0,-5 0,-12 3,-14l32 -4 0 -39c-6,0 -13,0 -19,0 -7,0 -13,0 -19,0 -13,1 -22,5 -29,11 -11,16 -14,2 -15,64l-23 0 0 39 23 0z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Modal windows -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="modal__title">Оставьте номер телефона, и мы вам перезвоним</p>
+    <form action="#" class="form">
+      <label for="name" class="form__label">Ваше имя:<span>*</span></label>
+      <input type="text" id="name" class="form__input" required>
+      <label for="tel" class="form__label">Ваш телефон:<span>*</span></label>
+      <input type="tel" id="tel" class="form__input" required>
+      <button type="submit" class="btn form__btn">Отправить</button>
+      <p class="form__comment"><span>*</span> — Поля, обязательные для заполнения</p>
+    </form>
+  </div>
+  
+  <div style="display: none;" id="login" class="modal">
+    <p class="modal__title">Войти в личный кабинет</p>
+    <div class="modal__enter" id="enter">
+      <ul class="modal__list">
+        <li class="modal__name"><a href="#enter-1">Вход</a></li>
+        <li class="modal__name"><a href="#enter-2">Регистрация</a></li>
+      </ul>
+      <div class="modal__field" id="enter-1">
+        <form action="#" class="form">
+          <label for="email" class="form__label">Введите Ваш e-mail:</label>
+          <input type="email" id="email" class="form__input">
+          <label for="password" class="form__label">Введите пароль:</label>
+          <input type="password" id="password" class="form__input">
+          <button type="submit" class="btn form__btn">Войти</button>
+        </form>
+      </div>
+      <div class="modal__field" id="enter-2">
+        <form action="#" class="form">
+          <label for="email2" class="form__label">Введите Ваш e-mail:</label>
+          <input type="email" id="email2" class="form__input">
+          <label for="tel2" class="form__label">Ваш номер телефона:</label>
+          <input type="tel" id="tel2" class="form__input">
+          <label for="password" class="form__label">Придумайте пароль:</label>
+          <input type="password" id="password" class="form__input">
+          <button type="submit" class="btn form__btn">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/filter-new.js"></script>
+  
+  <!-- Tabs -->
+  <script>
+    $(function() {
+      $("#enter").tabs();
+      $("#size").tabs();
+    });
+  </script>
+  
+  <!-- Sliders -->
+  <script>
+    var mySwiper6 = new Swiper ('.blog__slider--news', {
+      navigation: {
+        nextEl: '.blog__next--news',
+        prevEl: '.blog__prev--news',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        480: {
+          slidesPerView: 1,
+        }
+      }
+    });
+    
+    var mySwiper7 = new Swiper ('.blog__slider--video', {
+      navigation: {
+        nextEl: '.blog__next--video',
+        prevEl: '.blog__prev--video',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      breakpoints: {
+        1600: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 1,
+        }
+      }
+    });
+  </script>
+</body>
+</html>
