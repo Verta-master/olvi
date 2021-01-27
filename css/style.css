@@ -6778,3 +6778,48 @@ a.breadcrumbs__link:active {
   right: 0;
   background-color: #fff;
 }
+.noUi-value-sub,
+.noUi-pips {
+  color: #e5097f;
+  font-size: 12px;
+}
+.noUi-marker {
+  background: #e5097f;
+}
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 10px;
+}
+.noUi-handle,
+.noUi-target {
+  background: #e5097f;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.noUi-horizontal {
+  height: 6px;
+}
+.noUi-handle {
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+.noUi-horizontal .noUi-handle {
+  width: 20px;
+  height: 20px;
+  right: -10px;
+}
+.noUi-handle:after,
+.noUi-handle:before {
+  display: none;
+}
+.noUi-pips-horizontal {
+  padding: 0;
+}
+.filter__slider {
+  padding-bottom: 20px;
+}
+.noUi-target,
+.noUi-connects {
+  border-radius: 0;
+}
