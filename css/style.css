@@ -6823,3 +6823,17 @@ a.breadcrumbs__link:active {
 .noUi-connects {
   border-radius: 0;
 }
+.noUi-connect {
+  background: #00a0e3;
+}
+.filter__input {
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+.filter__price {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
