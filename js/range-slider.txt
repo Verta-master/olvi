@@ -1,0 +1,68 @@
+1) Подключить скрипты и стили слайдера:
+
+  <link rel="stylesheet" href="css/nouislider.min.css">
+
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/filter-new.js"></script>
+
+2) Стили: 
+
+.noUi-value-sub,
+.noUi-pips {
+  color: #e5097f;
+  font-size: 12px;
+}
+.noUi-marker {
+  background: #e5097f;
+}
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 10px;
+}
+.noUi-handle,
+.noUi-target {
+  background: #e5097f;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.noUi-horizontal {
+  height: 6px;
+}
+.noUi-handle {
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+.noUi-horizontal .noUi-handle {
+  width: 20px;
+  height: 20px;
+  right: -10px;
+}
+.noUi-handle:after,
+.noUi-handle:before {
+  display: none;
+}
+.noUi-pips-horizontal {
+  padding: 0;
+}
+.filter__slider {
+  padding-bottom: 20px;
+}
+.noUi-target,
+.noUi-connects {
+  border-radius: 0;
+}
+.noUi-connect {
+  background: #00a0e3;
+}
+.filter__input {
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+.filter__price {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
