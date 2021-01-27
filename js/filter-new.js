@@ -30,7 +30,7 @@ if (window.innerWidth < 1170) {
 }
 
 // Range sliders
-var slider = document.getElementById('slider-size');
+var slider = document.getElementById('slider');
   noUiSlider.create(slider, {
     range: {
         'min': 10,
@@ -48,27 +48,56 @@ var slider = document.getElementById('slider-size');
     }
 });
 
-//(function($) {
-//  //define initial hidden input value with slider value
-//  $("#amount-size").val(slider.get());
-//  //
-//  ////update hidden input value on slider change
-//  slider.on("change", function() {
-//      $("#amount-size").val(slider.get());
-//  });
-//})(jQuery)
-
-var inputNumber = document.getElementById('amount-size');
+var inputNumber = document.getElementById('amount');
 
 slider.noUiSlider.on('update', function (values, handle) {
 
     var value = values[handle];
 
-    if (handle) {
-        inputNumber.value = value;
-    }
+    inputNumber.value = Math.round(value);
 });
 
 inputNumber.addEventListener('change', function () {
     slider.noUiSlider.set([null, this.value]);
+});
+
+var sliderPrice = document.getElementById('slider-range');
+  noUiSlider.create(sliderPrice, {
+    range: {
+        'min': 0,
+        'max': 2000
+    },
+    step: 200,
+    connect: true,
+    start: [560, 1620],
+    // Move handle on tap, bars are draggable
+    behaviour: 'tap-drag',
+    // Show a scale with the slider
+    pips: {
+        mode: 'steps',
+        stepped: true,
+        density: 100
+    }
+});
+
+var inputNumber1 = document.getElementById('amount-min');
+var inputNumber2 = document.getElementById('amount-max');
+
+sliderPrice.noUiSlider.on('update', function (values, handle) {
+
+    var value = values[handle];
+
+    if (handle) {
+        inputNumber2.value = Math.round(value);
+    } else {
+        inputNumber1.value = Math.round(value);
+    }
+});
+
+inputNumber1.addEventListener('change', function () {
+    sliderPrice.noUiSlider.set([null, this.value]);
+});
+
+inputNumber2.addEventListener('change', function () {
+    sliderPrice.noUiSlider.set([null, this.value]);
 });
